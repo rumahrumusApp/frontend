@@ -1,0 +1,145 @@
+.header {
+  background-image: url('/header_background.png');
+  padding : 10px 0 350px 0;
+  height: 530px;
+}
+ /* background-color: #FCFFA6; */
+
+.header h1{
+  margin-top: 15px;
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 33px;
+  color:  rgb(211, 85, 39);
+  font-family: Fredoka One;
+}
+
+.header .fitur {
+    display: flex;
+    justify-content: center;
+    /* margin: 0 auto; */
+}
+
+.header .fitur div {
+  width: 250px;
+  text-align: center;
+  background-color: white;
+  margin: 0 50px;
+  padding: 10px 0px;
+  border-radius: 20px;
+  border: 4px solid rgb(247, 203, 58);
+  box-shadow: 0 2px 4px 0 rgb(238, 143, 108);
+}
+
+.header .fitur p {
+  padding: 0 10px;
+  font-size: 15px;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-family: Fredoka One;
+  text-align: justify;
+
+}
+
+.header .fitur span {
+  color: brown;
+}
+
+.header .fitur img{
+  width: 145px;
+  height: 145px;
+}
+
+.search {
+  text-align: center;
+  margin: 30px 10px;
+
+}
+
+.main h2{
+  padding: 20px auto;
+  text-align: center;
+}
+
+.search input {
+  font-size: 15px;
+  width: 30%;
+  height: 55px;
+  margin: 30px 10px;
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid rgb(247, 203, 58);
+  box-shadow: 0 2px 4px 0 rgb(238, 143, 108);
+}
+
+.search button {
+  font-family: Karla;
+  font-size: 15px;
+  width: 5%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: rgb(211, 85, 39);
+  box-shadow: 0 2px 6px 0 rgb(211, 85, 39);
+  color: white;
+  border: 1px solid rgb(211, 85, 39);
+  cursor: pointer;
+}
+
+.search .kategori {
+  background-color:  rgb(246, 247, 184); 
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 25px;
+  width: 500px;
+}
+
+
+.search .kategori a {
+  margin: 0px 10px 0px 10px;
+  padding: 20px;
+  color: black;
+  font-style: Karla;
+  font-size: 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.search .kategori a:hover{
+  background-color:  rgb(211, 85, 39);
+  color:white;
+  font-style: Karla;
+  font-size: 15px;
+}
+
+/* .search .subKategori a{
+  flex-direction: column;
+} */
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.subKategori {
+  text-align:left;
+  font-size: 15px;
+  padding: 25px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 25px;
+  width: 500px;
+  border-radius: 25px;
+  border: 1px solid rgb(211, 85, 39);
+  box-shadow: 0 10px 6px 0 rgb(211, 85, 39);
+}
+
+.container2{
+  display: flex;
+  margin-left: 200px;
+
+}

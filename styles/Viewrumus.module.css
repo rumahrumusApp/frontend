@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    justify-content: left;
+    margin-left: 150px;
+}
+
+
+.container .left {
+    margin-top: 40px;
+    color: rgb(81, 48, 48);
+    /* width: 15%; */
+}
+
+.left a {
+    /* margin-left: 250%; */
+    position: absolute;
+    right: 60px;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    transition: 0.5s;
+    color: white;
+}
+
+.container2{
+    margin-top: 60px;
+  
+}
+
+.container2 h2{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.container2 .rumus{
+    padding: 20px;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    margin: 20px 10px 50px 0px;
+}
+
+.container2 .rumus img{
+    /* border: 1px solid rgb(211, 85, 39); */
+    border-radius: 15px;
+    box-shadow: 0 1px 2px 0 rgb(238, 143, 108)
+}
+
+.container2 p {
+   font-size: 18px;
+   font-weight: 520;
+}

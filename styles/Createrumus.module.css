@@ -1,0 +1,126 @@
+.container {
+    /* background-color: aquamarine; */
+    /* display: flex;
+    justify-content: center; */
+}
+
+/* .titles {
+    /* display: flex; */
+    /* justify-content: space-between;
+} */
+    
+ 
+
+.titles h2{
+   margin-bottom: 50px;
+   font-weight: 800;
+   font-size: 28px;
+}
+
+.titles a{
+    margin-left: 100%;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    transition: 0.5s;
+    color: white;
+}
+
+.titles a:hover{
+    background-color: #FCFFA6;
+    color: brown;
+}
+
+.container .addRumus{
+    margin: 70px 150px;
+    /* background-color: antiquewhite; */
+   
+}
+
+.rumus{
+    display: flex;
+    padding: 15px;
+}
+
+.rumus p{
+    width: 30%;
+}
+
+.rumus input, .rumus select{
+    width: 70%;
+}
+/* .imgHitung input {
+    border-radius:
+} */
+
+
+/* .container .addRumus p{
+    display:flex;
+  
+    margin-left: 80px;
+} */
+
+
+.addRumus input, .addRumus select{
+    font-size: 15px;
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid rgb(211, 85, 39);
+    padding: 10px;
+}  
+
+.addRumus a{
+    font-size: 15px;
+    cursor: pointer;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    color:white;
+    font-family: Karla;
+    height: 38px;
+    width: 48%;
+}
+
+.addRumus .btn {
+    margin-top: 30px;
+    /* margin: 30px 10px 0px 10px; */
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    
+}
+
+.addRumus .btn a {
+    border: none;
+    width: 30%;
+    border-radius: 4px;
+    padding: 12px 20px;
+    text-align: center;
+}
+
+.addRumus a:hover{
+    background-color:  rgb(246, 247, 184);
+    color:  rgb(211, 85, 39);
+    transition: 0.2s;
+}
+
+
+.btn .hapus{
+    background-color:  rgb(175, 27, 17);
+    box-shadow: 0 1px 4px 0 rgb(175, 27, 17);
+}
+
+.btn .ajukan{
+    background-color:  rgb(14, 160, 1);
+    box-shadow: 0 1px 4px 0 rgb(14, 160, 1);
+}
+
+.addRumus .imgIlust, .addRumus .imgRumus, .addRumus .imgHitung{
+    height: 70px;
+    border: 2px dashed rgb(211, 85, 39) ;
+    text-align: center;
+}

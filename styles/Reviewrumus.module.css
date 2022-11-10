@@ -1,0 +1,168 @@
+.container {
+    display: flex;
+    justify-content: left;
+    margin-left: 180px;
+}
+
+.title .judul {
+    font-size: 23px;
+    margin-top: 0px;
+    /* position: absolute; */
+    left: 148px;
+    top: 180px;
+    /* margin-left: 0px;
+    font-weight: 600; */
+}
+
+.title h2{
+    font-size: 35px;
+    margin-top: 70px;
+    /* position: absolute; */
+    left: 148px;
+    top: 180px;
+   
+}
+
+.left a {
+    margin-top: 30px;
+    position: absolute;
+    right: 60px;
+}
+
+.left a {       
+    cursor: pointer;
+    padding: 12px 20px ;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    transition: 0.5s;
+    color: white;
+}
+
+.container2{
+    margin-top: 0px;
+    /* align-items: left; */
+    margin-left: 180px;
+}
+
+
+.container2 .rumus{
+    display: flex;
+    align-items: left;
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+    width: 500px;
+    height: 260px;
+    margin: 10px 0px 50px 0px;
+}
+
+.container2 .rumus img{
+    /* border: 1px solid rgb(211, 85, 39); */
+    border-radius: 15px;
+    box-shadow: 0 1px 2px 0 rgb(238, 143, 108)
+}
+
+.container2 p {
+   font-size: 18px;
+   font-weight: 520;
+}
+
+
+.komentar .status {
+    display: block;
+    /* position: relative;  */
+    margin-bottom: 15px;
+    cursor: pointer;
+    /* font-size: 22px; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.komentar hr{
+   margin-right: 550px;  
+    border: 2px solid rgba(0, 0, 0, 0.493);
+}
+
+.komentar textarea{
+    box-shadow: 0 1px 2px 0 rgb(11, 10, 10);
+    height: 200px;
+    border-radius: 18px;
+    border: none;
+    width: 570px;
+}
+  
+.status{
+    margin-top: 25px;
+}
+
+.status input {
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+.checkmark {
+    /* position:relative;
+    top: 0;
+    left: 0; */
+    height: 25px;
+    width: 25px;
+    background-color: rgb(92, 15, 15);
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+.status:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+.status input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    /* position: absolute; */
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+.status input:checked .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+.status .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+  .btnSubmit{
+    cursor: pointer;
+    border-radius: 5px;
+    width : 560px;
+    height: 45px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    transition: 0.5s;
+    border: none;
+    margin: 8px 0;
+    padding: 8px 10px;
+  }
+
+  .btnSubmit:hover{
+    background-color: rgba(211, 85, 39, 0.521);
+    box-shadow: 0 1px 4px 0 (211, 85, 39, 0.521);
+    color: rgba(255, 255, 255, 0.664);
+  }

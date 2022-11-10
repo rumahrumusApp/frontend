@@ -1,0 +1,74 @@
+.container{
+    margin-right: 60px;
+}
+.left a {
+    margin-top: 30px;
+    position: absolute;
+    right: 60px;
+}
+
+.left a {       
+    cursor: pointer;
+    padding: 12px 20px ;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    transition: 0.5s;
+    color: white;
+}
+
+.tabel h2{
+    margin-top: 80px;
+    font-weight: 500px;
+}
+
+.tabel hr{
+    color: black;   border: 1px solid rgb(14, 6, 3);
+}
+
+.tabel table {
+    margin-top: 65px;
+    width: 100%;
+}
+
+.tabel table tr td {
+    /* background-color: aqua; */
+    height: 30px;
+    /* padding: 10px 30px; */
+    /* width: 280px;    */
+    text-align: center;
+    
+}
+
+.tabel .header{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.tabel .btnDetail{
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    transition: 0.5s;
+    border: none;
+    margin: 8px 0;
+    padding: 8px 10px;
+
+}
+
+.tabel table tr td:first-child {
+    width: fit-content;
+}
+
+.tabel table tr:nth-child(even){
+    background-color: rgba(238, 143, 108, 0.208);
+}
+
+.tabel{
+    margin-left: 100px;
+    margin-top: 50px;
+}

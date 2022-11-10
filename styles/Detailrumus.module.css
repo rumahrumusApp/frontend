@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.title h2{
+    font-size: 35px;
+    position: absolute;
+    left: 200px;
+    top: 120px;
+}
+
+.container .left {
+    margin-top: 40px;
+    color: rgb(81, 48, 48);
+    position: absolute;
+    right: 60px;
+    /* width: 15%; */
+}
+
+.left a {
+    /* margin-left: 250%; */
+        
+    cursor: pointer;
+    padding: 12px 20px ;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    transition: 0.5s;
+    color: white;
+}
+
+.left a:first-child{
+    margin-right: 10px;
+}
+
+.left .edit{
+    background-color: rgb(53, 56, 151);
+    box-shadow: 0 1px 4px 0 rgb(53, 56, 151);
+}
+
+.container2{
+    /* display: flex; */
+    justify-content: center; 
+    margin-top: 150px;
+    align-items: center;
+}
+
+.container2 .rumus{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    /* border: 3px solid rgb(211, 85, 39); */
+    width: 550px;
+    height: 250px;
+    margin: 40px 10px 50px 0px;
+    /* border-radius: 15px;
+    box-shadow: 0 2px 4px 0 rgb(238, 143, 108) */
+}
+
+.container2 .rumus img{
+    border: 1px solid rgb(211, 85, 39);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 0 rgb(238, 143, 108)
+}
+
+.container2 p {
+   font-size: 20px;
+   font-weight: 520;
+}
