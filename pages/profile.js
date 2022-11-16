@@ -1,5 +1,6 @@
 import style from "../styles/Profile.module.css"
 import Navbarsign from '../components/Navbarsign'
+import Link from "next/link"
 
 export default function Profil() {
     return(
@@ -37,8 +38,8 @@ export default function Profil() {
                 <input type = 'password' value='areum123' id='password' disabled></input> */}
 
             <div className={style.btn}>
-                <button>Simpan</button>
-                <button>Ganti Password</button>
+                <a href='/'>Simpan</a>
+                <a href='/gantipassword'>Ganti Password</a>
             </div>
 
             </form>

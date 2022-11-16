@@ -32,6 +32,11 @@ export default function Viewrumus() {
                     <img src="/rumus/cthsoal.png"></img>
                     {/* <p>Picture</p> */}
                 </div>
+
+                <p>Catatan</p>
+                <div className={style.rumus}>
+                    <textarea disabled placeholder='Lorem ipsum siamed lorem ipsum'></textarea>
+                </div>
                     
             </div>
         </div>

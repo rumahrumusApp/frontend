@@ -1,9 +1,17 @@
 import style from "../styles/Navbar.module.css"
 import {useState} from 'react'
+import {useRouter} from 'next/router'
 
 
 export default function Navbar() {
     const [display, setDisplay] = useState(style.hide)
+    const router = useRouter()
+
+
+    const logout = async () => {
+            window.localStorage.removeItem('usn')
+            router.push('/')
+    }
 
 
     const changeDisplay = async (e) => {
@@ -15,7 +23,6 @@ export default function Navbar() {
           setDisplay(style.hide)
         }
     }
-    
     
     return (
        <div className={style.container}>
@@ -57,7 +64,7 @@ export default function Navbar() {
                 <p className={display}>Profile</p>
             </a>
 
-            <a href ="./">
+            <a onClick={() => logout()} href ="./">
                 <img src='./sign-out_white.png' title="Logout Akun"/>
                 <p className={display}>Logout</p>
             </a>

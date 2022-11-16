@@ -40,17 +40,17 @@ export default function CreateRumus() {
                 
                 <div className={style.rumus}>
                         <p>Upload Gambar Ilustrasi</p>
-                        <input className={style.imgIlust} type='text'  id='img_ilust' placeholder="Upload Image"></input>
+                        <input className={style.imgIlust} type='file'  id='img_ilust' placeholder="Upload Image"></input>
                 </div>
 
                 <div className={style.rumus}>
                         <p>Upload Rumus</p>
-                        <input className={style.imgRumus} type='text'  id='img_rumus' placeholder="Upload Image"></input>
+                        <input className={style.imgRumus} type='file'  id='img_rumus' placeholder="Upload Image"></input>
                 </div>
 
                 <div className={style.rumus}>
                         <p>Upload Contoh Perhitungan</p>
-                        <input className={style.imgHitung} type='text' id='img_perhitungan' placeholder="Upload Image"></input>
+                        <input className={style.imgHitung} type='file' id='img_perhitungan' placeholder="Upload Image"></input>
                 </div>
 
                 <div className={style.rumus}>

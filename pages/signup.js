@@ -1,8 +1,22 @@
 import style from "../styles/Sign.module.css"
 import Navbar from "../components/Navbar";
-
+import axios from "axios";
+import { useRouter } from 'next/router'
 
 export default function Signup() {
+
+    const signup = async(e, username, fullname, password, email) =>{
+        e.preventDefault()
+        console.log(username, fullname, password, email)
+        try {
+            const data = await axios.post("http://localhost:8000/user/signup", {
+
+            })
+            
+        } catch (error) {
+            
+        }
+    }
     return(
         <>
         <Navbar></Navbar>
@@ -32,15 +46,15 @@ export default function Signup() {
                 </select>
 
                 <p>Password<span>*</span></p>
-                <input type = 'text' id='password'></input>
+                <input type = 'password' id='password'></input>
 
                 <p>Konfirmasi Password<span>*</span></p>
-                <input type = 'text' id='konfirmasi_pw'></input>
+                <input type = 'password' id='konfirmasi_pw'></input>
 
-                <button>Sign Up</button>
+                <button onClick={(event) => signup(event, document.getElementById('username').value, document.getElementById('fullname').value, document.getElementById('password').value, document.getElementById('email').value)}>Sign Up</button>
 
                 <div className={style.signback}>
-                    <p>Sudah Punya Akun ?<a href=""> Sign In </a></p>
+                    <p>Sudah Punya Akun ?<a href="./signin"> Sign In </a></p>
                 </div>
             </form>
         </div>

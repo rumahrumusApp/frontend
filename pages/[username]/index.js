@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Navbar from '../components/Navbar'
-import Navbarsign from '../components/Navbarsign'
-import Cards from '../components/Card'
+import styles from '../../styles/Home.module.css'
+// import Navbar from '../components/Navbar'
+import Navbarsign from '../../components/Navbarsign'
+import Cards from '../../components/Card'
 import {useState} from 'react'
 import axios from 'axios' 
 
-export default function Home() {
+export default function HomeLogin() {
   const [display, setDisplay] = useState(styles.hide)
   const [subList, setSubList] = useState([])
   const [subItem, setSubItem] = useState([])
@@ -47,8 +47,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar></Navbar>
-      {/* <Navbarsign> </Navbarsign> */}
+      {/* <Navbar></Navbar> */}
+      <Navbarsign> </Navbarsign>
       <header className={styles.header}>
         <h1>Selamat Datang di Rumahrumus</h1>
         <div className={styles.fitur}>

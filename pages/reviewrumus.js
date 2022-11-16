@@ -35,12 +35,18 @@ export default function ReviewRumus(){
                     {/* <p>Picture</p> */}
                 </div>
 
+                <p>Catatan</p>
+                <div className={style.rumus}>
+                    <textarea disabled placeholder='Lorem ipsum siamed lorem ipsum'></textarea>
+                </div>
+
+
                   <div className={style.komentar}>
 
                         <hr/>
                         <div className={style.textcomment}>
                         <p>Komentar</p>
-                        <textarea></textarea>
+                        <textarea placeholder='masukan komentar...'></textarea>
                 
                     <label class={style.status}>
                         <input type="radio" checked="checked" name="radio"></input>

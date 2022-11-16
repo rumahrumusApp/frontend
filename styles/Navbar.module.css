@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
+    box-shadow: 0 1px 4px 2px #FFC23C;
    
 }
 
@@ -10,6 +11,7 @@
     display: flex;
     align-items: center;
     color: white;
+    box-shadow: 0 1px 4px 2px #FFC23C;
  
 }
 
@@ -116,7 +118,7 @@
 .nav .list{
     display: flex;
     align-items: left;
-    margin-left: 18px;
+    margin-left: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
   
