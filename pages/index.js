@@ -9,18 +9,20 @@ import axios from 'axios'
 
 export default function Home() {
   const [display, setDisplay] = useState(styles.hide)
+  const [currId, setCurrId] = useState(0)
   const [subList, setSubList] = useState([])
-  const [subItem, setSubItem] = useState([])
+  const [rumus, setRumus] = useState([])
 
-  const changeDisplay = async (e, kategori) => {
+  const handleCategory = async (e, id) => {
       e.preventDefault()
-      if (display == styles.hide) {
+      if (display == styles.hide || (display == styles.show && id != currId)) {
         setDisplay(styles.show)
+        setCurrId(id)
 
         try {
-           const data = await axios.get(`http://localhost:3000/api/sub-list`)
-           setSubList(data.data)
-           console.log(subList)
+           const result = await axios.get(`http://localhost:8000/sct/subByCategId/${id}`)
+          //  setSubList(data.data)
+           setSubList(result.data.data)
 
         } catch (err) {
           console.log(err)
@@ -29,14 +31,23 @@ export default function Home() {
       
       else {
         setDisplay(styles.hide)
+        setCurrId(0)
       }
   }
 
-  const getItemList = async (e, subKategori) => {
-    e.preventDefault(
+  const handleRumus = async (e, id) => {
+    e.preventDefault()
+
+    try {
+      const result = await axios.get(`http://localhost:8000/rumus/subcateg/${id}`)
+      //  setSubList(data.data)
+       setRumus(result.data.data)
       
-    )
-    console.log(`Klik sub ${subKategori}`)
+    } catch (error) {
+       console.log(error)
+    }
+    
+    console.log(`Klik sub ${id}`)
   }
 
   return (
@@ -74,31 +85,24 @@ export default function Home() {
              <button>Cari</button>
           
              <div className={styles.kategori}>
-                <a href onClick={(event) => changeDisplay(event, "Matematika")}>Matematika</a>
-                <a href onClick={(event) => changeDisplay(event, "Fisika")}>Fisika</a>
-                <a href onClick={(event) => changeDisplay(event, "Kimia")}>Kimia</a>
-                <a href onClick={(event) => changeDisplay(event, "Ekonomi")}>Ekonomi</a>
+                <a href onClick={(event) => handleCategory(event, 1)}>Matematika</a>
+                <a href onClick={(event) => handleCategory(event, 2)}>Fisika</a>
+                <a href onClick={(event) => handleCategory(event, 3)}>Kimia</a>
+                <a href onClick={(event) => handleCategory(event, 4)}>Ekonomi</a>
           </div>
           </div>
 
           <div className={display}>
             <div className={styles.subKategori}>
-
-            {subList.map((item) => <p onClick={(event) => getItemList(event, 'matematika')}><a href=".">{item}</a></p>)}
-          
-
-             {/* <p><a href="">Bangun Datar</a></p> */}
-             {/* <p><a href="">Bangun Ruang</a></p>
-             <p><a href="">Bilangan Bulat</a></p>
-             <p><a href="">Bilangan Pecahan</a></p>
-             <p><a href="">Bilangan Berpangkat</a></p> */}
+              {subList.map((item) => <p onClick={(event) => handleRumus(event, item.id)} key={item.id} list={item.name}>{item.name}</p>)}
             </div>
         </div>
 
-          <h2>Title</h2>
+         
 
           <div className={styles.container2}>
-            <Cards></Cards>
+            {/* <Cards></Cards> */}
+            {rumus.map((item) => <Cards key={item.id} data={item}></Cards>)}
           </div>
 
       </main>
