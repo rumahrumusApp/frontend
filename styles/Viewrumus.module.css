@@ -11,23 +11,26 @@
     /* width: 15%; */
 }
 
+
+
+
 .left a {
     /* margin-left: 250%; */
     position: absolute;
     right: 60px;
     cursor: pointer;
     padding: 12px 20px;
-    border-radius: 15px;
+    border-radius: 5px;
     font-size: 15px;
     background-color: rgb(211, 85, 39);
-    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
     color: white;
 }
 
 .container textarea{
     box-shadow: 0 1px 2px 0 rgb(11, 10, 10);
-    border-radius: 18px;
+    border-radius: 10px;
     border: none;
     width: 500px;
     height: 200px;
@@ -40,12 +43,43 @@
   
 }
 
+.container2 .iconStar img{
+    width: 30px;
+    margin-left: 350px;
+    cursor: pointer;
+}
+
+.container2 .iconStar{
+    margin-left:200px;
+
+}
+
+.iconStar img{
+    position: absolute;
+    top: 160px;
+}
+
 .container2 h2{
     font-size: 30px;
     margin-bottom: 50px;
 }
 
-.container2 .rumus{
+
+
+
+.hide{
+    display: none;
+ 
+}
+
+
+.show{
+    display: inherit;
+  
+
+}
+
+.container2 .rumus, .container2 .rumusguest{
     padding: 20px;
     background-color: white;
     width: 500px;
@@ -53,13 +87,55 @@
     margin: 20px 10px 50px 0px;
 }
 
-.container2 .rumus img{
+.container2 .rumus img, .container2 .rumusguest img{
     /* border: 1px solid rgb(211, 85, 39); */
-    border-radius: 15px;
-    box-shadow: 0 1px 2px 0 rgb(238, 143, 108)
+    border-radius: 5px;
+    /* box-shadow: 0 1px 2px 2px  rgba(211, 85, 39, 0.264); */
+}
+
+.rumusguest .imgcontoh{
+    filter: blur(3px);
+}
+
+.rumusguest{
+    display: flex;
 }
 
 .container2 p {
    font-size: 18px;
    font-weight: 520;
 }
+
+/* .btnSignin{
+    background-color: brown;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    
+ bottom: 25px;
+
+    margin-bottom: 300px; 
+]*/
+
+
+.rumusguest .btnSignin{
+  position: absolute;
+  top: 170%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(211, 85, 39);
+  box-shadow: 0 1px 4px rgb(211, 85, 39);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 25%;
+  font-family: karla;
+}
+
+

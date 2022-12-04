@@ -1,56 +1,85 @@
 .container {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: left; */
+    margin-left: 150px;
+    /* margin-top: 100px; */
 }
-
-.title h2{
+ 
+ .title h2{
     font-size: 35px;
-    position: absolute;
-    left: 200px;
-    top: 120px;
+    /* position: absolute; */
+    /* left: 10px;
+    top: 120px; */
+    margin-top: 80px;
+    /* margin-left: 0px ; */
+} 
+
+
+/* .container{
+    margin-top: 60px;
+  
+} */
+
+.container h2{
+    font-size: 30px;
+    margin-bottom: 50px;
 }
 
 .container .left {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     color: rgb(81, 48, 48);
     position: absolute;
     right: 60px;
     /* width: 15%; */
 }
 
-.left a {
+.left .edit{
     /* margin-left: 250%; */
         
     cursor: pointer;
     padding: 12px 20px ;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 15px;
-    background-color: rgb(211, 85, 39);
-    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
     transition: 0.5s;
     color: white;
 }
 
-.left a:first-child{
+
+
+.left .kembali{
+    /* margin-left: 250%; */
+        
+    cursor: pointer;
+    padding: 12px 20px ;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+    color: white;
+}
+
+.left .edit:first-child{
     margin-right: 10px;
 }
 
 .left .edit{
-    background-color: rgb(53, 56, 151);
-    box-shadow: 0 1px 4px 0 rgb(53, 56, 151);
+    background-color:rgb(100, 149, 237);
+    box-shadow: 0 4px 8px 0 rgba(100, 148, 237, 0.638), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
 }
 
 .container2{
     /* display: flex; */
-    justify-content: center; 
-    margin-top: 150px;
-    align-items: center;
+    /* justify-content: left;  */
+    margin-top: 70px;
+    /* align-items: center; */
 }
 
 .container2 .rumus{
     display: flex;
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
     padding: 20px;
     background-color: white;
     /* border: 3px solid rgb(211, 85, 39); */
@@ -62,12 +91,37 @@
 }
 
 .container2 .rumus img{
-    border: 1px solid rgb(211, 85, 39);
-    border-radius: 15px;
-    box-shadow: 0 2px 4px 0 rgb(238, 143, 108)
+    /* border: 1px solid rgb(211, 85, 39); */
+    border-radius: 10px;
+    /* box-shadow: 0 2px 8px 3px  rgba(211, 85, 39, 0.264); */
+}
+
+
+
+.container2 textarea{
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.145), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    border: none;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    font-family: karla;
 }
 
 .container2 p {
    font-size: 20px;
    font-weight: 520;
+}
+
+
+.hide{
+    display: none;
+ 
+}
+
+
+.show{
+    display: inherit;
+  
+
 }

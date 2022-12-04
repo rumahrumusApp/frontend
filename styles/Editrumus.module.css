@@ -21,10 +21,10 @@
     margin-left: 100%;
     cursor: pointer;
     padding: 12px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 15px;
     background-color: rgb(211, 85, 39);
-    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
     transition: 0.5s;
     color: white;
 }
@@ -52,16 +52,23 @@
 .rumus input, .rumus select{
     width: 70%;
 }
+/* .imgHitung input {
+    border-radius:
+} */
 
-
-.hide{
-    display: none;
+.image{
+    width: 40px; 
+    margin-left: 200px;
+    margin-top: 40px;
 }
 
 
-.show{
-    display: inherit;
-}
+/* .container .addRumus p{
+    display:flex;
+  
+    margin-left: 80px;
+} */
+
 
 .addRumus input, .addRumus select{
     font-size: 15px;
@@ -85,31 +92,21 @@
 
 .addRumus .btn {
     margin-top: 30px;
-    /* margin: 30px 50px 100px 10px; */
-    /* width: 400px; */
-    width: 100%;
+    /* margin: 30px 10px 0px 10px; */
+    width: 150%;
     display: flex;
-    /* justify-items: right; */
     justify-content: space-between;
     margin-bottom: 30px;
-    /* background-color: aqua; */
-    margin-left: 200px;
-    /* position: relative;
-    left: 25%; */
     
 }
 
-/* .btn button{
-    width: 1000px;
-} */
 .addRumus .btn button {
     border: none;
-    width: 50%;
+    width: 30%;
     color: white;
     border-radius: 4px;
     padding: 12px 20px;
     text-align: center;
-    margin: 0px 30px;
 }
 
 .addRumus button:hover{
@@ -120,9 +117,7 @@
 
 .btn .simpan{
     background-color:  rgb(211, 85, 39);
-    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* margin-left: 80%; */
-
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
 }
 
 
@@ -133,12 +128,12 @@
 
 .btn .ajukan{
     background-color:  rgb(14, 160, 1);
-    box-shadow: 0 4px 8px 0  rgba(14, 160, 1, 0.446), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* margin-left: 10%; */
+    box-shadow: 0 1px 4px 0 rgb(14, 160, 1);
 }
 
 .addRumus .imgIlust, .addRumus .imgRumus, .addRumus .imgHitung{
-    height: 70px;
+    height: 60px;
     border: 2px dashed rgb(211, 85, 39) ;
     text-align: center;
+    /* margin: 50px auto; */
 }

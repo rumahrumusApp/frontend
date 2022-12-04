@@ -1,24 +1,129 @@
 import style from "../styles/Navbar.module.css"
-import {useState} from 'react'
+// import styleLog from "../styles/Navbar.module.css"
+import { useRouter } from 'next/router';
+import {useEffect,useState} from 'react';
+import Link from "next/link";
 
 export default function Navbar() {
-   
-    // if(localStorage !== 'usn'){
 
-    return (
-       <div className={style.container}>
-            <div className={style.left}>
-                <img src='./rumahrumus_logo.png'/>
-                <a href="./">RumahRumus</a>
-            </div>
-    
-            <div className={style.right}>
-                <a className={style.btnMasuk} href="./signin">Sign In</a>
-                <a className={style.btnDaftar} href="./signup">Sign Up</a>
-            </div>
-        </div>
+    const [display, setDisplay] =useState(style.hide)
+    const [infoSignin, SetInfoSignin] = useState()
+    const [infoRole, SetRole] = useState()
+    const [menu, setMenu] = useState(style.hide)
+    const router = useRouter()
 
-    ); 
+    useEffect(() => {
+        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+        const ro = typeof window !== 'undefined' ? window.localStorage.getItem('rol') : {}
+        SetInfoSignin(id)
+        SetRole(ro)
+    }, []);
+
+    if (infoSignin == null) {
+
+                return (
+                <div className={style.container}>
+                        <div className={style.left}>
+                            <img src='/rumahrumus_logo.png'/>
+                            <a href="/">RumahRumus</a>
+                        </div>
+                
+                        <div className={style.right}>
+                            <a className={style.btnMasuk} href="/signin">Sign In</a>
+                            <a className={style.btnDaftar} href="/signup">Sign Up</a>
+                        </div>
+                    </div>
+
+                ); 
+
+        } else {
+
+                const changeDisplay =  (e) => {
+                    e.preventDefault()
+
+                    if (menu == style.hide) {
+
+                        setMenu(style.show)
+
+                    } else {
+
+                        setMenu(style.hide)
+                    }
+                }
+
+                const logout = async () => {
+                    window.localStorage.clear()
+                    router.push('/')
+                }
+
+            //  if( infoRole == 1) {
+
+                return (
+                    <div className={style.container}>
+                         <div className={style.left}>
+                             <img src='/rumahrumus_logo.png'/>
+                             <a href="/">RumahRumus</a>
+                         </div>
+                 
+                         <div className={style.right}>
+                             <a onClick={() => logout()} className={style.btnLogout} >Logout</a>
+                         </div>
+             
+                        <nav className = {style.nav}>
+                         <img onClick={(event) => changeDisplay(event)} className={style.list} src='/listmenu_white.png'/>
+                         
+                         <Link href ={"/"}>
+                             <img href src='/home_white.png' title="Home"/>
+                             <p className={menu}>Home</p>
+                         </Link>
+             
+                         <Link href ={"/rumussaya"}>
+                             <img src='/star_white.png' title="Rumus Saya"/>
+                             <p className={menu}>Rumus Saya</p>
+                         </Link>
+             
+                         <Link href = {"/createrumus"}>
+                             <img src='/plus_white.png' title="Buat Rumus"/>
+                             <p className={menu}>Buat Rumus</p>
+                         </Link>
+
+                         <Link href={'/pengajuanrumus'}>
+                             <img className={style.acc} src='/acc_white.png' title="Pengajuan Rumus"/>
+                             <p className={menu}>Pengajuan Rumus</p>
+                         </Link>
+             
+                         <hr/>
+
+                        <Link href={`/Profile/${infoSignin}`} >
+                             <img  className={style.user} src='/user_white.png' title="Profile"/>
+                             <p className={menu}>Profile</p>
+                        </Link>
+                         
+             
+                         <a onClick={() => logout()}>
+                             <img src='/sign-out_white.png' title="Logout Akun"/>
+                             <p className={menu}>Logout</p>
+                         </a>
+                     </nav>
+                     </div>
+             
+                        
+                 );
+            //  }
+
+                 
+        
+
+        }
+
+
+
+
+
+
+
+
+
 
     //     const [display, setDisplay] = useState(style.hide)
     //     const changeDisplay = async (e) => {

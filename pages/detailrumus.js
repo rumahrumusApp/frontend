@@ -1,8 +1,11 @@
 import style from "../styles/Detailrumus.module.css"
 import Navbarsign from "../components/NavbarSign";
 import Navbar from '../components/Navbar'
+import {useState} from 'react'
+import axios from 'axios' 
+import Link from "next/link";
 
-export default function Viewrumus() {
+export default function Detailrumus() {
     return (
         <>
         <Navbarsign></Navbarsign>

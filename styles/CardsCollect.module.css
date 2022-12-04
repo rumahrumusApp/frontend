@@ -1,0 +1,42 @@
+
+
+.cards{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+    width: 250px;
+    height: 210px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 90px 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+}
+
+
+.cards img{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.desc {
+    /* padding: 15px;*/
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+.cards .delbtn{
+    width: 20px;
+}
+.delbtn{
+    margin-left: 150px;
+    cursor: pointer;
+  
+    
+}
+
+

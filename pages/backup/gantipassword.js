@@ -1,12 +1,13 @@
-import Navbarsign from '../components/Navbarsign'
+import Navbar from '../../components/Navbar'
 import style from "../styles/ChangePassword.module.css"
+import Link from "next/link"
 
 export default function changePassword(){
     return(
         <>
-            <Navbarsign></Navbarsign>
+            <Navbar></Navbar>
             <div className={style.left}>
-                <a href="/profile">Kembali</a>
+                <Link href="/Profile">Kembali</Link>
             </div>
             
             <div className={style.container}>

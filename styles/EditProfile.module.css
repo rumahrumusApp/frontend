@@ -6,15 +6,21 @@
 }
 
 
-.detail input, .detail select {
+.detail input, .detail select, .detail button {
     font-size: 15px;
     width: 80%;
-    height: 35px;
+    height: 40px;
     border-radius: 7px;
     border: 1px solid rgb(211, 85, 39);
     padding: 10px;
 }
 
+
+
+
+.user .addimg{
+    border: 1px solid rgb(211, 85, 39);
+}
 /* .detail p{
     font-size: 15px;
     cursor: pointer;
@@ -26,31 +32,31 @@
 } */
 
 .detail button{
-    font-size: 9px;
+    font-size: 12px;
     width: 80%;
     /* height: 25px; */
     border-radius: 5px;
     border: 1px solid rgb(211, 85, 39);
     padding: 10px;
-    margin: 0px 20px;
-   
+    margin-top: 20px;
+  
    
 }
 
-.detail .btnDiv {
+/* .detail .btnDiv {
     display: flex;
     height: 25px;
     
    
-}
+} */
 
-.btnDiv .btn {
+/* .btnDiv .btn {
     position: relative;
     left: 120px;
     bottom: 30px;
    
 
-}
+} */
 
 .detail button:hover{
     background-color:  rgb(246, 247, 184);
@@ -58,11 +64,9 @@
     transition: 0.2s;
 }
 
-.btnDiv button{
+.btn button{
     background-color:  rgb(211, 85, 39);
     color: white;
-    box-shadow: 0 4px 8px 0 rgba(151, 141, 137, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor: pointer;
 }
 
 
@@ -71,7 +75,7 @@
 }
 
 .user img{
-    width: 100%;
+    width: 130px;
     height:130px;
     border-radius: 70px;
     border: 3px groove rgb(211, 85, 39);
@@ -80,6 +84,7 @@
     position: relative;
     top: 40px;
     right: 10px;
+    /* box-shadow: 0 4px 8px 0 rgba(20, 18, 17, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     /* box-shadow: 0px 2px 2px 0px rgb(211, 85, 39); */
 
 }
@@ -93,16 +98,11 @@
     font-family: Fredoka One;
     font-weight: 400;
     line-height: 0;
+    margin: 5px 5px;
     position: relative;
     right: 60px;
-    margin: 5px 10px;
    
 } 
-/* .user span{
-
-} */
-
-
 
 .user .roles p {
     font-size: 15px;
@@ -116,8 +116,8 @@
 .roles p{
     position: relative;
     top: 45px;
-    right: 340px;
-    margin: 5px 10px;
+    right: 325px;
+    margin: 5px 5px;
 }
 .container input:disabled{
     background-color: antiquewhite;
@@ -127,8 +127,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    margin-bottom: 40px;
-
+    margin-bottom: 70px;
 
     /* justify-content: left; */
     

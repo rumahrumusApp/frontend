@@ -1,4 +1,4 @@
-import Navbarsign from '../components/Navbarsign'
+import Navbarsign from '../../components/Navbarsign'
 import style from "../styles/Reviewrumus.module.css"
 import Link from "next/link"
 

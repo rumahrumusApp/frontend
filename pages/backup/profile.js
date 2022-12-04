@@ -1,11 +1,11 @@
 import style from "../styles/Profile.module.css"
-import Navbarsign from '../components/Navbarsign'
+import Navbar from '../../components/Navbar'
 import Link from "next/link"
 
 export default function Profil() {
     return(
         <>
-        <Navbarsign></Navbarsign>
+        <Navbar></Navbar>
         <div className={style.container}>
             
             <form className={style.detail}>

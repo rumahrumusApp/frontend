@@ -1,26 +1,55 @@
 import style from "../styles/Sign.module.css"
 import Navbar from "../components/Navbar";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { useRouter } from 'next/router'
+import { Icon } from 'react-icons-kit'
+import {eye} from 'react-icons-kit/feather/eye'
+import {eyeOff} from 'react-icons-kit/feather/eyeOff'
+
 
 
 export default function Signin() {
+    const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
     const router = useRouter()
+
+    const [type, setType]=useState('password');
+    const [icon, setIcon]=useState(eyeOff);
+
+    const handleViewPass=()=>{    
+        if(type==='password'){
+          setIcon(eye);      
+          setType('text');
+        }
+        else{
+          setIcon(eyeOff);     
+          setType('password');
+        }
+      }
+
+
+    useEffect(()=> {
+        if (user !== null) {
+            router.push(`/`)
+        }
+    })
+
     const login = async(e,  username, password) => {
         e.preventDefault()
-        console.log(username,password)
+        
         try{
             const data = await axios.post("http://localhost:8000/user/signin", {
                 username: username,
-                // fullname: fullname,
-                // occupation_id: occupation_id,
                 password: password,
-                // email: email
+                
             })
             .then((val) => {
-                // console.log(val.data.data.username)
-                window.localStorage.setItem('usn', val.data.data.username)
-                router.push(`/${val.data.data.username}`)
+            
+                window.localStorage.setItem('unm', val.data.data.id)
+                window.localStorage.setItem('rol', val.data.data.role)
+                console.log(val)
+                console.log(val.data.message)
+                router.push({ pathname: `/`})
             })
             // console.log(data);
             
@@ -34,10 +63,10 @@ export default function Signin() {
 
     return(
         <>
-        <Navbar></Navbar>
-      
+          <Navbar></Navbar>
         <div className={style.container}>
-
+       
+      
             <form className={style.form}>
                 <div>
                     <img src='./rumahrumus_logo.png'/>
@@ -49,7 +78,11 @@ export default function Signin() {
                 <input type = 'text' id='username'></input>
 
                 <p>Password <span>*</span></p>
-                <input type = 'password' id='password'></input>
+                <div className={style.password}>
+                <input type ={type} id='password'/>
+                <span onClick={handleViewPass}><Icon icon={icon} size={18} style={{color: 'black'}}/></span>
+                </div>
+
                 <button onClick={(event) => login(event, document.getElementById('username').value , document.getElementById('password').value)}>Sign In</button>
                 
                 <div className={style.signback}>

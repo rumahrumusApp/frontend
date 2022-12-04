@@ -2,10 +2,14 @@
     width: 100%;
 }
 
-.tabel table tr td {
+.tabel table tr  {
     height: 30px;
-    text-align: center;
+    text-align: center ;
     
+}
+
+.tabel table td {
+    text-align: center;
 }
 
 .tabel .header{
@@ -13,16 +17,34 @@
     font-size: 20px;
 }
 
+.btn button{
+    margin: 0px 10px;
+}
+
 .tabel .btnDetail{
     cursor: pointer;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
-    background-color: rgb(211, 85, 39);
-    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    background-color:rgb(100, 149, 237);
+    box-shadow: 0 1px 2px 0 rgb(100, 149, 237);
     transition: 0.5s;
     border: none;
     margin: 8px 0;
+    padding: 8px 10px;
+
+}
+
+.btnDel{
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 10px;
+    color: white;
+    background-color: rgb(175, 27, 17);
+    box-shadow: 0 1px 2px 0  rgb(175, 27, 17);
+    transition: 0.5s;
+    border: none;
+    /* margin: 8px 0; */
     padding: 8px 10px;
 
 }
@@ -41,27 +63,36 @@
 }
 
 .allcards{
-    display: flex;
-    margin-left: 60px;
-    /* background-color: aqua; */
-    /* margin: 0 auto; */
-    /* justify-content: center; */
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto ;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  column-gap: 20px; 
+  row-gap: 40px;
+  margin-left: 90px;
+  border-radius: 10px;
 }
 
-.container .cards{
-    /* display: flex;
-    align-items: center; */
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border: 3px solid rgb(211, 85, 39);
-    width: 200px;
-    /* margin-left: 120px;
-    margin-top: 100px; */
-    margin: 40px 0px 0px 40px;
-    border-radius: 15px;
-    box-shadow: 0 2px 4px 0 rgb(238, 143, 108)
-}
+/* .allcards .searchnotfound{
+    justify-content: center;
+} */
+
+.searchnotfound p{
+    margin-top: 50px;
+    margin-right: 320px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+.searchnotfound img{
+    margin-left: 60%;
+    margin-top: 30px;
+    border-radius: 120px;
+    opacity: 0.4;
+    /* box-shadow: 0 1px 2px 0 rgba(151, 141, 137, 0.169), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    */
+  }
+
 
 .cards img{
     width: 100px;
