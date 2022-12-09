@@ -1,0 +1,67 @@
+.left a {
+    position: absolute;
+    right: 60px;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+    color: white;
+    margin-top: 30px;
+}
+
+.tabel table {
+    width: 100%;
+}
+
+.tabel table tr  {
+    height: 30px;
+    text-align: center ;
+    
+}
+
+.tabel table td {
+    text-align: center;
+}
+
+.tabel .header{
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.tabel table tr td:first-child {
+    width: fit-content;
+    padding: 10px 20px 10px 10px;
+    /* margin: 0px 10px; */
+}
+
+.tabel table tr:nth-child(even){
+    background-color: rgba(238, 143, 108, 0.208);
+}
+
+.tabel{
+    margin-top: 100px;
+    margin-left: 110px;
+    margin-right: 100px;
+    padding: 40px auto;
+    
+}
+ 
+
+.tabel .tdtitle{
+    text-align: left;
+    font-size: 14px;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 10px;
+}
+
+
+.tabel img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0px 10px;
+}

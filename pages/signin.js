@@ -6,6 +6,8 @@ import { useRouter } from 'next/router'
 import { Icon } from 'react-icons-kit'
 import {eye} from 'react-icons-kit/feather/eye'
 import {eyeOff} from 'react-icons-kit/feather/eyeOff'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -44,28 +46,47 @@ export default function Signin() {
                 
             })
             .then((val) => {
+                toast.success("Login Success", {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                  });
             
                 window.localStorage.setItem('unm', val.data.data.id)
                 window.localStorage.setItem('rol', val.data.data.role)
                 console.log(val)
                 console.log(val.data.message)
-                router.push({ pathname: `/`})
+
             })
             // console.log(data);
+            router.push({ pathname: `/`})
             
 
         } catch(err) {
-
             console.log(err);
+            toast.error("Invalid Email or Password", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
         }
 
     }
 
+
     return(
         <>
           <Navbar></Navbar>
-        <div className={style.container}>
-       
+            <div className={style.container}>
+            <ToastContainer/>
       
             <form className={style.form}>
                 <div>

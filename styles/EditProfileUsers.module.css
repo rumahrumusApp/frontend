@@ -1,0 +1,149 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 55px auto;
+    margin-left: 100px;
+}
+
+.left a {
+    position: absolute;
+    right: 60px;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+    color: white;
+    margin-top: 20px;
+}
+
+
+.detail input, .detail select, .detail button {
+    font-size: 15px;
+    width: 500px;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid rgb(211, 85, 39);
+    padding: 10px;
+}
+
+
+
+
+.user .addimg{
+    border: 1px solid rgb(211, 85, 39);
+}
+/* .detail p{
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    color:white;
+    font-family: Karla;
+    height: 38px;
+    width: 48%;
+} */
+
+.detail button{
+    font-size: 12px;
+    width: 500px;
+    /* height: 25px; */
+    border-radius: 5px;
+    border: 1px solid rgb(211, 85, 39);
+    padding: 10px;
+    margin-top: 20px;
+  
+   
+}
+
+/* .detail .btnDiv {
+    display: flex;
+    height: 25px;
+    
+   
+} */
+
+/* .btnDiv .btn {
+    position: relative;
+    left: 120px;
+    bottom: 30px;
+   
+
+} */
+
+.detail button:hover{
+    background-color:  rgb(246, 247, 184);
+    color:  rgb(211, 85, 39);
+    transition: 0.2s;
+}
+
+.btn button{
+    background-color:  rgb(211, 85, 39);
+    color: white;
+}
+
+
+.detail p{
+    font-weight: bold;
+}
+
+.user img{
+    width: 130px;
+    height:130px;
+    border-radius: 70px;
+    border: 3px groove rgb(211, 85, 39);
+    cursor: pointer;
+    /* margin-right: 100px; */
+    position: relative;
+    top: 40px;
+    left: 170px;
+    /* box-shadow: 0 4px 8px 0 rgba(20, 18, 17, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    /* box-shadow: 0px 2px 2px 0px rgb(211, 85, 39); */
+
+}
+
+
+
+
+.user p{
+    /* right: 90px; */
+    font-size: 30px;
+    font-family: Fredoka One;
+    font-weight: 400;
+    line-height: 0;
+    margin: 5px 5px;
+    position: relative;
+    right: 60px;
+   
+} 
+
+.user .roles p {
+    font-size: 15px;
+    font-family: karla;
+    line-height: 0;
+  
+    font-weight: bold;
+}
+
+
+.roles p{
+    position: relative;
+    top: 45px;
+    right: 325px;
+    margin: 5px 5px;
+}
+.container input:disabled{
+    background-color: antiquewhite;
+}
+
+.user {
+    display: flex;
+    /* align-items: center; */
+    text-align: center;
+    margin-bottom: 100px;
+    margin-right: 90px;
+
+    /* justify-content: left; */
+    
+}

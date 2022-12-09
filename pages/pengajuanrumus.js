@@ -19,8 +19,8 @@ export default function AccRumus() {
 
     const handleData = async ()=> {
         try {
-            const result = await axios.get(`http://localhost:8000/rumus/all`)
-            console.log(result.data.data)
+            const result = await axios.get(`http://localhost:8000/rumus/getdatasubmits`)
+            console.log(result)
             setDataRumus(result.data.data)
             setstatus(result.data.status.name)
 

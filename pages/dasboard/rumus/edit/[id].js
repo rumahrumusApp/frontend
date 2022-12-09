@@ -1,5 +1,5 @@
-import style from "../../../styles/Editrumus.module.css"
-import Navbarsign from '../../../components/Navbar'
+import style from "../../../../styles/Editrumus.module.css"
+import Navbarsign from '../../../../components/Navbar'
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { useRouter } from 'next/router'
@@ -8,7 +8,7 @@ import Link from "next/link";
 
 
 
-export default function EditRumus() {
+export default function EditRumusByAdmin() {
     const router = useRouter();
     const [title, setTitle] = useState("");
     const [kategori, setKategori] = useState();
@@ -17,7 +17,7 @@ export default function EditRumus() {
     const [imgRumus, setImgRumus] = useState();
     const [imgCont, setImgCont] = useState();
     const [catatan, setCatatan] = useState("");
-    const [infoSignin, SetInfoSignin]=useState("");
+    const [komentar, setKomentar]=useState("");
     const [data, setData] = useState([]);
     const [catname, setCatname] = useState("");
 
@@ -112,11 +112,11 @@ export default function EditRumus() {
             setKategori(result.data.data.category_id)
             setSubkategori(result.data.data.sub_category_id)
             setCatname(result.data.data.category.name)
-            // setsubCatname(result.data.data.subcategory.name)
             setImgIlust(result.data.data.img_ilustrasi)
             setImgRumus(result.data.data.img_rumus)
             setImgCont(result.data.data.img_contoh)
             setCatatan(result.data.data.catatan)
+            setKomentar(result.data.data.komentar)
             
 
         } catch (error) {
@@ -205,8 +205,9 @@ export default function EditRumus() {
             <form className={style.addRumus} >
             {/* <Form onSubmit={saveRumus(onSubmit)}> */}
                  <div className={style.titles}>
-                    <Link href={'/'}>Kembali</Link>
-                    <h2>Buat Rumus</h2>
+                    <Link href={'/dasboard/rumus'}>Kembali</Link>
+                    <h2>Edit Rumus</h2>
+                    <hr/>
                 </div>
 
                 <div className={style.rumus}>
@@ -230,21 +231,11 @@ export default function EditRumus() {
 
                 <div className={style.rumus}>  
                         <p>Sub Kategori</p>   
-                        {/* <select id='sub' > 
-                        <option value={subkategori}>{subcatname}</option>
-                        {subList.map((item) => <option  value={item.id} key={item.id} >{item.name}</option>)}
-                        </select>  */}
                         { subList.length == 0 ? <select id="sub"><option value={-1}>Pilih Kategori</option><option>Loading...</option></select> : <select id='sub' value={subkategori} onChange={(event)=> setSubkategori(event)}>{ subList.map((item) => <option key={item.id} value={item.id}>{item.name}</option>) }</select> }
                         
 
             </div>
 
-                {/* <div className={style.rumus}>
-                        <p>Sub Kategori</p>
-                        <input type='text' id='subkategori' name='subkategori' value={subkategori}
-                         onChange={(e) => setSubkategori(e.target.value)} placeholder="masukan nama rumus"></input>
-                </div> */}
-                
                 <div className={style.image}>
                 {!selectedFileIlust ? (
                   <img src={imgIlust}/>
@@ -304,6 +295,12 @@ export default function EditRumus() {
                         <p>Catatan</p>
                         <input type='text'  name="catatan" value={catatan}
                          onChange={(e) => setCatatan(e.target.value)} id='catatan'></input>
+                </div>
+
+                <div className={style.rumus}>
+                        <p>Komentar</p>
+                        <input type='text'  name="komentar" value={komentar}
+                         onChange={(e) => setKomentar(e.target.value)} id='komentar'></input>
                 </div>
 
                 <div className={style.rumus}>

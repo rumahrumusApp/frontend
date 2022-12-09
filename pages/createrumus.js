@@ -3,6 +3,7 @@ import Navbarsign from '../components/Navbar'
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { useRouter } from 'next/router'
+import Link from "next/link"
 
 
 
@@ -133,7 +134,7 @@ export default function CreateRumus() {
             <form className={style.addRumus} >
             {/* <Form onSubmit={saveRumus(onSubmit)}> */}
                  <div className={style.titles}>
-                    <a href="/">Kembali</a>
+                    <Link href={"/"}>Kembali</Link>
                     <h2>Buat Rumus</h2>
                 </div>
 

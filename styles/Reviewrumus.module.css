@@ -10,8 +10,8 @@
     /* position: absolute; */
     left: 148px;
     top: 180px;
-    /* margin-left: 0px;
-    font-weight: 600; */
+    /* margin-left: 0px;*/
+    font-weight: 600; 
 }
 
 .title h2{
@@ -21,6 +21,11 @@
     left: 148px;
     top: 180px;
    
+}
+
+.title hr{
+  border: 2px solid rgba(0, 0, 0, 0.493);
+
 }
 
 .left {

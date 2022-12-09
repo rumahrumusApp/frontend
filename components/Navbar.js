@@ -25,12 +25,12 @@ export default function Navbar() {
                 <div className={style.container}>
                         <div className={style.left}>
                             <img src='/rumahrumus_logo.png'/>
-                            <a href="/">RumahRumus</a>
+                            <Link href={'/'}>RumahRumus</Link>
                         </div>
                 
                         <div className={style.right}>
-                            <a className={style.btnMasuk} href="/signin">Sign In</a>
-                            <a className={style.btnDaftar} href="/signup">Sign Up</a>
+                            <Link className={style.btnMasuk} href={"/signin"}>Sign In</Link>
+                            <Link className={style.btnDaftar} href={"/signup"}>Sign Up</Link>
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@ export default function Navbar() {
                     <div className={style.container}>
                          <div className={style.left}>
                              <img src='/rumahrumus_logo.png'/>
-                             <a href="/">RumahRumus</a>
+                             <Link href={"/"}>RumahRumus</Link>
                          </div>
                  
                          <div className={style.right}>
@@ -92,6 +92,12 @@ export default function Navbar() {
                              <p className={menu}>Pengajuan Rumus</p>
                          </Link>
              
+                         <hr/>
+                         <Link href={`/dasboard`}>
+                             <img className={style.admin} src='/paneladmin.png' title="Dasboard Admin"/>
+                             <p className={menu}>Dasboard Admin</p>
+                         </Link>
+
                          <hr/>
 
                         <Link href={`/Profile/${infoSignin}`} >

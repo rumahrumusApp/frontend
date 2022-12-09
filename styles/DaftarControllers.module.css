@@ -1,0 +1,117 @@
+.tabel table {
+    width: 100%;
+}
+
+.tabel table tr  {
+    height: 30px;
+    text-align: center ;
+    
+}
+
+.tabel table td {
+    text-align: center;
+}
+
+.tabel .header{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.tabel h2{
+    margin-left: 0px;
+}
+
+.tabel img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.btn button{
+    margin: 0px 10px;
+}
+
+
+.tabel .btnDetail{
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 10px;
+    color: white;
+    background-color:rgb(100, 149, 237);
+    box-shadow: 0 1px 2px 0 rgb(100, 149, 237);
+    transition: 0.5s;
+    border: none;
+    margin: 8px 0;
+    padding: 8px 10px;
+
+}
+
+.btnDel{
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 10px;
+    color: white;
+    background-color: rgb(175, 27, 17);
+    box-shadow: 0 1px 2px 0  rgb(175, 27, 17);
+    transition: 0.5s;
+    border: none;
+    /* margin: 8px 0; */
+    padding: 8px 10px;
+
+}
+
+.tabel table tr td:first-child {
+    width: fit-content;
+}
+
+.tabel table tr:nth-child(even){
+    background-color: rgba(238, 143, 108, 0.208);
+}
+
+.tabel{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.allcards{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto ;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  column-gap: 20px; 
+  row-gap: 40px;
+  margin-left: 90px;
+  border-radius: 10px;
+}
+
+/* .allcards .searchnotfound{
+    justify-content: center;
+} */
+
+.searchnotfound p{
+    margin-top: 50px;
+    margin-right: 320px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+.searchnotfound img{
+    margin-left: 60%;
+    margin-top: 30px;
+    border-radius: 120px;
+    opacity: 0.4;
+    /* box-shadow: 0 1px 2px 0 rgba(151, 141, 137, 0.169), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    */
+  }
+
+
+.cards img{
+    width: 100px;
+    height: 100px;
+}
+
+.cards p{
+    font-weight: bold;
+}

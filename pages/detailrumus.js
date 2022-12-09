@@ -8,12 +8,12 @@ import Link from "next/link";
 export default function Detailrumus() {
     return (
         <>
-        <Navbarsign></Navbarsign>
+        <Navbar></Navbar>
         {/* <Navbar></Navbar> */}
         <div className={style.container}>
             <div className={style.left}>
-                <a className={style.edit} href="/createrumus">Edit</a>
-                <a href="/rumussaya">Kembali</a>
+                <Link className={style.edit} href={"/createrumus"}>Edit</Link>
+                <Link href={"/rumussaya"}>Kembali</Link>
             </div>
 
         <div className={style.title}>

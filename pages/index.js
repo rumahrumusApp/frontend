@@ -21,6 +21,7 @@ export default function Home() {
       .then((data) => {
         setRumus(data.data)
       })
+        // handleList()
   }, [])
 
   const handleRumus = async (e) => {
@@ -83,10 +84,19 @@ export default function Home() {
       e.preventDefault()
       const response = await axios.get(`http://localhost:8000/rumus/keyword?key=${key}`)
       console.log('Key: ', key, ' Res: ', response.data.data)
-      setRumus(response.data.data)
+      // setRumus(response.data.data)
+
+      if (response.data.status == 404){
+        setRumus([])
+
+      } else {
+        setRumus(response.data.data)
+      }
+
+      // console.log(response)
     }
 
-    catch(err) {
+      catch(err) {
       console.log(err)
     }
   }
@@ -145,13 +155,17 @@ export default function Home() {
            
 {/* 
             <div className={styles.search}> */}
+            {/* <div> */}
             <input  type = 'text' id='key' placeholder='masukan keyword disini..'></input>
             <button onSubmit={(event) => handleSearching(event, document.getElementById('key').value)} onClick={(event) => handleSearching(event, document.getElementById('key').value)}>Cari</button>
+            {/* {rumus.length == 0?: <div className={styles.searchnotfound}><p>Hasil pencarianmu...</p><img src='./rumusnotfound.png'/></div>} */}
+          {/* </div> */}
           {/* </div> */}
     
         </div>
 
         <div className={styles.container2}>
+          {/* {getRum.length == 1? <div className={styles.searchnotfound}><p>Hasil pencarianmu...</p><img src='./rumusnotfound.png'/></div>:getRum.map((item) => <Cards key={item.id} data={item}></Cards>)} */}
           {rumus.length == 0? <div className={styles.searchnotfound}><p>Hasil pencarianmu...</p><img src='./rumusnotfound.png'/></div>:rumus.map((item) => <Cards key={item.id} data={item}></Cards>)}
         </div> 
       </main>

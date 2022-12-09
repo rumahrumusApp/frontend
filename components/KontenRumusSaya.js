@@ -13,8 +13,9 @@ export default function KontenRumusSaya(page){
     const [infoSignin, SetInfoSignin]=useState();
 
     const [collect, setCollect] = useState([])
-   
 
+    const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+    // SetInfoSignin(id)
 
     useEffect(() => {
         handleRumus()
@@ -27,7 +28,7 @@ export default function KontenRumusSaya(page){
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`http://localhost:8000/rumus/all`)
+            const result = await axios.get(`http://localhost:8000/rumus/myrumus/${id}`)
             console.log(result.data.data)
             setDatarumus(result.data.data)
             
@@ -40,8 +41,8 @@ export default function KontenRumusSaya(page){
 
     const handleRumus = async (e) => {
       
-        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-        SetInfoSignin(id)
+        // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+        // SetInfoSignin(id)
     
             try {
 

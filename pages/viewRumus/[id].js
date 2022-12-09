@@ -157,7 +157,7 @@ const getRumusById = async () => {
                 <div className={style.rumusguest}>
                 <Link href={'/signin'}>
                 <img src={rumus.img_contoh} className={style.imgcontoh}/>
-                <button className={style.btnSignin}>signin</button>
+                <button className={style.btnSignin}>signin/signup</button>
                 </Link>
                 </div>
                 </div>

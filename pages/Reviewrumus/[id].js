@@ -16,7 +16,7 @@ export default function ReviewRumus(){
     const [imgCont, setImgCont] = useState();
     const [catatan, setCatatan] = useState("");
     const [komentar, setKomentar] = useState("");
-    const [status, setStatus] = useState("");
+    const [status, setStatus] = useState(0);
 
     // useEffect(() => {
     //     const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
@@ -37,11 +37,13 @@ export default function ReviewRumus(){
         console.log(router.query.id);
     
         try {
-            const result = await axios.get(`http://localhost:8000/rumus/getOne/${router.query.id}`)
+            const result = await axios.get(`http://localhost:8000/rumus/getdatasubmitbyid/${router.query.id}`)
 
                console.log(result.data.data)
                SetDataRumus(result.data.data);
                setKomentar(result.data.data.komentar)
+               document.getElementById('kategori').innerHTML = 'Kategori: ' + result.data.data.category.name
+               document.getElementById('sub-kategori').innerHTML = 'Sub Kategori: ' + result.data.data.subcategory.name
           
         } catch (error) {
            console.log(error)
@@ -51,27 +53,24 @@ export default function ReviewRumus(){
     const handleReview = async (e) => {
         // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
         // SetInfoSignin(id)
-        const statusid = document.getElementById('st').value
+        const statusid = document.getElementsByName('radio').value
+        console.log(status)
         const rumusid = rumus.id
 
         // console.log(rumusid)
 
-        const formData = new FormData();
-        formData.append("reviewer_id", infoSignin)
-        formData.append("komentar", komentar)
-        formData.append("status_id", status)
+        // const formData = new FormData();
+        // formData.append("reviewer_id", infoSignin)
+        // formData.append("komentar", komentar)
+        // formData.append("status_id", status)
     
         try {
             console.log(router.query.id);
-            const result = await axios.post(`http://localhost:8000/rumus/editRumus/${rumusid}`,formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                  },
+            const result = await axios.post(`http://localhost:8000/rumus/review/${rumusid}`,{
 
-
-                // reviewer_id: infoSignin,
-                // komentar: document.getElementById('komentar').value,
-                // status_id: parseInt(document.getElementById('st').value)
+                reviewer_id: infoSignin,
+                komentar: document.getElementById('komentar').value,
+                status_id: status,
 
             })
 
@@ -94,8 +93,11 @@ export default function ReviewRumus(){
             <div className={style.container}>
                 
             <div className={style.title}>
-                <h2>Detail Rumus</h2>
+                <h2>Detail Review Rumus</h2>
                 <p className={style.judul}>{rumus.title}</p>
+                <p id="kategori">Kategori: </p>
+                <p id="sub-kategori">SubKategori: </p>
+                <hr/>
             </div>
                 </div>
                 <div className={style.container2}>

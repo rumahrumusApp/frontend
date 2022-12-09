@@ -12,7 +12,7 @@
  
 
 .titles h2{
-   margin-bottom: 50px;
+   /* margin-bottom: 50px; */
    font-weight: 800;
    font-size: 28px;
 }
@@ -21,10 +21,11 @@
     margin-left: 100%;
     cursor: pointer;
     padding: 12px 20px;
-    border-radius: 15px;
+    border-radius: 5px;
+    font-size: 15px;
     font-size: 15px;
     background-color: rgb(211, 85, 39);
-    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
     color: white;
 }
@@ -32,6 +33,11 @@
 .titles a:hover{
     background-color: #FCFFA6;
     color: brown;
+}
+
+.titles hr{
+    color: black;   border: 1px solid rgb(14, 6, 3);
+
 }
 
 .container .addRumus{
@@ -43,6 +49,7 @@
 .rumus{
     display: flex;
     padding: 15px;
+    /* margin-top: 50px; */
 }
 
 .rumus p{

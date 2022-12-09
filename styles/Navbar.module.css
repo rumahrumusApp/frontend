@@ -131,6 +131,11 @@
   
 }
 
+.nav .admin{
+    width: 30px;
+    height: 30px;
+}
+
 .nav .acc{
     margin-bottom: 10px;
 }
