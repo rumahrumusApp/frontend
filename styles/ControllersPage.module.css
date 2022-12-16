@@ -3,8 +3,8 @@
 }
 
 .container .list{
-  padding: 5px;
-  margin: 25px auto;
+  /* padding: 5px; */
+  margin-top: 30px;
   border-radius: 25px;
   display:flex;
   justify-content: center;
@@ -12,6 +12,8 @@
   margin-left: 90px;
 
 }
+
+
 
 .container .list a{
     margin: 5px auto;
@@ -23,15 +25,16 @@
     cursor: pointer;
     text-align:center;
     line-height: 0ch;
+    border-radius: 5px;
 }
 
 .list hr{
-    margin: 1px auto;
-    width: 1px;
+    height: 30px;
+    color: black;
+    border: 1px solid black;
     /* margin-top: 50px; */
     
 } 
-
 /* .list a:hover{
     background-color:  rgb(211, 85, 39);
     color:white;
@@ -41,7 +44,7 @@
 
 .rumus h2{
     text-align:  left;
-    margin-left: 105px;
+    margin-left: 2px;
     margin-top: 50px;
     font-size: 30px;
     font-weight:400px;

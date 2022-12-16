@@ -1,0 +1,82 @@
+
+ 
+.container {
+        display: flex;
+        justify-content: center;
+        width: 400px;
+        background-color: white;
+        margin: 100px auto;
+        /* padding: 50px; */
+        box-shadow: 0 0 6px 0 #adadad;
+        border-radius: 10px;
+        padding: 30px 30px 30px 30px;
+}
+
+
+.left a {
+        margin-top: 40px;
+        position: absolute;
+        right: 90px;
+    }
+    
+.left a {       
+        cursor: pointer;
+        padding: 12px 30px ;
+        border-radius: 5px;
+        font-size: 15px;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(151, 141, 137, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        color: white;
+}
+
+.form h1{
+        font-size: 20px;
+        margin-bottom: 50px;
+}
+
+
+
+.form input, .form select, .form button {
+        font-size: 15px;
+        padding: 5px;
+        width: 350px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid rgb(211, 85, 39);
+        cursor: pointer;
+}
+
+
+.form button{
+        font-size: 13px;
+        margin-top: 30px;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+        color:white;
+        font-size: Karla;
+        height: 35px;
+}
+
+.form span{
+        color:red;
+}
+
+
+
+
+.form div {
+       
+        text-align: center;
+}
+
+.form div img {
+        /* background-color: aqua; */
+        width: 70px;
+        border-radius: 40px;
+        /* margin: 0px auto; */
+
+}
+
+
+

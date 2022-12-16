@@ -46,7 +46,7 @@ export default function MoreControllers(){
             <div className={style.rumus}> 
                 {/* <h2>Rumus Saya</h2> */}
                 <div className={style.list}>
-                    <hr/>
+                    <hr className={style.linehr}/>
                     <Link className={hover[0]} onClick={(event) => changeDisplay(event, 0)} href={'/more'}>Kategori</Link>
                     <hr/>
                     <Link className={hover[1]} onClick={(event) => changeDisplay(event, 1)} href={'/more'}>Sub Kategori</Link>

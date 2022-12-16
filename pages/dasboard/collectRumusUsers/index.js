@@ -8,7 +8,7 @@ import Navbarsign from '../../../components/Navbar'
 
 
 
-export default function UsersPage() {
+export default function CollectUsersPage() {
 
     const [data, setData] = useState([])
     useEffect(() => {
@@ -22,7 +22,7 @@ export default function UsersPage() {
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`http://localhost:8000/user/getAll`)
+            const result = await axios.get(`http://localhost:8000/collect/allCollect`)
             console.log(result.data.data)
             setData(result.data.data)
             
@@ -71,16 +71,13 @@ export default function UsersPage() {
         <table>
             <tbody>
                 <tr className={style.header}>
-                    <td>Name</td>
+                    <td>ID</td>
+                    <td>ID User</td>
                     <td>Username</td>
-                    <td>Email</td>
-                    <td>Pekerjaan</td>
-                    <td>Asal Institusi</td>
-                    <td>Role</td>
                     <td></td>
                 </tr>
 
-                {data.length == 0 ? <tr><td>Loading...</td></tr> : data.map((item) => <tr key={item.id}><td className={style.tdtitle}>{item.fullname}</td><td className={style.tdtitle}>{item.username}</td><td className={style.tdtitle}>{item.email}</td><td className={style.tdtitle}>{item.occupation.name}</td><td className={style.tdtitle}>{item.institusi_name}</td><td className={style.tdtitle}>{item.roles.name}</td><td><Link href={`/dasboard/contributor/edit/${item.id}`}><img src='/user-profile.png' /></Link><Link href={`/dasboard/contributor`}><img src='/icon-delete.png' onClick={(e)=> DelData(e, item.id)} /></Link></td></tr>)}
+                {data.length == 0 ? <tr><td>Loading...</td></tr> : data.map((item) => <tr key={item.id}><td className={style.tdtitle}>{item.id}</td><td className={style.tdtitle}>{item.user_id}</td><td className={style.tdtitle}>{item.users.username}</td><td><Link href={`/dasboard/collectRumusUsers/Collects/${item.user_id}`}><button>Lihat Koleksi</button></Link></td></tr>)}
 
                 </tbody>
             </table>

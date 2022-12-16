@@ -9,11 +9,26 @@
     box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
     color: white;
-    margin-top: 30px;
+    margin-top: 20px;
 }
+
+
+
+
+.tabel .addBtn {
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
 
 .tabel table {
     width: 100%;
+    margin-top: 40px;
 }
 
 .tabel table tr  {
@@ -21,6 +36,8 @@
     text-align: center ;
     
 }
+
+
 
 .tabel table td {
     text-align: center;
@@ -64,4 +81,18 @@
     padding: 5px;
     cursor: pointer;
     margin: 0px 10px;
+}
+
+.tabel button{
+
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+    color: white;
+    border: none;
+
 }

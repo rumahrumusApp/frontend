@@ -13,14 +13,14 @@ export default function Admin(){
                 <div className={style.container}>
                 <div className={style.cards}>
                      <Link href={`dasboard/contributor`}> 
-                         <img src='./buat_rumus.png' className={style.delbtn}/>
+                         <img src='./userdata.png' className={style.delbtn}/>
                          <div className={style.desc}> <p>Users</p></div>
                      </Link>
                 </div>
 
                 <div className={style.cards}>
                      <Link href={`dasboard/rumus`}>
-                         <img src='./buat_rumus.png' className={style.delbtn}/>
+                         <img src='./rumusicon.png' className={style.delbtn}/>
                          <div className={style.desc}> <p>Rumus</p></div>
                      </Link>
                 </div>
@@ -28,8 +28,8 @@ export default function Admin(){
 
                 <div className={style.container}>
                 <div className={style.cards}>
-                     <Link href={`/`}>
-                         <img src='./buat_rumus.png' className={style.delbtn}/>
+                     <Link href={`dasboard/collectRumusUsers`}>
+                         <img src='./collecticon.png' className={style.delbtn}/>
                          <div className={style.desc}> <p>Koleksi Rumus User</p></div>
                      </Link>
                 </div>
@@ -37,7 +37,7 @@ export default function Admin(){
                 <div className={style.container}>
                 <div className={style.cards}>
                      <Link href={`dasboard/more`}>
-                         <img src='./buat_rumus.png' className={style.delbtn}/>
+                         <img src='./settingsicon.png' className={style.delbtn}/>
                          <div className={style.desc}> <p>Lainnya</p></div>
                      </Link>
                 </div>
