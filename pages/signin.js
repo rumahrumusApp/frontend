@@ -40,7 +40,7 @@ export default function Signin() {
         e.preventDefault()
         
         try{
-            const data = await axios.post("http://localhost:8000/user/signin", {
+            const data = await axios.post("http://13.229.227.189:8000/user/signin", {
                 username: username,
                 password: password,
                 

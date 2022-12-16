@@ -3,6 +3,7 @@ import Navbar from "../../../components/Navbar";
 import axios from "axios";
 import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
+import Link from "next/link"
 
 export default function AddStatus() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
