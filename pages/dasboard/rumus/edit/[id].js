@@ -154,7 +154,7 @@ export default function EditRumusByAdmin() {
     const editRumus = async(e, statusid) =>{
         e.preventDefault()
         const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-        SetInfoSignin(id)
+        // SetInfoSignin(id)
 
         const categ = document.getElementById('ct').value
         const subcateg = document.getElementById('sub').value
