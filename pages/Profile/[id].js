@@ -36,7 +36,7 @@ export default function ViewProfil() {
             // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
             console.log(router.query.id)
 
-            const result = await axios.get(`http://localhost:8000/user/profile/${id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/user/profile/${id}`)
             console.log(result.data.data)
             SetImg(result.data.data.img_profile)
             SetEmail(result.data.data.email)

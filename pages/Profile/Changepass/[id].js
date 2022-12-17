@@ -75,7 +75,7 @@ const handleViewPassOld=()=>{
           
             console.log(router.query.id)
 
-            const result = await axios.get(`http://localhost:8000/user/${id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/user/${id}`)
             console.log(result.data.data)
             setoldPassword(result.data.data.password)
             setData(result.data.data)
@@ -91,7 +91,7 @@ const handleViewPassOld=()=>{
         try{
             console.log(router.query.id)
                 
-            await axios.post(`http://localhost:8000/user/changePass/${id}`,{
+            await axios.post(`http://13.229.227.189:8000/user/changePass/${id}`,{
                
                 oldPass: document.getElementById('oldpassword').value,
                 newPass: document.getElementById('newpassword').value,

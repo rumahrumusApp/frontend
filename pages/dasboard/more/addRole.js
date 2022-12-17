@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Link from "next/link"
 
-export default function Signup() {
+export default function AddRolePage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
     const router = useRouter()
 
@@ -15,7 +15,7 @@ export default function Signup() {
         e.preventDefault()
 
         try {
-            const data = await axios.post("http://localhost:8000/role/createRole", {
+            const data = await axios.post("http://13.229.227.189:8000/role/createRole", {
                 name: document.getElementById('kategori').value,
                 order: parseInt(document.getElementById('order').value),
                     

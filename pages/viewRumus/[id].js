@@ -51,7 +51,7 @@ const handleStarred = async(e, rumusid) => {
 
         try {
 
-            const result = await axios.post(`http://localhost:8000/collect/addCollect`,{
+            const result = await axios.post(`http://13.229.227.189:8000/collect/addCollect`,{
                 user_id: infoSignin,
                 rumus_id: rumusid,
 
@@ -72,7 +72,7 @@ const handleStarred = async(e, rumusid) => {
         
         try {
              const id = datacollect
-            const result = await axios.delete(`http://localhost:8000/collect/delCollect/${id}`)
+            const result = await axios.delete(`http://13.229.227.189:8000/collect/delCollect/${id}`)
             console.log("berhasil dihapus")
             // window.location.reload()
 
@@ -94,7 +94,7 @@ const getRumusById = async () => {
     console.log(router.query.id);
 
     try {
-        const result = await axios.get(`http://localhost:8000/rumus/getOne/${router.query.id}`)
+        const result = await axios.get(`http://13.229.227.189:8000/rumus/getOne/${router.query.id}`)
    
            console.log(result.data.data)
            setRumus(result.data.data);

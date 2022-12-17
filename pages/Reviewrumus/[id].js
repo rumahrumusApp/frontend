@@ -37,7 +37,7 @@ export default function ReviewRumus(){
         console.log(router.query.id);
     
         try {
-            const result = await axios.get(`http://localhost:8000/rumus/getdatasubmitbyid/${router.query.id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/rumus/getdatasubmitbyid/${router.query.id}`)
 
                console.log(result.data.data)
                SetDataRumus(result.data.data);
@@ -66,7 +66,7 @@ export default function ReviewRumus(){
     
         try {
             console.log(router.query.id);
-            const result = await axios.post(`http://localhost:8000/rumus/review/${rumusid}`,{
+            const result = await axios.post(`http://13.229.227.189:8000/rumus/review/${rumusid}`,{
 
                 reviewer_id: infoSignin,
                 komentar: document.getElementById('komentar').value,

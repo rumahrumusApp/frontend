@@ -37,7 +37,7 @@ export default function Profil() {
             // e.preventDefault()
             console.log(router.query.id)
 
-            const result = await axios.get(`http://localhost:8000/user/profile/${id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/user/profile/${id}`)
             // console.log(result.data.data)
             SetImg(result.data.data.img_profile)
             SetEmail(result.data.data.email)
@@ -59,7 +59,7 @@ export default function Profil() {
       
         try {
             // const id = document.getElementById('sub').value
-            const result = await axios.get(`http://localhost:8000/occup/allOccup`)
+            const result = await axios.get(`http://13.229.227.189:8000/occup/allOccup`)
             // console.log('Occupations:', result.data.data)
             setData(result.data.data)
 
@@ -102,7 +102,7 @@ export default function Profil() {
             // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
             // console.log(router.query.id)
 
-            const result = await axios.post(`http://localhost:8000/user/editUser/${id}`, formData, {
+            const result = await axios.post(`http://13.229.227.189:8000/user/editUser/${id}`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                    

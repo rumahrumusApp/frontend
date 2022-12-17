@@ -28,7 +28,7 @@ export default function KontenRumusSaya(page){
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`http://localhost:8000/rumus/myrumus/${id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/rumus/myrumus/${id}`)
             console.log(result.data.data)
             setDatarumus(result.data.data)
             
@@ -47,7 +47,7 @@ export default function KontenRumusSaya(page){
             try {
 
             // e.preventDefault()
-            const result = await axios.get(`http://localhost:8000/collect/collectById/${id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/collect/collectById/${id}`)
             setCollect(result.data.data)
             console.log(result.data.data)
             
@@ -68,7 +68,7 @@ export default function KontenRumusSaya(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus rumus ini?") == true){
-            const result = await axios.delete(`http://localhost:8000/rumus/delRumus/${id}`)
+            const result = await axios.delete(`http://13.229.227.189:8000/rumus/delRumus/${id}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 

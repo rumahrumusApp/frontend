@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Link from "next/link"
 
-export default function Signup() {
+export default function AddSubPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
     const router = useRouter()
     const [dataCateg, setDataCateg]= useState([])
@@ -22,7 +22,7 @@ export default function Signup() {
     const handleDataCat = async () => {
 
         try {
-            const result = await axios.get(`http://localhost:8000/ct/allCateg`)
+            const result = await axios.get(`http://13.229.227.189:8000/ct/allCateg`)
             console.log(result.data.data)
             setDataCateg(result.data.data)
             
@@ -38,7 +38,7 @@ export default function Signup() {
         e.preventDefault()
 
         try {
-            const data = await axios.post("http://localhost:8000/sct/addSubCateg", {
+            const data = await axios.post("http://13.229.227.189:8000/sct/addSubCateg", {
                 name: document.getElementById('kategori').value,
                 category_id: parseInt(document.getElementById('cat').value),
                 order: parseInt(document.getElementById('order').value),

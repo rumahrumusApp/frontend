@@ -22,7 +22,7 @@ export default function RumusPage() {
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`http://localhost:8000/rumus/getOne/${router.query.id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/rumus/getOne/${router.query.id}`)
             console.log(result.data.data)
             setData(result.data.data)
 

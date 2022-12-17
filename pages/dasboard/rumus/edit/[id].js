@@ -35,12 +35,12 @@ export default function EditRumusByAdmin() {
 
     useEffect(() => {
 
-        fetch(`http://localhost:8000/rumus/getOne/${router.query.id}`)
+        fetch(`http://13.229.227.189:8000/rumus/getOne/${router.query.id}`)
         .then((res) => res.json())
         .then((val) => {
           setData(val.data)
 
-          fetch(`http://localhost:8000/sct/subByCategId/${val.data.category_id}`)
+          fetch(`http://13.229.227.189:8000/sct/subByCategId/${val.data.category_id}`)
           .then((res) => res.json())
           .then((data) => {
             setSubList(data.data)
@@ -106,7 +106,7 @@ export default function EditRumusByAdmin() {
             
             console.log(router.query.id)
 
-            const result = await axios.get(`http://localhost:8000/rumus/getOne/${router.query.id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/rumus/getOne/${router.query.id}`)
 
             setTitle(result.data.data.title)
             setKategori(result.data.data.category_id)
@@ -134,7 +134,7 @@ export default function EditRumusByAdmin() {
 
     
                 const id = document.getElementById('ct').value
-                const respone = await axios.get(`http://localhost:8000/sct/subByCategId/${id}`)
+                const respone = await axios.get(`http://13.229.227.189:8000/sct/subByCategId/${id}`)
                 setSubList(respone.data.data)
 
                 // const result = await axios.get(`http://localhost:8000/rumus/categ/${id}`)
@@ -173,7 +173,7 @@ export default function EditRumusByAdmin() {
         // console.log(formData.values())
         try{
                 
-            await axios.post(`http://localhost:8000/rumus/editRumus/${router.query.id}` ,formData,{
+            await axios.post(`http://13.229.227.189:8000/rumus/editRumus/${router.query.id}` ,formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data',
                   },

@@ -41,7 +41,7 @@ export default function EditUsers() {
             // console.log(typeof router.query.id)
             const id_profile = parseInt(router.query.id)
 
-            const result = await axios.get(`http://localhost:8000/user/${id_profile}`)
+            const result = await axios.get(`http://13.229.227.189:8000/user/${id_profile}`)
             SetIdUser(id_profile)
             SetImg(result.data.data.img_profile)
             SetEmail(result.data.data.email)
@@ -66,7 +66,7 @@ export default function EditUsers() {
       
         try {
             // const id = document.getElementById('sub').value
-            const result = await axios.get(`http://localhost:8000/occup/allOccup`)
+            const result = await axios.get(`http://13.229.227.189:8000/occup/allOccup`)
             // console.log('Occupations:', result.data.data)
             setData(result.data.data)
 
@@ -81,7 +81,7 @@ export default function EditUsers() {
       
         try {
             // const id = document.getElementById('sub').value
-            const result = await axios.get(`http://localhost:8000/role/allRole`)
+            const result = await axios.get(`http://13.229.227.189:8000/role/allRole`)
             // console.log('Occupations:', result.data.data)
             setDataRole(result.data.data)
 
@@ -122,7 +122,7 @@ export default function EditUsers() {
      
         try {
            
-            const result = await axios.post(`http://localhost:8000/user/editbyAdmin/${idUser}`, formData, {
+            const result = await axios.post(`http://13.229.227.189:8000/user/editbyAdmin/${idUser}`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                    

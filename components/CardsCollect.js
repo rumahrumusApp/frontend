@@ -13,7 +13,7 @@ export default function CardCollect(data) {
     if( btnStar == '/startyellow.png'){
         try {
                 if(confirm("Hapus rumus ini?") == true){
-                const result = await axios.delete(`http://localhost:8000/collect/delCollect/${id}`)
+                const result = await axios.delete(`http://13.229.227.189:8000/collect/delCollect/${id}`)
                 console.log("berhasil dihapus")
             
                 setbtnIconStar('/starwhite.png')

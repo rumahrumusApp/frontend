@@ -22,7 +22,7 @@ export default function DataRumus() {
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`http://localhost:8000/rumus/allrumus`)
+            const result = await axios.get(`http://13.229.227.189:8000/rumus/allrumus`)
             console.log(result.data.data)
             setData(result.data.data)
             
@@ -39,7 +39,7 @@ export default function DataRumus() {
         try {
           
             if(confirm("Hapus rumus ini?") == true){
-            const result = await axios.delete(`http://localhost:8000/rumus/delRumus/${id}`)
+            const result = await axios.delete(`http://13.229.227.189:8000/rumus/delRumus/${id}`)
             console.log("berhasil dihapus")
     
             window.location.reload()
