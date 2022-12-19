@@ -61,11 +61,11 @@ export default function Home() {
 
             const id = document.getElementById('ct').value
 
-            const result = await axios.get(`http://13.229.227.189:8000/rumus/categ/${idCat}`)
+            const result = await axios.get(`http://13.229.227.189:8000/rumus/categ/${id}`)
             //  setSubList(data.data)
             setRumus(result.data.data)
 
-            const respone = await axios.get(`http://13.229.227.189:8000/sct/subByCategId/${idCat}`)
+            const respone = await axios.get(`http://13.229.227.189:8000/sct/subByCategId/${id}`)
             setSubList(respone.data.data)
 
             console.log('Rumus', rumus)
