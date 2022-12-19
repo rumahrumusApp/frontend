@@ -4,6 +4,8 @@ import Link from "next/link"
 import {useEffect, useState} from 'react'
 import axios from 'axios' 
 import { useRouter } from 'next/router'
+import Footer from '../components/Footer'
+
 
 export default function AccRumus() {
     const [rumus, setDataRumus] = useState([])
@@ -68,6 +70,7 @@ export default function AccRumus() {
     
             </div>
             </div>
+            <Footer></Footer>
         </>
     )
 }

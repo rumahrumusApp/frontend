@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Button } from "react-bootstrap"
 import { useRouter } from 'next/router'
 import Navbar from "../../../components/Navbar"
+import Footer from '../../../components/Footer'
 
 export default function DataRumus() {
 
@@ -77,7 +78,7 @@ export default function DataRumus() {
             </tbody>
         </table>
     </div>
-
+        <Footer></Footer>
         </>
     )
 

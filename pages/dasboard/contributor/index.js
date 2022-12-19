@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Button } from "react-bootstrap"
 import { useRouter } from 'next/router'
 import Navbarsign from '../../../components/Navbar'
+import Footer from '../../../components/Footer'
 
 
 
@@ -85,6 +86,7 @@ export default function UsersPage() {
                 </tbody>
             </table>
         </div>
+        <Footer></Footer>
         </>
     )
 }

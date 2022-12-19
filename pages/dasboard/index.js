@@ -3,6 +3,7 @@ import style from '../../styles/DasboardCard.module.css'
 import {useState} from 'react'
 import axios from 'axios' 
 import Link from "next/link";
+import Footer from '../../components/Footer'
 
 export default function Admin(){
  return(
@@ -43,6 +44,7 @@ export default function Admin(){
                 </div>
             </div>
         </div>
+    <Footer></Footer>
     </>
  )
 

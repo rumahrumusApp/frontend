@@ -3,6 +3,7 @@ import Navbarsign from '../components/Navbar'
 import KontenRumusSaya from "../components/KontenRumusSaya"
 import {useState} from 'react'
 import Link from "next/link";
+import Footer from '../components/Footer'
 
 
 export default function RumusSaya(){
@@ -53,9 +54,10 @@ export default function RumusSaya(){
         </div>
 
         </div>
-
+        <Footer></Footer>
         {/* </div> */}
         </>
+       
     )
     
 }

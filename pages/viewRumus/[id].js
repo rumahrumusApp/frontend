@@ -8,6 +8,7 @@ import axios from 'axios'
 import Link from "next/link";
 import { SettingsIcon, StarIcon } from '@chakra-ui/icons'
 import { Button } from "react-bootstrap"
+import Footer from '../../components/Footer'
 
 
 export default function Viewrumus() {
@@ -169,6 +170,7 @@ const getRumusById = async () => {
                     
             </div>
         </div>
+        <Footer></Footer>
         </>
     )
 }

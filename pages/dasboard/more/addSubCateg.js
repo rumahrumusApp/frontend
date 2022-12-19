@@ -4,6 +4,7 @@ import axios from "axios";
 import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Link from "next/link"
+import Footer from '../../../components/Footer' 
 
 export default function AddSubPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
@@ -86,6 +87,7 @@ export default function AddSubPage() {
 
             </form>
         </div>
+        <Footer></Footer>
         </>
     )
 }

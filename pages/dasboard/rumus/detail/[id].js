@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Button } from "react-bootstrap"
 import { useRouter } from 'next/router'
 import Navbar from '../../../../components/Navbar'
+import Footer from '../../../../components/Footer'
 
 export default function RumusPage() {
 
@@ -86,6 +87,7 @@ export default function RumusPage() {
 
             </div>
         </div>
+            <Footer></Footer>
         </>
     )
 

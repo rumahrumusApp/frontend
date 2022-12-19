@@ -1,0 +1,25 @@
+.Container {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFC23C;
+    color: rgb(211, 85, 39);
+    /* text-align: center; */
+    /* height: 30px; */
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .Container .creditText{
+    display: flex;
+    justify-content: center;
+    /* margin: 0px 5px; */
+    padding: 10px;
+  }
+
+  .Container p {
+    margin: 0px 2px; 
+    font-weight: 800;
+    font-size: 13px;
+    
+  }

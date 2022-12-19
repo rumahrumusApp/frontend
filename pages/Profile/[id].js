@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import {useEffect,useState} from 'react';
 import axios from "axios";
 import Link from "next/link"
+import Footer from '../../components/Footer'
 
 export default function ViewProfil() {
 
@@ -98,6 +99,7 @@ export default function ViewProfil() {
            
             </form>
         </div>
+        <Footer></Footer>
         </>
     )
     

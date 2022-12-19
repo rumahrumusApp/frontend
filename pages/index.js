@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar'
 import Cards from '../components/Card'
+import Footer from '../components/Footer'
 
 import {useState, useEffect} from 'react'
 import axios from 'axios' 
@@ -49,7 +50,7 @@ export default function Home() {
     try {
       e.preventDefault()
 
-      if (id === 0) {
+      if (idCat === 0) {
                 
               const respone = await axios.get(`http://13.229.227.189:8000/rumus/all`)
               setRumus(respone.data.data)
@@ -59,12 +60,14 @@ export default function Home() {
       } else {
 
             const id = document.getElementById('ct').value
-            const respone = await axios.get(`http://13.229.227.189:8000/sct/subByCategId/${id}`)
-            setSubList(respone.data.data)
 
-            const result = await axios.get(`http://13.229.227.189:8000/rumus/categ/${id}`)
+            const result = await axios.get(`http://13.229.227.189:8000/rumus/categ/${idCat}`)
             //  setSubList(data.data)
             setRumus(result.data.data)
+
+            const respone = await axios.get(`http://13.229.227.189:8000/sct/subByCategId/${idCat}`)
+            setSubList(respone.data.data)
+
             console.log('Rumus', rumus)
        
     
@@ -107,7 +110,7 @@ export default function Home() {
 
 
   return (
-    
+    <>
     <div className={styles.container}>
       <Head>
         <title>RumahRumusApp</title>
@@ -170,9 +173,11 @@ export default function Home() {
         </div> 
       </main>
       
-      <footer className={styles.footer}>
-      </footer>
+      {/* <footer className={styles.footer}>
+      </footer> */}
+     <Footer></Footer>
     </div>
+    </>
   )
 }
 

@@ -7,6 +7,7 @@ import { Icon } from 'react-icons-kit'
 import {eye} from 'react-icons-kit/feather/eye'
 import {eyeOff} from 'react-icons-kit/feather/eyeOff'
 import { ToastContainer, toast } from "react-toastify";
+import Footer from '../components/Footer'
 import "react-toastify/dist/ReactToastify.css";
 
 
@@ -113,6 +114,7 @@ export default function Signin() {
             </form>
 
         </div>
+        <Footer></Footer>
         
         </>
     )

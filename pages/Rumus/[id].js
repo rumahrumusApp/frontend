@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 import axios from 'axios' 
 import { useRouter } from 'next/router'
 import Link from "next/link";
+import Footer from '../../components/Footer'
 
 export default function Detailrumus() {
 
@@ -108,6 +109,7 @@ const getRumusById = async () => {
                     
             </div>
         </div>
+        <Footer></Footer>
         </>
     )
 }

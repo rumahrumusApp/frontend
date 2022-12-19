@@ -4,6 +4,7 @@ import axios from "axios";
 import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Link from "next/link"
+import Footer from '../../../components/Footer'
 
 export default function AddStatusPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
@@ -56,6 +57,7 @@ export default function AddStatusPage() {
 
             </form>
         </div>
+        <Footer></Footer>
         </>
     )
 }

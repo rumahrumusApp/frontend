@@ -7,6 +7,7 @@ import Link from "next/link"
 import { Icon } from 'react-icons-kit'
 import {eye} from 'react-icons-kit/feather/eye'
 import {eyeOff} from 'react-icons-kit/feather/eyeOff'
+import Footer from '../../../components/Footer'
 
 export default function ChangePassword(){
 const router = useRouter()
@@ -153,6 +154,7 @@ const handleViewPassOld=()=>{
 
             </form>
         </div>
+        <Footer></Footer>
         </>
     )
 }

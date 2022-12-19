@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import {useEffect,useState} from 'react';
 import axios from "axios";
 import Link from "next/link"
+import Footer from '../../../components/Footer'
 
 export default function Profil() {
 
@@ -170,6 +171,7 @@ export default function Profil() {
             </div>
             </form>
         </div>
+        <Footer></Footer>
         </>
     )
     

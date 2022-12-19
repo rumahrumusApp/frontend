@@ -3,6 +3,7 @@ import Navbarsign from '../../../components/Navbar'
 import KontenMoreControllers from "../../../components/KontenMoreControllers"
 import {useState} from 'react'
 import Link from "next/link";
+import Footer from '../../../components/Footer'
 
 export default function MoreControllers(){
     const [hover, setHover] = useState([style.bgOrange, style.bgNone])
@@ -79,6 +80,7 @@ export default function MoreControllers(){
         </div>
 
         {/* </div> */}
+        <Footer></Footer>
         </>
     )
     

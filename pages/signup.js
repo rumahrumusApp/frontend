@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { Icon } from 'react-icons-kit'
 import {eye} from 'react-icons-kit/feather/eye'
 import {eyeOff} from 'react-icons-kit/feather/eyeOff'
+import Footer from '../components/Footer'
 
 export default function Signup() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
@@ -146,6 +147,7 @@ export default function Signup() {
                 </div>
             </form>
         </div>
+        <Footer></Footer>
         </>
     )
 }

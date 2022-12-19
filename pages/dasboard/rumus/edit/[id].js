@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { useRouter } from 'next/router'
 import Link from "next/link";
+import Footer from '../../../../components/Footer'
 
 
 
@@ -315,6 +316,7 @@ export default function EditRumusByAdmin() {
                 </form>
               
             </div>
+            <Footer></Footer>
         </>
     )
     
