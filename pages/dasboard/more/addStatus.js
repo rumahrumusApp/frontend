@@ -16,7 +16,7 @@ export default function AddStatusPage() {
         e.preventDefault()
 
         try {
-            const data = await axios.post("http://13.229.227.189:8000/status/createStatus", {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/status/createStatus`, {
                 name: document.getElementById('status').value,
                 order: parseInt(document.getElementById('order').value),
                     

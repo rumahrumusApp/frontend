@@ -23,7 +23,7 @@ export default function EditStatusPage() {
     
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/status/statusById/${router.query.id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/status/statusById/${router.query.id}`)
             console.log(result.data.data[0])
             setData(result.data.data[0].id) 
             setName(result.data.data[0].name)
@@ -44,7 +44,7 @@ export default function EditStatusPage() {
        
 
         try {
-            const data = await axios.post(`http://13.229.227.189:8000/status/editStatus/${router.query.id}`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/status/editStatus/${router.query.id}`, {
                 name: document.getElementById('status').value,
                 order: parseInt(document.getElementById('order').value),
                     

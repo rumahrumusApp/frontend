@@ -16,7 +16,7 @@ export default function AddOccupPage() {
         e.preventDefault()
 
         try {
-            const data = await axios.post("http://13.229.227.189:8000/role/createRole", {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/role/createRole`, {
                 name: document.getElementById('occup').value,
                 order: parseInt(document.getElementById('order').value),
                     

@@ -23,7 +23,7 @@ export default function EditCatPage() {
     
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/ct/categById/${router.query.id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/ct/categById/${router.query.id}`)
             console.log(result.data.data[0])
             setData(result.data.data[0].id) 
             setNameCat(result.data.data[0].name)
@@ -44,7 +44,7 @@ export default function EditCatPage() {
        
 
         try {
-            const data = await axios.post(`http://13.229.227.189:8000/ct/editCateg/${router.query.id}`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/ct/editCateg/${router.query.id}`, {
                 name: document.getElementById('kategori').value,
                 order: parseInt(document.getElementById('order').value),
                     

@@ -25,7 +25,7 @@ export default function CollectUserPage() {
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/collect/collectById/${router.query.id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/collect/collectById/${router.query.id}`)
             console.log(result.data.data)
             setData(result.data.data)
             
@@ -40,7 +40,7 @@ export default function CollectUserPage() {
         const id = data.rumus.id
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/rumus/getOne//${id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/getOne//${id}`)
             console.log(result.data.data)
             setData(result.data.data)
             
@@ -55,7 +55,7 @@ export default function CollectUserPage() {
         try {
             // e.preventDefault()
             if(confirm("Hapus rumus ini?") == true){
-            const result = await axios.delete(`http://13.229.227.189:8000/user/delUser/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/user/delUser/${id}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 

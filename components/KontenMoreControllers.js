@@ -60,7 +60,7 @@ export default function KontenMoreControllers(page){
     const handleDataCat = async () => {
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/ct/allCateg`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/ct/allCateg`)
             console.log(result.data.data)
             setDataCat(result.data.data)
             setCategId(result.data.data.id)
@@ -74,7 +74,7 @@ export default function KontenMoreControllers(page){
     const handleDataOccup = async () => {
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/occup/allOccup`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/occup/allOccup`)
             console.log(result.data.data)
             setDataOccup(result.data.data)
             
@@ -87,7 +87,7 @@ export default function KontenMoreControllers(page){
     const handleDataStatus = async () => {
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/status/allStatus`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/status/allStatus`)
             console.log(result.data.data)
             setDataStatus(result.data.data)
             
@@ -100,7 +100,7 @@ export default function KontenMoreControllers(page){
     const handleDataRole = async () => {
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/role/allRole`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/role/allRole`)
             console.log(result.data.data)
             setDataRole(result.data.data)
             
@@ -113,7 +113,7 @@ export default function KontenMoreControllers(page){
     const handleDataSubCat = async () => {
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/sct/allSubCateg`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/sct/allSubCateg`)
             console.log(result.data.data)
             setDatasubcat(result.data.data)
             
@@ -136,7 +136,7 @@ export default function KontenMoreControllers(page){
 
                 const id = document.getElementById('cat').value
 
-                const result = await axios.get(`http://13.229.227.189:8000/sct/subByCategId/${id}`)
+                const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/sct/subByCategId/${id}`)
                 // setDatasubcat(result.data.data[0])
                 console.log(result.data.data)
             
@@ -158,7 +158,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`http://13.229.227.189:8000/ct/delCateg/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/ct/delCateg/${id}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 
@@ -179,7 +179,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`http://13.229.227.189:8000/sct/delSubCateg/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/sct/delSubCateg/${id}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 
@@ -199,7 +199,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`http://13.229.227.189:8000//role/delRole/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}//role/delRole/${id}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 
@@ -220,7 +220,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`http://13.229.227.189:8000/occup/delOccupt/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/occup/delOccupt/${id}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 
@@ -241,7 +241,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`http://13.229.227.189:8000/status/delStatus/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/status/delStatus/${id}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 

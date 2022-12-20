@@ -20,7 +20,7 @@ export default function AddUser() {
     const [data, setData] = useState([])
 
     useEffect(()=>{
-        fetch(`http://13.229.227.189:8000/occup/allOccup`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/occup/allOccup`)
         .then((res) => res.json())
         .then((data) => {
             setData(data.data)
@@ -63,7 +63,7 @@ export default function AddUser() {
         e.preventDefault()
         console.log(username)
         try {
-            const data = await axios.post("http://13.229.227.189:8000/user/signup", {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/signup`, {
                 username: document.getElementById('username').value,
                 fullname: document.getElementById('fullname').value,
                 occupation_id: parseInt(document.getElementById('sub').value),
@@ -93,7 +93,7 @@ export default function AddUser() {
 
         try {
             const id = document.getElementById('sub').value
-            const result = await axios.get(`http://13.229.227.189:8000/occup/allOccup`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/occup/allOccup`)
             console.log(result.data.data)
             setData(result.data.data)
 

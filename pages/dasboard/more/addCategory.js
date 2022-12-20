@@ -16,7 +16,7 @@ export default function AddCategPage() {
         e.preventDefault()
 
         try {
-            const data = await axios.post("http://13.229.227.189:8000/ct/createCateg", {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/ct/createCateg`, {
                 name: document.getElementById('kategori').value,
                 order: parseInt(document.getElementById('order').value),
                     

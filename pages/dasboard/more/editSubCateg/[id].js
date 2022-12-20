@@ -24,7 +24,7 @@ export default function EditSubPage() {
     const handleDataCat = async () => {
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/ct/allCateg`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/ct/allCateg`)
             console.log(result.data.data)
             setDataCateg(result.data.data)
             
@@ -39,7 +39,7 @@ export default function EditSubPage() {
     
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/sct/subById/${router.query.id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/sct/subById/${router.query.id}`)
             console.log(result.data.data[0])
             setNameSubCat(result.data.data[0].name)
             setCat(result.data.data[0].category_id)
@@ -60,7 +60,7 @@ export default function EditSubPage() {
        
 
         try {
-            const data = await axios.post(`http://13.229.227.189:8000/sct/editSubCateg/${router.query.id}`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/sct/editSubCateg/${router.query.id}`, {
                 name: document.getElementById('kategori').value,
                 category_id: parseInt(document.getElementById('subcat').value),
                 order: parseInt(document.getElementById('order').value),

@@ -23,7 +23,7 @@ export default function AddSubPage() {
     const handleDataCat = async () => {
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/ct/allCateg`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/ct/allCateg`)
             console.log(result.data.data)
             setDataCateg(result.data.data)
             
@@ -39,7 +39,7 @@ export default function AddSubPage() {
         e.preventDefault()
 
         try {
-            const data = await axios.post("http://13.229.227.189:8000/sct/addSubCateg", {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/sct/addSubCateg`, {
                 name: document.getElementById('kategori').value,
                 category_id: parseInt(document.getElementById('cat').value),
                 order: parseInt(document.getElementById('order').value),

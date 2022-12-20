@@ -66,7 +66,7 @@ export default function CreateRumus() {
 
     
                 const id = document.getElementById('ct').value
-                const respone = await axios.get(`http://13.229.227.189:8000/sct/subByCategId/${id}`)
+                const respone = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/sct/subByCategId/${id}`)
                 setSubList(respone.data.data)
 
                 // const result = await axios.get(`http://localhost:8000/rumus/categ/${id}`)
@@ -108,7 +108,7 @@ export default function CreateRumus() {
         console.log(formData.values())
         try{
                 
-            await axios.post("http://13.229.227.189:8000/rumus/addRumus" ,formData,{
+            await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/rumus/addRumus` ,formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data',
                   },

@@ -45,7 +45,7 @@ const getRumusById = async () => {
     console.log(router.query.id);
 
     try {
-        const result = await axios.get(`http://13.229.227.189:8000/rumus/getOne/${router.query.id}`)
+        const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/getOne/${router.query.id}`)
       //  setSubList(data.data)
            console.log(result.data.data)
            setRumus(result.data.data);

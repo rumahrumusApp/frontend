@@ -23,7 +23,7 @@ export default function EditOccupPage() {
     
 
         try {
-            const result = await axios.get(`http://13.229.227.189:8000/occup/occupById/${router.query.id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/occup/occupById/${router.query.id}`)
             console.log(result.data.data[0])
             setData(result.data.data[0].id) 
             setNameoccup(result.data.data[0].name)
@@ -44,7 +44,7 @@ export default function EditOccupPage() {
        
 
         try {
-            const data = await axios.post(`http://13.229.227.189:8000/occup/editOccup/${router.query.id}`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/occup/editOccup/${router.query.id}`, {
                 name: document.getElementById('occup').value,
                 order: parseInt(document.getElementById('order').value),
                     

@@ -17,7 +17,7 @@ export default function Home() {
   const [rumus, setRumus] = useState([])
 
   useEffect(() => {
-    fetch('http://13.229.227.189:8000/rumus/all')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/rumus/all`)
       .then((res) => res.json())
       .then((data) => {
         setRumus(data.data)
@@ -32,7 +32,7 @@ export default function Home() {
 
     try {
       const id = document.getElementById('sub').value
-      const result = await axios.get(`http://13.229.227.189:8000/rumus/subcateg/${id}`)
+      const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/subcateg/${id}`)
       //  setSubList(data.data)
        setRumus(result.data.data)
        
@@ -52,7 +52,7 @@ export default function Home() {
 
       if (id === 0) {
                 
-              const respone = await axios.get(`http://13.229.227.189:8000/rumus/all`)
+              const respone = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/all`)
               setRumus(respone.data.data)
               console.log('Rumus', rumus)
 
@@ -61,11 +61,11 @@ export default function Home() {
 
             const id = document.getElementById('ct').value
 
-            const result = await axios.get(`http://13.229.227.189:8000/rumus/categ/${id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/categ/${id}`)
             //  setSubList(data.data)
             setRumus(result.data.data)
 
-            const respone = await axios.get(`http://13.229.227.189:8000/sct/subByCategId/${id}`)
+            const respone = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/sct/subByCategId/${id}`)
             setSubList(respone.data.data)
 
             console.log('Rumus', rumus)
@@ -85,7 +85,7 @@ export default function Home() {
   const handleSearching = async (e, key) => {
     try {
       e.preventDefault()
-      const response = await axios.get(`http://13.229.227.189:8000/rumus/keyword?key=${key}`)
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/keyword?key=${key}`)
       console.log('Key: ', key, ' Res: ', response.data.data)
       // setRumus(response.data.data)
 
