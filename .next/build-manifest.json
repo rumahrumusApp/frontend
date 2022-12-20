@@ -15,30 +15,10 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
-    "/Profile/Edit/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Profile/Edit/[id].js"
-    ],
     "/Profile/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/Profile/[id].js"
-    ],
-    "/Reviewrumus/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Reviewrumus/[id].js"
-    ],
-    "/Rumus/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Rumus/[id].js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
@@ -50,15 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/pengajuanrumus": [
+    "/signin": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/pengajuanrumus.js"
-    ],
-    "/rumussaya": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/rumussaya.js"
+      "static/chunks/pages/signin.js"
     ]
   },
   "ampFirstPages": []

@@ -4,6 +4,7 @@ import axios from "axios";
 import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Link from "next/link"
+import Footer from '../../../../components/Footer'
 
 export default function EditStatusPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
@@ -62,6 +63,7 @@ export default function EditStatusPage() {
 
     return(
         <>
+        <div className={style.pagewhite}>
         <Navbar></Navbar>
         <div className={style.left}>
             <Link href="/dasboard/more">Kembali</Link>
@@ -82,6 +84,8 @@ export default function EditStatusPage() {
                 <button onClick={(event) => EditStatus(event)}>Simpan</button>
 
             </form>
+            </div>
+            <Footer></Footer>
         </div>
         </>
     )
