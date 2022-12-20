@@ -4,7 +4,9 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { useRouter } from 'next/router'
 import Link from "next/link"
+import { ToastContainer, toast } from "react-toastify";
 import Footer from '../components/Footer'
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -112,14 +114,31 @@ export default function CreateRumus() {
                   },
             })
 
-            
+            toast.success("Data berhasil ditambahkan", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              }, router.push('/rumussaya'));
+        
 
         }catch(err){
             
             console.log(err);
+            toast.error("Data tidak berhasil ditambahkan", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
         }
 
-        router.push('/rumussaya')
 
     };
     
