@@ -1,5 +1,4 @@
 
- 
 .container {
         display: flex;
         justify-content: center;
@@ -12,8 +11,21 @@
         padding: 30px 20px 30px 20px;
 }
 
+
+.form{
+        background-color: white;
+        margin-left: 40px;
+        
+}
+
+.form .logo {
+        margin-right: 30px;
+        margin-bottom: 40px;
+}
+
 .form h1{
         font-size: 20px;
+
 }
 
 .form input, .form select, .form button {
@@ -26,6 +38,10 @@
         cursor: pointer;
 }
 
+.form input{
+        font-size: 13px;
+}
+
 .form select{
         font-size: 15px;
 }
@@ -34,10 +50,18 @@
         font-size: 13px;
         margin-top: 30px;
         background-color: rgb(211, 85, 39);
-        box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(151, 141, 137, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         color:white;
         font-size: Karla;
         height: 35px;
+}
+
+.form button:hover{
+
+        background-color:  rgb(246, 247, 184);
+        color:  rgb(211, 85, 39);
+        transition: 0.2s;
+
 }
 
 .form span{
@@ -52,15 +76,18 @@
 }
 
 .password span{
-        margin-top: 5px;
-        /* background-color:rgb(100, 149, 237); */
+        margin-top: 3px;
         padding: 5px;
         cursor: pointer;
         border-radius: 5px;
         width: 40px; 
-        position:absolute;
-        right: 480px;
-        
+        /* position:absolute;
+        right: 480px; */
+}
+
+.password .eyeIcon {
+        position: relative;
+        left: -40px;
 }
 
 

@@ -134,39 +134,49 @@ const getRumusById = async () => {
         <div className={style.title}>
             <h2>{rumus.title}</h2>
         </div>
-                    <p> Gambar Ilustrasi</p>
+
+        <div className={style.imageilust}>
+                <p> Gambar Ilustrasi</p>
                 <div className={style.rumus}>
                     <img src={rumus.img_ilustrasi}/>
-                    {/* <p>Picture</p> */}
                 </div>
+        </div>
 
-                    <p>Rumus</p>
+
+        <div className={style.imagerumus}>
+                <p>Rumus</p>
                 <div className={style.rumus}>
                 <img src={rumus.img_rumus}/>
-                    {/* <p>Picture</p> */}
                 </div>
+        </div>
 
+        <div className={style.conso}>
                 <p>Contoh perhitungan</p>
                 <div className={imgbtn}>
                 <div className= {style.rumus}>
                 <img src={rumus.img_contoh}/>
-                    {/* <p>Picture</p> */}
                 </div>
-                </div>
+            </div>
 
                 <div className={imgshow}>
+                <p className={style.notesSign}>Silahkan masuk atau daftar terlebih dahulu</p>
                 <div className={style.rumusguest}>
                 <Link href={'/signin'}>
                 <img src={rumus.img_contoh} className={style.imgcontoh}/>
-                <button className={style.btnSignin}>signin/signup</button>
+                <button className={style.btnSignin}>Signin/Signup disini</button>
                 </Link>
+               
                 </div>
-                </div>
+            </div>
+        </div>
 
+
+        <div className={style.notes}>
                 <p>Catatan</p>
                 <div className={style.rumus}>
                     <textarea value={rumus.catatan}></textarea>
                 </div>
+        </div>
                     
             </div>
         </div>

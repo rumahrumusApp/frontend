@@ -50,7 +50,7 @@ export default function Home() {
     try {
       e.preventDefault()
 
-      if (idCat === 0) {
+      if (id === 0) {
                 
               const respone = await axios.get(`http://13.229.227.189:8000/rumus/all`)
               setRumus(respone.data.data)
@@ -121,7 +121,7 @@ export default function Home() {
       <Navbar></Navbar>
       {/* <Navbarsign> </Navbarsign> */}
       <header className={styles.header}>
-        <h1>Selamat Datang diRumahRumus</h1>
+        <h1>Selamat Datang di RumahRumus</h1>
         <div className={styles.fitur}>
           <div>
               <img src='./cari_rumus.png'/>

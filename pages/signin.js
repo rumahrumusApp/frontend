@@ -90,19 +90,19 @@ export default function Signin() {
             <ToastContainer/>
       
             <form className={style.form}>
-                <div>
+                <div className={style.logo}>
                     <img src='./rumahrumus_logo.png'/>
                     <h1> Sign In</h1>
                     
                 </div>
 
                 <p>Username <span>*</span></p>
-                <input type = 'text' id='username'></input>
+                <input type = 'text' id='username' placeholder="masukkan username..."></input>
 
                 <p>Password <span>*</span></p>
                 <div className={style.password}>
-                <input type ={type} id='password'/>
-                <span onClick={handleViewPass}><Icon icon={icon} size={18} style={{color: 'black'}}/></span>
+                <input type ={type} id='password'placeholder="masukkan password..."/>
+                <span onClick={handleViewPass} className={style.eyeIcon}><Icon icon={icon} size={18} style={{color: 'black'}}/></span>
                 </div>
 
                 <button onClick={(event) => login(event, document.getElementById('username').value , document.getElementById('password').value)}>Sign In</button>
