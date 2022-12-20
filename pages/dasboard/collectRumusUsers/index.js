@@ -58,6 +58,7 @@ export default function CollectUsersPage() {
 
     return (
         <>
+        <div className={style.pagewhite}>
         <Navbarsign></Navbarsign>
         <div className={style.left}>
                 <Link href={`/dasboard`}>Kembali</Link>   
@@ -65,9 +66,6 @@ export default function CollectUsersPage() {
        
         <div className={style.tabel}>
             <h2>Data User</h2>
-            <div>
-            <Link href={'/dasboard/contributor/addUsers'} className={style.addBtn}>Tambah Sub Kategori</Link>
-            </div>
     
         <table>
             <tbody>
@@ -84,6 +82,7 @@ export default function CollectUsersPage() {
             </table>
         </div>
         <Footer></Footer>
+        </div>
         </>
     )
 }

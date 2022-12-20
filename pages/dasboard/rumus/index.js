@@ -54,7 +54,8 @@ export default function DataRumus() {
 
     return (
         <>
-
+          
+          <div className={style.pagewhite}>
             <Navbar></Navbar>
             <div className={style.left}>
                 <Link href={`/dasboard`}>Kembali</Link>   
@@ -79,6 +80,7 @@ export default function DataRumus() {
         </table>
     </div>
         <Footer></Footer>
+    </div>
         </>
     )
 

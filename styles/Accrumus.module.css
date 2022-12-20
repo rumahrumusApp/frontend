@@ -1,10 +1,18 @@
 .container{
     margin-right: 60px;
+    /* background-color: white; */
+    /* color: black; */
 }
 .left {
     margin-top: 30px;
     position: absolute;
     right: 60px;
+    background-color: white;
+}
+
+.tabelpage{
+    background-color: white;
+    color: black;
 }
 
 .left {       
@@ -28,7 +36,7 @@
 }
 
 .tabel table {
-    margin-top: 65px;
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -80,4 +88,6 @@
 .tabel{
     margin-left: 100px;
     margin-top: 50px;
+
+    margin-bottom: 20%;
 }

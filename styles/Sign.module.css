@@ -11,10 +11,34 @@
         padding: 30px 20px 30px 20px;
 }
 
+.pagewhite{
+        background-color: white;
+}
+
+.left a {
+        position: absolute;
+        right: 60px;
+        cursor: pointer;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        color: white;
+        margin-top: 20px;
+        /* background-color: white; */
+    }
+    
+.left{
+        background-color: white;
+    }
+
 
 .form{
         background-color: white;
         margin-left: 40px;
+        color: black;
         
 }
 
@@ -36,6 +60,8 @@
         border-radius: 10px;
         border: 1px solid rgb(211, 85, 39);
         cursor: pointer;
+        background-color: white;
+        color: black;
 }
 
 .form input{

@@ -104,6 +104,7 @@ export default function Signup() {
 
     return(
         <>
+        <div className={style.pagewhite}>
         <Navbar></Navbar>
         <div className={style.container}>
             
@@ -148,6 +149,7 @@ export default function Signup() {
             </form>
         </div>
         <Footer></Footer>
+        </div>
         </>
     )
 }

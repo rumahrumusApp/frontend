@@ -8,9 +8,9 @@ import Footer from '../../components/Footer'
 export default function Admin(){
  return(
      <>
-                <Navbar></Navbar>
-
-        
+               
+             <div className={style.pagecontainer}>
+             <Navbar></Navbar>
                 <div className={style.container}>
                 <div className={style.cards}>
                      <Link href={`dasboard/contributor`}> 
@@ -44,7 +44,9 @@ export default function Admin(){
                 </div>
             </div>
         </div>
-    <Footer></Footer>
+        <Footer></Footer>
+      </div>
+   
     </>
  )
 

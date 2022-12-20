@@ -59,6 +59,7 @@ export default function AddSubPage() {
 
     return(
         <>
+        <div className={style.pagewhite}>
         <Navbar></Navbar>
         <div className={style.left}>
             <Link href="/dasboard/more">Kembali</Link>
@@ -88,6 +89,7 @@ export default function AddSubPage() {
             </form>
         </div>
         <Footer></Footer>
+        </div>
         </>
     )
 }

@@ -85,6 +85,7 @@ export default function Signin() {
 
     return(
         <>
+        <div className={style.pagewhite}>
           <Navbar></Navbar>
             <div className={style.container}>
             <ToastContainer/>
@@ -115,6 +116,7 @@ export default function Signin() {
 
         </div>
         <Footer></Footer>
+    </div>
         
         </>
     )

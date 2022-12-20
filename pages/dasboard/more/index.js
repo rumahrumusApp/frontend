@@ -42,8 +42,9 @@ export default function MoreControllers(){
 
     return(
         <>
-        <Navbarsign></Navbarsign>
+       
         <div className={style.container}>
+        <Navbarsign></Navbarsign>
             <div className={style.rumus}> 
                 {/* <h2>Rumus Saya</h2> */}
                 <div className={style.list}>
@@ -62,25 +63,11 @@ export default function MoreControllers(){
                     <hr/> */}
             </div>
 
-        {/* <div className={style.allcards}>
-            <div className={style.cards}>
-                <a href="./viewrumus"><img src='./cari_rumus.png'/></a>
-                <p>Persegi</p>
-            </div>
-
-            <div className={style.cards}>
-                <a href="./viewrumus"><img src='./cari_rumus.png'/></a>
-                <p>Persegi Panjang</p>
-            </div> */}
-
-            {/* <DaftarRumus></DaftarRumus> */}
+        
             {content}
         </div>
-
-        </div>
-
-        {/* </div> */}
         <Footer></Footer>
+        </div>
         </>
     )
     

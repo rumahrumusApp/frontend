@@ -87,6 +87,8 @@ export default function ReviewRumus(){
 
     return(
         <>
+
+        <div className={style.pagewhite}>
             <Navbar></Navbar>
             <div className={style.left}>
                 <Link href="/pengajuanrumus">Kembali</Link>
@@ -167,6 +169,7 @@ export default function ReviewRumus(){
                 </div>
                 </div>
             <Footer></Footer>
+            </div>
         </>
     )
 }

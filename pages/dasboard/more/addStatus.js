@@ -35,6 +35,7 @@ export default function AddStatusPage() {
 
     return(
         <>
+        <div className={style.pagewhite}>
         <Navbar></Navbar>
         <div className={style.left}>
                 <Link href="/dasboard/more">Kembali</Link>
@@ -58,6 +59,7 @@ export default function AddStatusPage() {
             </form>
         </div>
         <Footer></Footer>
+        </div>
         </>
     )
 }

@@ -128,20 +128,20 @@ const handleViewPassOld=()=>{
 
                 <p>Password Lama<span>*</span></p>
                 <div className={style.password}>
-                <input type = {typeOld} value={oldpass} onChange={(e) => setoldPassword(e.target.value)} placeholder='masukkan password saat ini ...' id='oldpassword'></input>
-                <span onClick={handleViewPassOld}><Icon icon={passOld} size={18} style={{color: 'black'}}/></span>
+                <input type = {typeOld}  onChange={(e) => setoldPassword(e.target.value)} placeholder='masukkan password saat ini ...' id='oldpassword'></input>
+                <span onClick={handleViewPassOld} className={style.eyeIcon}><Icon icon={passOld} size={18} style={{color: 'black'}}/></span>
                 </div>
 
                 <p>Password Baru<span>*</span></p>
                 <div className={style.password}>
                 <input type ={typeNew}  id='newpassword' placeholder='masukkan password baru ...'></input>
-                <span onClick={handleViewPassNew}><Icon icon={passNew} size={18} style={{color: 'black'}}/></span>
+                <span onClick={handleViewPassNew} className={style.eyeIcon}><Icon icon={passNew} size={18} style={{color: 'black'}}/></span>
                 </div>
 
                 <p>Konfirmasi Password<span>*</span></p>
                 <div className={style.password}>
                 <input type ={typeConpass} id='confirmpassword' placeholder='masukkan password baru ...'></input>
-                <span onClick={handleViewConPass}><Icon icon={conpass} size={18} style={{color: 'black'}}/></span>
+                <span onClick={handleViewConPass} className={style.eyeIcon}><Icon icon={conpass} size={18} style={{color: 'black'}}/></span>
                 </div>
 
             <div className={style.btn}>

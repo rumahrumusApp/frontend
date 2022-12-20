@@ -3,6 +3,7 @@ import Navbar from "../../../components/Navbar";
 import axios from "axios";
 import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
+import Footer from '../../../components/Footer' 
 import Link from "next/link"
 
 export default function AddRolePage() {
@@ -34,6 +35,7 @@ export default function AddRolePage() {
 
     return(
         <>
+        <div className={style.pagewhite}>
         <Navbar></Navbar>
         <div className={style.left}>
                 <Link href="/dasboard/more">Kembali</Link>
@@ -55,6 +57,8 @@ export default function AddRolePage() {
                 <button onClick={(event) => AddRole(event)}>Simpan</button>
 
             </form>
+        </div>
+        <Footer></Footer>
         </div>
         </>
     )

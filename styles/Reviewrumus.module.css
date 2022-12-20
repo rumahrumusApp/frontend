@@ -4,6 +4,11 @@
     margin-left: 180px;
 }
 
+.pagewhite {
+  background-color: white;
+  color: black;
+}
+
 .title .judul {
     font-size: 23px;
     margin-top: 0px;
@@ -63,6 +68,8 @@
     width: 600px;
     padding: 20px;
     font-family: karla;
+    background-color: white;
+    color: black;
 }
 
 .container2 .rumus{
@@ -121,7 +128,10 @@
 
 .status input {
     cursor: pointer;
+   
   }
+
+
 
 .statusUpload div{
   margin: 25pX auto;

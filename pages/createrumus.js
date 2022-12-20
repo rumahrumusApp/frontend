@@ -128,9 +128,9 @@ export default function CreateRumus() {
 
     return(
         <>
-        <Navbarsign></Navbarsign>
+       
         <div className={style.container}>
-        
+        <Navbarsign></Navbarsign>
         
             <form className={style.addRumus} >
             {/* <Form onSubmit={saveRumus(onSubmit)}> */}
@@ -206,9 +206,9 @@ export default function CreateRumus() {
                 </div>
                  
                 </form>
-              
+                <Footer></Footer>
             </div>
-            <Footer></Footer>
+           
         </>
     )
     

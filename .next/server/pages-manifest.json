@@ -2,6 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/signup": "pages/signup.js",
-  "/signin": "pages/signin.js"
+  "/Rumus/[id]": "pages/Rumus/[id].js",
+  "/rumussaya": "pages/rumussaya.js",
+  "/Profile/Edit/[id]": "pages/Profile/Edit/[id].js",
+  "/Profile/[id]": "pages/Profile/[id].js",
+  "/pengajuanrumus": "pages/pengajuanrumus.js",
+  "/Reviewrumus/[id]": "pages/Reviewrumus/[id].js",
+  "/": "pages/index.js"
 }

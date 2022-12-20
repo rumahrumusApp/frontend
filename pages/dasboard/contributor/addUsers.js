@@ -7,6 +7,7 @@ import { Icon } from 'react-icons-kit'
 import {eye} from 'react-icons-kit/feather/eye'
 import {eyeOff} from 'react-icons-kit/feather/eyeOff'
 import Footer from '../../../components/Footer'
+import Link from "next/link";
 
 export default function AddUser() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
@@ -56,7 +57,7 @@ export default function AddUser() {
         }
       }
 
-    const signup = async(e) =>{
+    const addUsers = async(e) =>{
        
 
         e.preventDefault()
@@ -104,11 +105,15 @@ export default function AddUser() {
 
     return(
         <>
+        <div className={style.pagewhite}>
         <Navbar></Navbar>
+        <div className={style.left}>
+            <Link href="/dasboard">Kembali</Link>
+        </div>
         <div className={style.container}>
             
             <form className={style.form}>
-            <div>
+            <div className={style.logo}>
             {/* <img src='./rumahrumus_logo.png'/> */}
             <h1>Tambah User</h1>
             </div>
@@ -132,19 +137,21 @@ export default function AddUser() {
                 <p>Password<span>*</span></p>
                 <div className={style.password}>
                 <input type ={type} id='password' placeholder="masukkan password..."></input>
-                <span onClick={handleViewPass}><Icon icon={pass} size={18} style={{color: 'black'}}/></span>
+                <span onClick={handleViewPass} className={style.eyeIcon}><Icon icon={pass} size={18} style={{color: 'black'}}/></span>
                 </div>
 
                 <p>Konfirmasi Password<span>*</span></p>
                 <div className={style.password}>
-                <input type ={typeconpass} id='konfirmasi_pw' placeholder="masukkan p"></input>
-                <span onClick={handleViewConPass}><Icon icon={conpass} size={18} style={{color: 'black'}}/></span>
+                <input type ={typeconpass} id='konfirmasi_pw' placeholder="masukkan password kembali..."></input>
+                <span onClick={handleViewConPass} className={style.eyeIcon}><Icon icon={conpass} size={18} style={{color: 'black'}}/></span>
                 </div>
                 <button onClick={(event) => addUsers(event)}>Tambah User</button>
 
             </form>
         </div>
         <Footer></Footer>
+        </div>
+        
         </>
     )
 }

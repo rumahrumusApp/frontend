@@ -110,7 +110,7 @@ const getRumusById = async () => {
 
     return (
         <>
-     
+     <div className={style.pagewhite}>
         <Navbar></Navbar>
         <div className={style.container}>
             <div className={style.left}>
@@ -181,6 +181,7 @@ const getRumusById = async () => {
             </div>
         </div>
         <Footer></Footer>
+        </div>
         </>
     )
 }

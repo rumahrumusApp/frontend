@@ -58,6 +58,7 @@ export default function UsersPage() {
 
     return (
         <>
+        <div className={style.pagewhite}>
         <Navbarsign></Navbarsign>
         <div className={style.left}>
                 <Link href={`/dasboard`}>Kembali</Link>   
@@ -87,6 +88,8 @@ export default function UsersPage() {
             </table>
         </div>
         <Footer></Footer>
+        </div>
+        
         </>
     )
 }

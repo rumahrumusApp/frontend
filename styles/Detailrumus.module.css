@@ -5,7 +5,12 @@
     /* margin-top: 100px; */
 }
  
- .title h2{
+.pagewhite{
+ background-color: white;
+ color: black;
+}
+
+.title h2{
     font-size: 35px;
     /* position: absolute; */
     /* left: 10px;
@@ -106,6 +111,8 @@
     height: 200px;
     padding: 20px;
     font-family: karla;
+    background-color: white;
+    color: black;
 }
 
 .container2 p {

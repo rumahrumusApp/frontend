@@ -2,6 +2,8 @@
     /* background-color: aquamarine; */
     /* display: flex;
     justify-content: center; */
+    background-color: white;
+    color: black;
 }
 
 /* .titles {
@@ -16,6 +18,7 @@
    font-weight: 800;
    font-size: 28px;
 }
+
 
 .titles a{
     margin-left: 100%;
@@ -70,6 +73,8 @@
     border-radius: 7px;
     border: 1px solid rgb(211, 85, 39);
     padding: 10px;
+    background-color: white;
+    color: black;
 }  
 
 .addRumus a{

@@ -1,8 +1,15 @@
 .container {
     display: flex;
     justify-content: center;
+    /* margin: 55px auto; */
+    /* margin-left: 100px; */
+    background-color: white;
+}
+
+
+.container .detail {
     margin: 55px auto;
-    margin-left: 100px;
+    margin-left: 420px;
 }
 
 
@@ -13,6 +20,8 @@
     border-radius: 7px;
     border: 1px solid rgb(211, 85, 39);
     padding: 10px;
+    background-color: white;
+    color: black;
 }
 
 /* .detail p{
@@ -68,6 +77,7 @@
 
 .detail p{
     font-weight: bold;
+    color: black;
 }
 
 .user img{
@@ -96,6 +106,7 @@
     position: relative;
     right: 60px;
     margin: 5px 10px;
+    color: black;
    
 } 
 /* .user span{
@@ -128,8 +139,6 @@
     align-items: center;
     text-align: center;
     margin-bottom: 40px;
-
-
-    /* justify-content: left; */
+   /* justify-content: left; */
     
 }

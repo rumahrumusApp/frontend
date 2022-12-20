@@ -1,8 +1,14 @@
 .container {
     display: flex;
     justify-content: center;
+    /* margin: 55px auto;
+    margin-left: 100px; */
+    background-color: white;
+}
+
+.detail{
     margin: 55px auto;
-    margin-left: 100px;
+    margin-left: 400px;
 }
 
 
@@ -13,6 +19,9 @@
     border-radius: 7px;
     border: 1px solid rgb(211, 85, 39);
     padding: 10px;
+    /* color: black; */
+    background-color: white;
+    color: black;
 }
 
 
@@ -72,6 +81,7 @@
 
 .detail p{
     font-weight: bold;
+    color: black;
 }
 
 .user img{
@@ -101,6 +111,7 @@
     margin: 5px 5px;
     position: relative;
     right: 60px;
+    color: black;
    
 } 
 
@@ -110,6 +121,7 @@
     line-height: 0;
   
     font-weight: bold;
+    color: black;
 }
 
 

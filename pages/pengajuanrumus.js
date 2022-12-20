@@ -41,16 +41,19 @@ export default function AccRumus() {
 
     return(
         <>
+           
+            <div className={style.tabelpage}>
             <Navbar></Navbar>
+
             <div className={style.left}>
                 <Link href="/">Kembali</Link>
             </div>
+
             <div className={style.container}>
             <div className={style.tabel}>
                 <h2>Daftar Ajuan Rumus</h2>
                 <hr/>
 
-    
                 <table>
                     <tr className={style.header}>
                         {/* <td>No</td> */}
@@ -64,13 +67,17 @@ export default function AccRumus() {
 
                     {rumus.length == 0 ? <p>Loading...</p> : rumus.map((item) => <tr key={item.id}><td className={style.tdtitle}>{item.title}</td><td>{item.contributor.username}</td><td>{item.status.name}</td><td><Link href={`Reviewrumus/${item.id}`}><button className={style.btnDetail}>Lihat Detail</button></Link></td></tr>)}
 
-    
+                 
+                   
     
                 </table>
     
             </div>
             </div>
             <Footer></Footer>
+         </div>
+           
         </>
+        
     )
 }

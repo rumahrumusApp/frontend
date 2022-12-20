@@ -199,6 +199,7 @@ export default function EditRumus() {
 
     return(
         <>
+        <div className={style.pagewhite}>
         <Navbarsign></Navbarsign>
         <div className={style.container}>
         
@@ -320,6 +321,7 @@ export default function EditRumus() {
               
             </div>
             <Footer></Footer>
+            </div>
         </>
     )
     

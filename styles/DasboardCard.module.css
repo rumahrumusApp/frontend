@@ -1,6 +1,12 @@
 .container{
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
+}
+
+.pagecontainer{
+    background-color: white;
+    color: black;
 }
 
 .cards{
@@ -9,15 +15,12 @@
     padding: 10px 0px;
     width: 350px;
     height: 190px;
-    /* display: table;
-    clear: both; */
-    /* background-color: white; */
-    /* border-radius: 10px; */
     border: 0px solid rgb(194, 150, 7);
     box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 60px 5px 0px 30px;
     border-radius: 5px;
     box-sizing: border-box;
+
 
 }
 
