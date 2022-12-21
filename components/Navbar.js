@@ -53,11 +53,189 @@ export default function Navbar() {
 
                 const logout = async () => {
                     window.localStorage.clear()
-                    router.push('/')
+                    router.reload('/')
                 }
 
-            //  if( infoRole == 1) {
+             if( infoRole == 1) {
 
+                return (
+                    <div className={style.container}>
+                         <div className={style.left}>
+                             <img src='/rumahrumus_logo.png'/>
+                             <Link href={"/"}>RumahRumus</Link>
+                         </div>
+                 
+                         <div className={style.right}>
+                             <a onClick={() => logout()} className={style.btnLogout} >Logout</a>
+                         </div>
+             
+                        <nav className = {style.nav}>
+                         <img onClick={(event) => changeDisplay(event)} className={style.list} src='/listmenu_white.png'/>
+                         
+                         <Link href ={"/"}>
+                             <img href src='/home_white.png' title="Home"/>
+                             <p className={menu}>Home</p>
+                         </Link>
+             
+                         <Link href ={"/rumussaya"}>
+                             <img src='/star_white.png' title="Rumus Saya"/>
+                             <p className={menu}>Rumus Saya</p>
+                         </Link>
+             
+                         <Link href = {"/createrumus"}>
+                             <img src='/plus_white.png' title="Buat Rumus"/>
+                             <p className={menu}>Buat Rumus</p>
+                         </Link>
+
+                         {/* <Link href={'/pengajuanrumus'}>
+                             <img className={style.acc} src='/acc_white.png' title="Pengajuan Rumus"/>
+                             <p className={menu}>Pengajuan Rumus</p>
+                         </Link>
+             
+                         <hr/>
+                         <Link href={`/dasboard`}>
+                             <img className={style.admin} src='/paneladmin.png' title="Dasboard Admin"/>
+                             <p className={menu}>Dasboard Admin</p>
+                         </Link>
+
+                         <hr/> */}
+                        <hr/>
+                        <Link href={`/Profile/${infoSignin}`} >
+                             <img  className={style.user} src='/user_white.png' title="Profile"/>
+                             <p className={menu}>Profile</p>
+                        </Link>
+                         
+             
+                         <a onClick={() => logout()}>
+                             <img src='/sign-out_white.png' title="Logout Akun"/>
+                             <p className={menu}>Logout</p>
+                         </a>
+                     </nav>
+                     </div>
+             
+                        
+                 );
+            } else if (infoRole == 2) {
+
+                return (
+                    <div className={style.container}>
+                         <div className={style.left}>
+                             <img src='/rumahrumus_logo.png'/>
+                             <Link href={"/"}>RumahRumus</Link>
+                         </div>
+                 
+                         <div className={style.right}>
+                             <a onClick={() => logout()} className={style.btnLogout} >Logout</a>
+                         </div>
+             
+                        <nav className = {style.nav}>
+                         <img onClick={(event) => changeDisplay(event)} className={style.list} src='/listmenu_white.png'/>
+                         
+                         <Link href ={"/"}>
+                             <img href src='/home_white.png' title="Home"/>
+                             <p className={menu}>Home</p>
+                         </Link>
+             
+                         <Link href ={"/rumussaya"}>
+                             <img src='/star_white.png' title="Rumus Saya"/>
+                             <p className={menu}>Rumus Saya</p>
+                         </Link>
+             
+                         <Link href = {"/createrumus"}>
+                             <img src='/plus_white.png' title="Buat Rumus"/>
+                             <p className={menu}>Buat Rumus</p>
+                         </Link>
+                         <hr/>
+
+                         {/* <Link href={'/pengajuanrumus'}>
+                             <img className={style.acc} src='/acc_white.png' title="Pengajuan Rumus"/>
+                             <p className={menu}>Pengajuan Rumus</p>
+                         </Link>
+             
+                         <hr/>
+                         <Link href={`/dasboard`}>
+                             <img className={style.admin} src='/paneladmin.png' title="Dasboard Admin"/>
+                             <p className={menu}>Dasboard Admin</p>
+                         </Link>
+
+                         <hr/> */}
+
+                        <Link href={`/Profile/${infoSignin}`} >
+                             <img  className={style.user} src='/user_white.png' title="Profile"/>
+                             <p className={menu}>Profile</p>
+                        </Link>
+                         
+             
+                         <a onClick={() => logout()}>
+                             <img src='/sign-out_white.png' title="Logout Akun"/>
+                             <p className={menu}>Logout</p>
+                         </a>
+                     </nav>
+                     </div>
+             
+                        
+                 );
+
+            } else if (infoRole == 3) {
+                return (
+                    <div className={style.container}>
+                         <div className={style.left}>
+                             <img src='/rumahrumus_logo.png'/>
+                             <Link href={"/"}>RumahRumus</Link>
+                         </div>
+                 
+                         <div className={style.right}>
+                             <a onClick={() => logout()} className={style.btnLogout} >Logout</a>
+                         </div>
+             
+                        <nav className = {style.nav}>
+                         <img onClick={(event) => changeDisplay(event)} className={style.list} src='/listmenu_white.png'/>
+                         
+                         <Link href ={"/"}>
+                             <img href src='/home_white.png' title="Home"/>
+                             <p className={menu}>Home</p>
+                         </Link>
+             
+                         <Link href ={"/rumussaya"}>
+                             <img src='/star_white.png' title="Rumus Saya"/>
+                             <p className={menu}>Rumus Saya</p>
+                         </Link>
+             
+                         <Link href = {"/createrumus"}>
+                             <img src='/plus_white.png' title="Buat Rumus"/>
+                             <p className={menu}>Buat Rumus</p>
+                         </Link>
+
+                         <Link href={'/pengajuanrumus'}>
+                             <img className={style.acc} src='/acc_white.png' title="Pengajuan Rumus"/>
+                             <p className={menu}>Pengajuan Rumus</p>
+                         </Link>
+             
+                         <hr/>
+                         {/* <Link href={`/dasboard`}>
+                             <img className={style.admin} src='/paneladmin.png' title="Dasboard Admin"/>
+                             <p className={menu}>Dasboard Admin</p>
+                         </Link>
+
+                         <hr/>  */}
+
+                        <Link href={`/Profile/${infoSignin}`} >
+                             <img  className={style.user} src='/user_white.png' title="Profile"/>
+                             <p className={menu}>Profile</p>
+                        </Link>
+                         
+             
+                         <a onClick={() => logout()}>
+                             <img src='/sign-out_white.png' title="Logout Akun"/>
+                             <p className={menu}>Logout</p>
+                         </a>
+                     </nav>
+                     </div>
+             
+                        
+                 );
+            
+            } else if (infoRole == 4) {
                 return (
                     <div className={style.container}>
                          <div className={style.left}>
@@ -115,12 +293,10 @@ export default function Navbar() {
              
                         
                  );
-            //  }
+            }
 
-                 
-        
 
-        }
+ }
 
 
 

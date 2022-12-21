@@ -61,14 +61,14 @@ export default function Home() {
 
             const id = document.getElementById('ct').value
 
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/categ/${id}`)
-            //  setSubList(data.data)
-            setRumus(result.data.data)
-
             const respone = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/sct/subByCategId/${id}`)
             setSubList(respone.data.data)
 
             console.log('Rumus', rumus)
+            
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/categ/${id}`)
+            //  setSubList(data.data)
+            setRumus(result.data.data)
        
     
       // const rum = await axios.get(`http://localhost:8000/rumus/subcateg/${id}`)
