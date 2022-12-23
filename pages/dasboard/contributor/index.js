@@ -26,6 +26,7 @@ export default function UsersPage() {
             const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/getAll`)
             console.log(result.data.data)
             setData(result.data.data)
+            document.getElementById('occup').innerHTML = result.data.data.occupation.name
             
 
         } catch (error) {
@@ -67,7 +68,7 @@ export default function UsersPage() {
         <div className={style.tabel}>
             <h2>Data User</h2>
             <div>
-            <Link href={'/dasboard/contributor/addUsers'} className={style.addBtn}>Tambah Sub Kategori</Link>
+            <Link href={'/dasboard/contributor/addUsers'} className={style.addBtn}>Tambah Users</Link>
             </div>
     
         <table>

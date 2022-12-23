@@ -146,10 +146,6 @@ export default function Navbar() {
                              <p className={menu}>Buat Rumus</p>
                          </Link>
 
-                         <Link href={`/dasboard`}>
-                             <img className={style.admin} src='/paneladmin.png' title="Dasboard Admin"/>
-                             <p className={menu}>Dasboard Admin</p>
-                         </Link>
                          <hr/>
 
 

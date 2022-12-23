@@ -143,6 +143,7 @@ export default function EditUsers() {
 
     return(
         <>
+        <div className={style.pagewhite}>
         <Navbar></Navbar>
         <div className={style.container}>
         <div className={style.left}>
@@ -193,6 +194,7 @@ export default function EditUsers() {
             </form>
         </div>
         <Footer></Footer>
+        </div>
         </>
     )
 

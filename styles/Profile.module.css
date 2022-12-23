@@ -6,8 +6,7 @@
     background-color: white;
 }
 
-
-.container .detail {
+.detail {
     margin: 55px auto;
     margin-left: 420px;
 }
@@ -15,7 +14,7 @@
 
 .detail input, .detail select {
     font-size: 15px;
-    width: 80%;
+    width: 400px;
     height: 35px;
     border-radius: 7px;
     border: 1px solid rgb(211, 85, 39);
@@ -81,7 +80,7 @@
 }
 
 .user img{
-    width: 100%;
+    width: 130px;
     height:130px;
     border-radius: 70px;
     border: 3px groove rgb(211, 85, 39);
@@ -114,25 +113,11 @@
 } */
 
 
-
-.user .roles p {
-    font-size: 15px;
-    font-family: karla;
-    line-height: 0;
-  
-    font-weight: bold;
-    
+.detail .user p {
+    margin-top: 40px;
 }
 
 
-.roles p{
-    margin-top: 50px;
-    margin-right: 170px;
-    /* position: 8
-    top: 45px;
-    right: 340px;
-    margin: 5px 10px; */
-}
 .container input:disabled{
     background-color: antiquewhite;
 }

@@ -1,3 +1,8 @@
+.pagewhite {
+    background-color: white;
+    color:black;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -27,6 +32,8 @@
     border-radius: 7px;
     border: 1px solid rgb(211, 85, 39);
     padding: 10px;
+    background-color: white;
+    color: black;
 }
 
 

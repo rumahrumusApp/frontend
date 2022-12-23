@@ -128,7 +128,7 @@ export default function Profil() {
                 <div className={style.user}>
 
             {!selectedFile ? (
-                  <img src={imgProfile}/>
+                  <img src={imgProfile  == null ? '/img-not-available.png' : imgProfile}/>
             
               
             ) : (
@@ -138,14 +138,16 @@ export default function Profil() {
             )}
                 
                 <p>Hai! </p><p> {userName}</p>
-                
-                <div className={style.roles}>
-                    <p>{roles}</p>
-                    </div>
+            
+                {/* <span className={style.roles}>{roles}</> */}
                 </div>
+
 
                 <p>Foto Profil</p>
                 <input type = 'file' id='file_upload'  onChange={handleFileInputChange}></input>
+
+                <p>Role</p>
+                <input type = 'text' value={roles} id='role' disabled></input>
 
                 <p>Email</p>
                 <input type = 'email' value={email} id='email' disabled></input>

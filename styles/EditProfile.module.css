@@ -14,7 +14,7 @@
 
 .detail input, .detail select, .detail button {
     font-size: 15px;
-    width: 80%;
+    width: 500px;
     height: 40px;
     border-radius: 7px;
     border: 1px solid rgb(211, 85, 39);
@@ -26,23 +26,20 @@
 
 
 
-
 .user .addimg{
     border: 1px solid rgb(211, 85, 39);
 }
-/* .detail p{
-    font-size: 15px;
-    cursor: pointer;
-    box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
-    color:white;
-    font-family: Karla;
-    height: 38px;
-    width: 48%;
-} */
+
+
+.detail .user p {
+    margin-top: 80px;
+}
+
+
 
 .detail button{
     font-size: 12px;
-    width: 80%;
+    width: 500px;
     /* height: 25px; */
     border-radius: 5px;
     border: 1px solid rgb(211, 85, 39);
@@ -115,19 +112,23 @@
    
 } 
 
-.user .roles p {
+
+
+
+
+/* .user .roles{
     font-size: 15px;
     font-family: karla;
     line-height: 0;
-  
+    margin-top: 90px;
+    position: absolute;
+    left: -70px;
     font-weight: bold;
     color: black;
-}
+} */
 
 
-.roles {
-    margin: 5px 5px;
-}
+
 .container input:disabled{
     background-color: antiquewhite;
 }

@@ -62,18 +62,18 @@ export default function ViewProfil() {
             
             <form className={style.detail}>
                 <div className={style.user}>
-                    <img  src={imgProfile}/>
+                    <img  src={imgProfile == null ? '/img-not-available.png' : imgProfile}/>
                     <p>Hai! </p><p>{userName}</p>
                 
-                <div className={style.roles}>
-                    <p className={style.rolesname}>{role}</p>
-                    </div>
                 </div>
 
                 <div className={style.btnDiv}>
                 <Link className={style.btn} href={`Edit/${id}`}><button>Edit Profile</button></Link>
                 <Link className={style.btn} href={`Changepass/${id}`}><button>Ubah Password</button></Link>
             </div>
+
+                <p>Role</p>
+                <input type = 'text' value={role} id='role' disabled></input>
 
                 <p>Email</p>
                 <input type = 'email' value={email} id='email' disabled></input>
