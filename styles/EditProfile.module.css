@@ -125,10 +125,7 @@
 }
 
 
-.roles p{
-    position: relative;
-    top: 45px;
-    right: 325px;
+.roles {
     margin: 5px 5px;
 }
 .container input:disabled{

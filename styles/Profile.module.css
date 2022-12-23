@@ -121,14 +121,17 @@
     line-height: 0;
   
     font-weight: bold;
+    
 }
 
 
 .roles p{
-    position: relative;
+    margin-top: 50px;
+    margin-right: 170px;
+    /* position: 8
     top: 45px;
     right: 340px;
-    margin: 5px 10px;
+    margin: 5px 10px; */
 }
 .container input:disabled{
     background-color: antiquewhite;

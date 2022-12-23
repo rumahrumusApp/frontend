@@ -145,7 +145,13 @@ export default function Navbar() {
                              <img src='/plus_white.png' title="Buat Rumus"/>
                              <p className={menu}>Buat Rumus</p>
                          </Link>
+
+                         <Link href={`/dasboard`}>
+                             <img className={style.admin} src='/paneladmin.png' title="Dasboard Admin"/>
+                             <p className={menu}>Dasboard Admin</p>
+                         </Link>
                          <hr/>
+
 
                          {/* <Link href={'/pengajuanrumus'}>
                              <img className={style.acc} src='/acc_white.png' title="Pengajuan Rumus"/>

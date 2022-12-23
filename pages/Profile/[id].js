@@ -63,10 +63,10 @@ export default function ViewProfil() {
             <form className={style.detail}>
                 <div className={style.user}>
                     <img  src={imgProfile}/>
-                    <p>Hai! </p><p> {userName}</p>
+                    <p>Hai! </p><p>{userName}</p>
                 
                 <div className={style.roles}>
-                    <p>{role}</p>
+                    <p className={style.rolesname}>{role}</p>
                     </div>
                 </div>
 
