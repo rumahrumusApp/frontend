@@ -208,7 +208,7 @@ export default function EditRumus() {
             {/* <Form onSubmit={saveRumus(onSubmit)}> */}
                  <div className={style.titles}>
                     <Link href={'/'}>Kembali</Link>
-                    <h2>Buat Rumus</h2>
+                    <h2>Edit Rumus</h2>
                 </div>
 
                 <div className={style.rumus}>

@@ -30,7 +30,16 @@ export default function KontenRumusSaya(page){
         try {
             const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/myrumus/${id}`)
             console.log(result.data.data)
-            setDatarumus(result.data.data)
+            
+
+            if (result.data.status == 404) {
+                setDatarumus([])
+
+            } else {
+
+                setDatarumus(result.data.data)
+
+            }
             
 
         } catch (error) {
@@ -107,19 +116,9 @@ export default function KontenRumusSaya(page){
             <>
                 <div className={style.tabel}>
     
-                <table>
-                    <tbody>
-                    <tr className={style.header}>
-                        <td>Rumus</td>
-                        <td>Status</td>
-                        <td>Detail</td>
-                    </tr>
 
-                    {rumus.length == 0 ? <p>Loading...</p> : rumus.map((item) => <tr key={item.id}><td>{item.title}</td><td>{item.status.name}</td><td className={style.btn}><Link href={`Rumus/${item.id}`}><button className={style.btnDetail}>Lihat Detail</button></Link><Link href={'/rumussaya'}><Button onClick={(e)=> DelData(e, item.id)} className={style.btnDel}>Hapus</Button></Link></td></tr>)}
-    
+                    {rumus.length == 0 ?<div className={style.searchnotfound}><p>Belum ada rumus yang dibuat..</p><img src='./collectimg.png'/></div> :<table><tbody><tr className={style.header}><td>Rumus</td><td>Status</td><td>Detail</td></tr>{ rumus.map((item) => <tr key={item.id}><td>{item.title}</td><td>{item.status.name}</td><td className={style.btn}><Link href={`Rumus/${item.id}`}><button className={style.btnDetail}>Lihat Detail</button></Link><Link href={'/rumussaya'}><Button onClick={(e)=> DelData(e, item.id)} className={style.btnDel}>Hapus</Button></Link></td></tr>)} </tbody> </table>}
 
-                    </tbody>
-                </table>
     
             </div>
     
