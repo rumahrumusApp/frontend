@@ -53,7 +53,7 @@ export default function Navbar() {
 
                 const logout = async () => {
                     window.localStorage.clear()
-                    router.reload('/')
+                    router.push('/')
                 }
 
              if( infoRole == 1) {
