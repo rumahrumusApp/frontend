@@ -67,19 +67,19 @@ export default function CollectUsersPage() {
         <div className={style.tabel}>
             <h2>Data User</h2>
     
-        <table>
-            <tbody>
-                <tr className={style.header}>
+        {/* <table>
+            <tbody> */}
+                {/* <tr className={style.header}>
                     <td>ID</td>
                     <td>ID User</td>
                     <td>Username</td>
                     <td></td>
-                </tr>
+                </tr> */}
 
-                {data.length == 0 ? <tr><td>Loading...</td></tr> : data.map((item) => <tr key={item.id}><td className={style.tdtitle}>{item.id}</td><td className={style.tdtitle}>{item.user_id}</td><td className={style.tdtitle}>{item.users.username}</td><td><Link href={`/dasboard/collectRumusUsers/Collects/${item.user_id}`}><button>Lihat Koleksi</button></Link></td></tr>)}
+                {data.length == 0 ? <tr><td>Loading...</td></tr> :<table><tbody><tr className={style.header}><td>ID</td><td>ID User</td><td>Username</td></tr>{data.map((item) => <tr key={item.id}><td className={style.tdtitle}>{item.id}</td><td className={style.tdtitle}>{item.user_id}</td><td className={style.tdtitle}>{item.users.username}</td><td><Link href={`/dasboard/collectRumusUsers/Collects/${item.user_id}`}><button>Lihat Koleksi</button></Link></td></tr>)}</tbody></table>}
 
-                </tbody>
-            </table>
+                {/* </tbody>
+            </table> */}
         </div>
         <Footer></Footer>
         </div>

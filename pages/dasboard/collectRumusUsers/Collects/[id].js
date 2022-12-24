@@ -75,6 +75,7 @@ export default function CollectUserPage() {
 
     return (
         <>
+        <div className={style.pagewhite}>
         <Navbarsign></Navbarsign>
         <div className={style.left}>
                 <Link href={`/dasboard`}>Kembali</Link>   
@@ -97,6 +98,7 @@ export default function CollectUserPage() {
             </table>
         </div>
         <Footer></Footer>
+        </div>
         </>
     )
 }
