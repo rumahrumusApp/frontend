@@ -146,12 +146,13 @@
 .container {
    display: flex;
    justify-content: center;
-   width: 350px;
+   width: 320px;
    background-color: white;
-   margin: 90px 70px ;
+   margin: 90px 35px ;
    box-shadow: 0 0 6px 0 #adadad;
    border-radius: 25px;
-   padding: 30px 20px 30px 20px;
+   padding: 20px 0px 20px 0px;
+   margin-bottom: 200px;
 
 }
 
