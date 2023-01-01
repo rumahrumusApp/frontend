@@ -29,7 +29,8 @@
 }
 
 .title hr{
-  border: 2px solid rgba(0, 0, 0, 0.493);
+  margin-right: -220px;
+  border: 1px solid rgb(0, 0, 0);
 
 }
 
@@ -63,7 +64,7 @@
 .container2 textarea{
     box-shadow: 0 1px 2px 0 rgb(11, 10, 10);
     height: 200px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     width: 600px;
     padding: 20px;
@@ -72,20 +73,27 @@
     color: black;
 }
 
-.container2 .rumus{
+.container2 .rumus img{
     display: flex;
     align-items: left;
     text-align: left;
-    padding: 20px;
-    background-color: white;
+    /* padding: 20px; */
     width: 500px;
-    height: 260px;
+    height: 200px;
     margin: 10px 0px 50px 0px;
+}
+
+.container2 .rumus textarea{
+  width: 500px;
+  height: 200px;
+  margin-bottom: 30px;
+  color: black;
+
 }
 
 .container2 .rumus img{
     /* border: 1px solid rgb(211, 85, 39); */
-    border-radius: 10px;
+    border-radius: 5px;
     /* box-shadow: 0 1px 2px 0 rgb(238, 143, 108) */
 }
 
@@ -108,14 +116,14 @@
   }
 
 .komentar hr{
-   margin-right: 550px;  
-    border: 2px solid rgba(0, 0, 0, 0.493);
+  margin-right: 535px;
+   border: 2px solid rgba(0, 0, 0, 0.493);
 }
 
 .komentar textarea{
     box-shadow: 0 1px 2px 0 rgb(11, 10, 10);
     height: 200px;
-    border-radius: 18px;
+    border-radius: 5px;
     border: none;
     width: 500px;
     padding: 20px;
@@ -134,7 +142,7 @@
 
 
 .statusUpload div{
-  margin: 25pX auto;
+  margin: 25px auto;
 }
 
 /* .rumus .statusUpload{
@@ -156,7 +164,7 @@
   display: inline-block;
  } 
   /* On mouse-over, add a grey background color */
-.statusUpload input ~ .checkmark {
+.statusUpload input .checkmark {
     background-color: #ccc;
 }
   
@@ -191,7 +199,7 @@
   .btnSubmit{
     cursor: pointer;
     border-radius: 5px;
-    width : 560px;
+    width : 500px;
     height: 45px;
     font-size: 15px;
     color: white;
@@ -207,4 +215,110 @@
     background-color: rgba(211, 85, 39, 0.521);
     box-shadow: 0 1px 4px 0 (211, 85, 39, 0.521);
     color: rgba(255, 255, 255, 0.664);
+  }
+
+
+  @media (max-width: 480px) {
+    .left {
+      margin-top: 20px;
+      position: absolute;
+      right: 10px;
+  }
+  
+  .left {       
+      cursor: pointer;
+      padding: 10px 20px ;
+      border-radius: 5px;
+      font-size: 12px;
+      background-color: rgb(211, 85, 39);
+      box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition: 0.5s;
+      color: white;
+  }
+
+
+    .container, .container2{
+      margin-left: 70px;
+    }
+
+    .container2 p , .statusUpload{
+      font-size: 15px;
+      font-weight: 520;
+   }
+
+    .container2 .rumus{
+      display: flex;
+      align-items: left;
+      text-align: left;
+      /* padding: 20px; */
+      width: 380px;
+      height: 190px;
+      /* margin: 10px 0px 50px 0px; */
+  }
+
+  .title .judul {
+    font-size: 18px;
+    margin-top: 0px;
+    /* position: absolute; */
+    left: 140px;
+    top: 100px;
+    /* margin-left: 0px;*/
+    font-weight: 600; 
+}
+
+.title h2{
+    font-size: 25px;
+    margin-top: 70px;
+    /* position: absolute; */
+    left: 130px;
+    top: 180px;
+   
+}
+
+.title p{
+  font-size: 15px;
+}
+
+  .container2 .rumus img {
+
+    width: 380px;
+    height: 150px;
+
+  }
+
+  .komentar textarea{
+    box-shadow: 0 1px 2px 0 rgb(11, 10, 10);
+    height: 190px;
+    border-radius: 5px;
+    border: none;
+    width: 380px;
+    padding: 20px;
+}
+  .btnSubmit{
+    cursor: pointer;
+    border-radius: 5px;
+    width : 380px;
+    height: 45px;
+    font-size: 13px;
+    color: white;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+    border: none;
+    margin: 8px 0;
+    padding: 8px 10px;
+}
+
+  .komentar hr{
+    margin-right: 10px;  
+    border: 2px solid rgba(0, 0, 0, 0.493);
+}
+
+  .title hr{
+    margin-right: -150px;
+    border: 1px solid rgb(0, 0, 0);
+
+}
+
+
   }

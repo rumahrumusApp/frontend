@@ -14,8 +14,8 @@ export default function AccRumus() {
     const [statusid, setstatus] = useState("")
 
     useEffect(() => {
-        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-        SetInfoSignin(id)
+        const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+        SetInfoSignin(t)
        
     }, []);
 

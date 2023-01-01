@@ -22,24 +22,10 @@ useEffect(()=> {
 },[]);
 
 useEffect(() => {
-    const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-    SetInfoSignin(id)
+    // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+    // SetInfoSignin(id)
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 }, []);
-
-// const changeDisplay =  (e) => {
-//     e.preventDefault()
-
-//     // setbtnIcon(<img src="/startyellow.png" className={btnIcon}/>)
-
-//     if (btnIconYellow == style.hide) {
-
-//         setbtnIcon(style.show)
-
-//     } else {
-
-//         setbtnIcon(style.hide)
-//     }
-// }
 
 
 

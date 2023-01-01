@@ -1,8 +1,5 @@
 .container {
-    /* display: flex; */
-    /* justify-content: left; */
     margin-left: 150px;
-    /* margin-top: 100px; */
 }
  
 .pagewhite{
@@ -12,18 +9,9 @@
 
 .title h2{
     font-size: 35px;
-    /* position: absolute; */
-    /* left: 10px;
-    top: 120px; */
     margin-top: 80px;
-    /* margin-left: 0px ; */
 } 
 
-
-/* .container{
-    margin-top: 60px;
-  
-} */
 
 .container h2{
     font-size: 30px;
@@ -31,16 +19,13 @@
 }
 
 .container .left {
-    /* margin-top: 40px; */
+    
     color: rgb(81, 48, 48);
     position: absolute;
     right: 60px;
-    /* width: 15%; */
 }
 
-.left .edit{
-    /* margin-left: 250%; */
-        
+.left .edit{    
     cursor: pointer;
     padding: 12px 20px ;
     border-radius: 5px;
@@ -81,7 +66,7 @@
     /* align-items: center; */
 }
 
-.container2 .rumus{
+.container2 .rumus img{
     display: flex;
     /* align-items: center;
     text-align: center; */
@@ -113,7 +98,9 @@
     font-family: karla;
     background-color: white;
     color: black;
+    margin-bottom: 30px;
 }
+
 
 .container2 p {
    font-size: 20px;
@@ -130,5 +117,65 @@
 .show{
     display: inherit;
   
+
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        margin-left: 80px;
+    }
+
+    .container2 .rumus img, .container2 textarea{
+        display: flex;
+        width: 400px;
+        height: 180px;
+        margin: 40px 10px 50px -10px;
+    }
+
+
+    .container2 p {
+        font-size: 15px;
+        font-weight: 520;
+     }
+
+     .container h2{
+        font-size: 20px;
+        margin-bottom: -20px;
+        margin-top: 60px;
+    }
+    
+    .container .left {
+    
+        color: rgb(81, 48, 48);
+        position: absolute;
+        right: 10px;
+        top: 90px;
+    }
+    
+    .left .edit{    
+        cursor: pointer;
+        padding: 10px 20px ;
+        border-radius: 5px;
+        font-size: 12px;
+        transition: 0.5s;
+        color: white;
+    }
+    
+    
+    .left .kembali{
+        /* margin-left: 250%; */
+            
+        cursor: pointer;
+        padding: 10px 20px ;
+        border-radius: 5px;
+        font-size: 12px;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        color: white;
+    }
+    
 
 }

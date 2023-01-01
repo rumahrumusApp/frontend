@@ -76,14 +76,14 @@ export default function UsersPage() {
                 <tr className={style.header}>
                     <td>Name</td>
                     <td>Username</td>
-                    <td>Email</td>
-                    <td>Pekerjaan</td>
-                    <td>Asal Institusi</td>
+                    {/* <td>Email</td> */}
+                    {/* <td>Pekerjaan</td>
+                    <td>Asal Institusi</td> */}
                     <td>Role</td>
                     <td></td>
                 </tr>
 
-                {data.length == 0 ? <tr><td>Loading...</td></tr> : data.map((item) => <tr key={item.id}><td className={style.tdtitle}>{item.fullname}</td><td className={style.tdtitle}>{item.username}</td><td className={style.tdtitle}>{item.email}</td><td className={style.tdtitle}>{item.occupation.name}</td><td className={style.tdtitle}>{item.institusi_name}</td><td className={style.tdtitle}>{item.roles.name}</td><td><Link href={`/dasboard/contributor/edit/${item.id}`}><img src='/user-profile.png' /></Link><Link href={`/dasboard/contributor`}><img src='/icon-delete.png' onClick={(e)=> DelData(e, item.id)} /></Link></td></tr>)}
+                {data.length == 0 ? <tr><td>Loading...</td></tr> : data.map((item) => <tr key={item.id}><td className={style.tdtitle}>{item.fullname}</td><td className={style.tdtitle}>{item.username}</td><td className={style.tdtitle}>{item.roles.name}</td><td><Link href={`/dasboard/contributor/edit/${item.id}`}><img src='/user-profile.png' /></Link><Link href={`/dasboard/contributor`}><img src='/icon-delete.png' onClick={(e)=> DelData(e, item.id)} /></Link></td></tr>)}
 
                 </tbody>
             </table>

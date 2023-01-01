@@ -75,6 +75,7 @@
     margin-left: 110px;
     margin-right: 70px;
     padding: 40px auto;
+    margin-bottom: 100%;
     /* background-color: white; */
     
 }
@@ -107,5 +108,74 @@
     transition: 0.5s;
     color: white;
     border: none;
+
+}
+
+
+@media (max-width: 480px) {
+
+    .left a {
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 12px;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        color: white;
+        margin-top: 20px;
+        /* background-color: white; */
+    }
+
+
+    .tabel{
+        margin-top: 60px;
+        margin-left: 65px;
+        margin-right: 10px;
+        padding: 0px auto;
+        /* background-color: white; */
+        
+    }
+
+    /* .tabel table {
+        max-width: 100%;
+        background-color: aqua;
+    } */
+
+
+    .tabel .header{
+        font-weight: 800;
+        font-size: 15px;
+    }
+    
+
+    .tabel .addBtn {
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    .tabel .tdtitle{
+        text-align: left;
+        font-size: 11.5px;
+        padding: 5px;
+        margin: 0px 10px;
+    }
+
+    .tabel img {
+        width: 27px;
+        height: 27px;
+        padding: 5px;
+        cursor: pointer;
+        margin: 0px 0px;
+    }
+
+   
 
 }

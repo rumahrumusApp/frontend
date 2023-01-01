@@ -31,8 +31,9 @@ export default function EditRumus() {
     const [selectedFileCont, setSelectedFileCont] = useState(false);
 
 
-  const [CatList, setCatList] = useState([])
+    const [CatList, setCatList] = useState([])
     const [subList, setSubList] = useState([])
+    const [infoUser, SetU] = useState("")
 
     useEffect(() => {
 
@@ -52,6 +53,21 @@ export default function EditRumus() {
 
 
     useEffect(() => {
+      const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+      if (!t) {
+        router.push('/')
+        } else {
+                 fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/info?token=${window.localStorage.getItem('t')}`)
+                .then((res) => res.json())
+                .then((val) => {
+                    SetU({
+                        uid: val.info.userid,
+                        uname: val.info.username,
+                        role: val.info.roleuser,
+                        img: val.info.pictprofile
+                    })   
+                })
+           }
 
         handleData()
         handleList()
@@ -154,8 +170,9 @@ export default function EditRumus() {
 
     const editRumus = async(e, statusid) =>{
         e.preventDefault()
-        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-        SetInfoSignin(id)
+        // const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+        // SetInfoSignin(t)
+        const iduser = infoUser.uid
 
         const categ = document.getElementById('ct').value
         const subcateg = document.getElementById('sub').value
@@ -164,7 +181,7 @@ export default function EditRumus() {
         formData.append("title", title);
         formData.append("category_id", categ)
         formData.append("sub_category_id", subcateg)
-        formData.append("contributor_id", id)
+        formData.append("contributor_id", iduser)
         formData.append("img_ilustrasi", imgIlust)
         formData.append("img_rumus", imgRumus)
         formData.append("img_contoh", imgCont)

@@ -57,14 +57,15 @@ export default function Signin() {
                     progress: undefined,
                   });
             
-                window.localStorage.setItem('unm', val.data.data.id)
-                window.localStorage.setItem('rol', val.data.data.role)
+                // window.localStorage.setItem('unm', val.data.data.id)
+                // window.localStorage.setItem('rol', val.data.data.role)
+                window.localStorage.setItem('t', val.data.token)
                 console.log(val)
                 console.log(val.data.message)
+                router.push({ pathname: `/`})
 
             })
             // console.log(data);
-            router.push({ pathname: `/`})
             
 
         } catch(err) {

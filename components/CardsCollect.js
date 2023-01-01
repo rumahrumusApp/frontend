@@ -7,9 +7,11 @@ export default function CardCollect(data) {
     // console.log(data.data.rumus.title)
 
     const [btnStar, setbtnIconStar] = useState('/startyellow.png')
+    // console.log(data.data)
     
     const DelStarred = async (e, id) => {
         // e.preventDefault()
+    console.log(id)
     if( btnStar == '/startyellow.png'){
         try {
                 if(confirm("Hapus rumus ini?") == true){
@@ -34,8 +36,6 @@ export default function CardCollect(data) {
                 <img src={data.data.rumus.img_ilustrasi}/>
                 <div className={style.desc}> <p>{data.data.rumus.title}</p></div>
             </Link>
-
-        
         </div>
         </>
     )

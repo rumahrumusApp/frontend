@@ -130,3 +130,86 @@
    /* justify-content: left; */
     
 }
+
+
+@media (max-width: 480px) {
+
+    .container .detail {
+        /* margin: 30px auto; */
+        /* margin-left: 200px; */
+        margin-left: 100px;
+
+        
+    }
+
+    /* .detail{
+        background-color: aquamarine;
+    } */
+
+    .user img{
+        width: 90px;
+        height:90px;
+        border-radius: 70px;
+        border: 3px groove rgb(211, 85, 39);
+        cursor: pointer;
+        margin-left: 0px;
+        position: relative;
+        top: 40px;
+        right: 10px;
+        /* box-shadow: 0px 2px 2px 0px rgb(211, 85, 39); */
+    
+    }
+    
+    .user p{
+        /* right: 90px; */
+        font-size: 25px;
+        font-family: Fredoka One;
+        font-weight: 400;
+        line-height: 0;
+        position: relative;
+        margin-right: 0px;
+        margin: 5px 3px;
+        color: black;
+       
+    } 
+
+    .detail button{
+        font-size: 9px;
+        width: 80%;
+        /* height: 25px; */
+        border-radius: 5px;
+        border: 1px solid rgb(211, 85, 39);
+        padding: 10px;
+        margin: 0px 20px;
+       
+       
+    }
+    
+    .detail .btnDiv {
+        display: flex;
+        height: 25px;
+        
+       
+    }
+    
+    .btnDiv .btn {
+        position: relative;
+        left: 70px;
+        bottom: 30px;
+       
+    
+    }
+
+    .detail input, .detail select {
+        font-size: 13.5px;
+        width: calc(650px / 2);
+        height: 35px;
+        border-radius: 7px;
+        border: 1px solid rgb(211, 85, 39);
+        padding: 10px;
+        background-color: white;
+        color: black;
+    }
+
+
+}

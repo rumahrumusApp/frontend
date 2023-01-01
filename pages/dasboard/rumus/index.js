@@ -75,7 +75,7 @@ export default function DataRumus() {
                 <td></td>
             </tr>
 
-            {data.length == 0 ? <p>Loading...</p> : data.map((item) => <tr key={item.id}><Link href={`/dasboard/rumus/detail/${item.id}`} className={style.tdtitle}><td className={style.tdtitle}>{item.title}</td></Link><td className={style.tdtitle}>{item.status.name}</td><td className={style.tdtitle}>{item.contributor.username}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/rumus/edit/${item.id}`}><img src='/editicon.png' /></Link><Link href={`/dasboard/contributor`}><img src='/icon-delete.png' onClick={(e)=> DelData(e, item.id)} /></Link></td></tr>)}
+            {data.length == 0 ? <p>Loading...</p> : data.map((item) => <tr key={item.id}><Link href={`/dasboard/rumus/detail/${item.id}`} className={style.tdtitle}><td className={style.tdtitle}>{item.title}</td></Link><td className={style.tdtitle}>{item.status.name}</td><td className={style.tdtitle}>{item.contributor.username}</td><td className={style.tdtitle}>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/rumus/edit/${item.id}`}><img src='/editicon.png' /></Link><Link href={`/dasboard/contributor`}><img src='/icon-delete.png' onClick={(e)=> DelData(e, item.id)} /></Link></td></tr>)}
             </tbody>
         </table>
     </div>

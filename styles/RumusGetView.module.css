@@ -4,6 +4,10 @@
     margin-left: 150px;
 }
 
+.pagewhite{
+    background-color: white;
+    color: black;
+}
 
 .container .left {
     margin-top: 40px;
@@ -47,6 +51,8 @@
     height: 200px;
     padding: 20px;
     font-family: karla;
+    background-color: white;
+    color: black;
 }
 
 .container2{
@@ -90,9 +96,9 @@
 
 }
 
-.container2 .rumus, .container2 .rumusguest{
+.container2 .rumus img{
     padding: 20px;
-    background-color: white;
+    /* background-color: white; */
     width: 500px;
     height: 200px;
     margin: 20px 10px 50px 0px;
@@ -117,36 +123,54 @@
    font-weight: 520;
 }
 
-/* .btnSignin{
-    background-color: brown;
-    padding: 10px;
-    width: 100px;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    
- bottom: 25px;
 
-    margin-bottom: 300px; 
-]*/
+@media (max-width: 480px) {
+
+    .container {
+        margin-left: 70px;
+    }
+
+    .left a {
+        /* margin-left: 250%; */
+        position: absolute;
+        right: 10px;
+        top: 80px;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 12px;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        color: white;
+    }
+
+    .container2 .rumus img, .container textarea{
+        padding: 20px;
+        /* background-color: white; */
+        width: 400px;
+        height: 190px;
+        margin: 20px 10px 50px 0px;
+    }
+
+    .container2 p {
+        font-size: 15px;
+        font-weight: 520;
+     }
+
+     .container2 h2{
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .container2 .title p {
+        font-size: 15px;
+       
+    }
+
+    .container2 hr {
+        margin-right: 15px;
+    }
 
 
-.rumusguest .btnSignin{
-  position: absolute;
-  top: 170%;
-  left: 32%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgb(211, 85, 39);
-  box-shadow: 0 1px 4px rgb(211, 85, 39);
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 25%;
-  font-family: karla;
 }
-
-

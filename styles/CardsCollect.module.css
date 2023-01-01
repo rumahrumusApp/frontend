@@ -41,3 +41,33 @@
 }
 
 
+@media (max-width: 480px) {
+
+    .cards{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 90px 0px;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+}
+
+.desc {
+    font-size: 12px;
+}
+
+
+.delbtn{
+    margin-left: 100px;
+    cursor: pointer;
+  
+    
+}
+
+
+}

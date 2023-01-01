@@ -25,7 +25,7 @@ const [passOld, setPassOld]=useState(eyeOff);
 const [passNew, setPassNew]=useState(eyeOff);
 const [conpass, consetPass]=useState(eyeOff);
 
-const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
 
 const handleViewPassOld=()=>{    
@@ -74,9 +74,9 @@ const handleViewPassOld=()=>{
       
         try {
           
-            console.log(router.query.id)
+            // console.log(router.query.id)
 
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/${id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user?token=${window.localStorage.getItem('t')}`)
             console.log(result.data.data)
             setoldPassword(result.data.data.password)
             setData(result.data.data)
@@ -92,7 +92,7 @@ const handleViewPassOld=()=>{
         try{
             console.log(router.query.id)
                 
-            await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/changePass/${id}`,{
+            await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/changePass?token=${window.localStorage.getItem('t')}`,{
                
                 oldPass: document.getElementById('oldpassword').value,
                 newPass: document.getElementById('newpassword').value,
@@ -101,7 +101,7 @@ const handleViewPassOld=()=>{
     
             })
 
-            router.push(`/Profile/${id}`)
+            router.push(`/Profile/profiles`)
 
         }catch(err){
             
@@ -146,7 +146,7 @@ const handleViewPassOld=()=>{
 
             <div className={style.btn}>
                
-                 <Link href={`/Profile/${id}`}><button className={style.batal}>Batal</button></Link>
+                 <Link href={`/Profile/profiles`}><button className={style.batal}>Batal</button></Link>
 
                 <button onClick={(event) => Changespass(event)} className={style.simpan}>Ubah</button>
                 

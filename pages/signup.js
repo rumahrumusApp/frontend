@@ -72,14 +72,15 @@ export default function Signup() {
                     
             }) 
             .then((val) => {
-            
-                window.localStorage.setItem('unm', val.data.data.id)
-                window.localStorage.setItem('rol', val.data.data.role)
-                console.log(val)
-                console.log(val.data.message)
+                
+                router.push({ pathname: `/signin`})
+                // window.localStorage.setItem('unm', val.data.data.id)
+                // window.localStorage.setItem('rol', val.data.data.role)
+                // console.log(val)
+                // console.log(val.data.message)
             })
 
-            router.push({ pathname: `/`})
+            // router.push({ pathname: `/`})
 
               
             

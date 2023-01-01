@@ -21,7 +21,7 @@ export default function Profil() {
     const [previewSource, setPreviewSource] = useState("");
     const [selectedFile, setSelectedFile] = useState(false);
 
-    const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     
     useEffect(() => {
         handleData()
@@ -36,9 +36,9 @@ export default function Profil() {
       
         try {
             // e.preventDefault()
-            console.log(router.query.id)
+            // console.log(router.query.id)
 
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/profile/${id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/profile?token=${t}`)
             // console.log(result.data.data)
             SetImg(result.data.data.img_profile)
             SetEmail(result.data.data.email)
@@ -103,14 +103,14 @@ export default function Profil() {
             // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
             // console.log(router.query.id)
 
-            const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/editUser/${id}`, formData, {
+            const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/editUser?token=${window.localStorage.getItem('t')}`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                    
                   },
             });
 
-            router.push(`/Profile/${id}`);
+            router.push(`/Profile/profiles`);
                
 
         } catch (error) {
@@ -128,7 +128,7 @@ export default function Profil() {
                 <div className={style.user}>
 
             {!selectedFile ? (
-                  <img src={imgProfile  == null ? '/img-not-available.png' : imgProfile}/>
+                  <img src={imgProfile  == null ? '/user_img.png' : imgProfile}/>
             
               
             ) : (

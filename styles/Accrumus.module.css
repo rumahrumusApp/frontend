@@ -89,5 +89,60 @@
     margin-left: 100px;
     margin-top: 50px;
 
-    margin-bottom: 20%;
+    margin-bottom: 100%;
+}
+
+
+@media (max-width: 480px) {
+
+    .container{
+        margin: 0px 20px 0px -15px;
+    }
+
+    .left {       
+        cursor: pointer;
+        padding: 10px 20px ;
+        border-radius: 2px;
+        font-size: 10px;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        color: white;
+    }
+
+    .left {
+        margin-top: 30px;
+        position: absolute;
+        right: 20px;
+    }
+
+    
+    .tabel .header{
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    .tabel td {
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    .tabel h2{
+        font-size: 20px;
+    }
+
+    .tabel .btnDetail{
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 8px;
+        color: white;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        border: none;
+        margin: 8px 0;
+        padding: 5px 8px;
+    
+    }
+
 }

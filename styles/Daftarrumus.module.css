@@ -68,13 +68,14 @@
     margin-top: 50px;
 }
 
-.allcards{
+
+
+
+.container .allcards{
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto ;
-  /* grid-column-start: 1;
-  grid-column-end: 5; */
-  column-gap: 20px; 
-  row-gap: 40px;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px; 
+  row-gap: -10px;
   margin-left: 90px;
   border-radius: 10px;
 }
@@ -107,4 +108,74 @@
 
 .cards p{
     font-weight: bold;
+}
+
+
+
+@media (max-width: 480px) {
+
+    .tabel {
+        margin-left: 90px;
+        /* background-color: aquamarine; */
+        width: 90%;
+    }
+
+    .tabel .header{
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    .tabel td {
+        font-size: 12px;
+        padding: 2px;
+    }
+
+
+    .tabel .btnDetail{
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 9.5px;
+        color: white;
+        background-color:rgb(100, 149, 237);
+        box-shadow: 0 1px 2px 0 rgb(100, 149, 237);
+        transition: 0.5s;
+        border: none;
+        margin: 8px 0;
+        padding: 8px 10px;
+    
+    }
+    
+    .btnDel{
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 9.5px;
+        color: white;
+        background-color: rgb(175, 27, 17);
+        box-shadow: 0 1px 2px 0  rgb(175, 27, 17);
+        transition: 0.5s;
+        border: none;
+        /* margin: 8px 0; */
+        padding: 8px 10px;
+    
+    }
+    .searchnotfound {
+        max-width: 70%;
+      }
+      
+    .searchnotfound p{
+        width: 200px;
+        margin-top: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+      }
+      
+    .searchnotfound img{
+        opacity: 0.7;
+        width: 50%;
+        margin-bottom: 20px;
+        border-radius: 120px;
+        margin-left: 75px;
+    }   
+
 }

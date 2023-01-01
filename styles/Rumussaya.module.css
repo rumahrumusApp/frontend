@@ -100,3 +100,13 @@
     color: black;
 }
 
+
+@media (max-width: 480px) {
+    .rumus h2{
+        font-size: 25px;
+        font-weight:400px;
+        color: black;
+    }
+
+
+}

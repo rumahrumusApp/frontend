@@ -21,10 +21,13 @@ export default function ViewProfil() {
     const [infoid, SetInfoSignin] = useState()
     // const [dataOccup, setDataOccup] = useState([])
     
-    const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
     // SetInfoSignin(id)
+
+    const token = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     
     useEffect(() => {
+        // const token = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+
        
         handleData()
     }, []);
@@ -35,10 +38,10 @@ export default function ViewProfil() {
         try {
             // e.preventDefault()
             // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-            console.log(router.query.id)
+            // console.log(router.query.id)
 
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/profile/${id}`)
-            console.log(result.data.data)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/profile?token=${token}`)
+            console.log(result.data)
             SetImg(result.data.data.img_profile)
             SetEmail(result.data.data.email)
             SetUserName(result.data.data.username)
@@ -62,14 +65,14 @@ export default function ViewProfil() {
             
             <form className={style.detail}>
                 <div className={style.user}>
-                    <img  src={imgProfile == null ? '/img-not-available.png' : imgProfile}/>
+                    <img  src={imgProfile == null ? '/user_img.png' : imgProfile}/>
                     <p>Hai! </p><p>{userName}</p>
                 
                 </div>
 
                 <div className={style.btnDiv}>
-                <Link className={style.btn} href={`Edit/${id}`}><button>Edit Profile</button></Link>
-                <Link className={style.btn} href={`Changepass/${id}`}><button>Ubah Password</button></Link>
+                <Link className={style.btn} href={`Edit/edit`}><button>Edit Profile</button></Link>
+                <Link className={style.btn} href={`Changepass/change`}><button>Ubah Password</button></Link>
             </div>
 
                 <p>Role</p>

@@ -14,26 +14,45 @@ import "react-toastify/dist/ReactToastify.css";
 export default function CreateRumus() {
     const router = useRouter();
 
-    const [infoRole, SetRole] = useState()
+    // const [infoId, SetID] = useState()
+    const [infoUser, SetU] = useState("")
     const [button, setButton] = useState(style.ajukan)
 
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     useEffect(() => {
-        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-        const ro = typeof window !== 'undefined' ? window.localStorage.getItem('rol') : {}
+        // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+        // const ro = typeof window !== 'undefined' ? window.localStorage.getItem('rol') : {}
 
-        SetInfoSignin(id)
-        SetRole(ro)
+        if (!t) {
+            router.push('/')
+        } else {
+                fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/info?token=${window.localStorage.getItem('t')}`)
+                    .then((res) => res.json())
+                    .then((val) => {
+                        SetU({
+                            uid: val.info.userid,
+                            uname: val.info.username,
+                            role: val.info.roleuser,
+                            img: val.info.pictprofile
+                        }) 
 
-        if(ro == 1) {
-            setButton(style.hide)
-        }
+                        const ro = val.info.roleuser
+                        // console.log(ro)
+                        if(ro == 1) {
+                            setButton(style.hide)
+                        }
+
+                    })
+
+            }
+
+        // SetInfoSignin(id)
+        // SetRole(ro)
+        
+        
 
     }, []);
   
-
-
-    // if(infoRole == 1)
-
 
     const [title, setTitle] = useState("");
     const [kategori, setKategori] = useState("");
@@ -46,11 +65,11 @@ export default function CreateRumus() {
 
     const [subList, setSubList] = useState([])
 
-    useEffect(() => {
-        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-        SetInfoSignin(id)
+    // useEffect(() => {
+    //     const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+    //     SetInfoSignin(id)
         // handleData()
-    }, []);
+    // }, []);
 
 
     useEffect(() => {
@@ -86,6 +105,7 @@ export default function CreateRumus() {
     const AddRum = async(e, statusid) =>{
         e.preventDefault()
 
+        const iduser = infoUser.uid
         const categ = document.getElementById('ct').value
         const subcateg = document.getElementById('sub').value
 
@@ -98,7 +118,7 @@ export default function CreateRumus() {
         // });
         formData.append("category_id", categ)
         formData.append("sub_category_id", subcateg)
-        formData.append("contributor_id", infoSignin)
+        formData.append("contributor_id", iduser)
         formData.append("img_ilustrasi", imgilust)
         formData.append("img_rumus", imgRumus)
         formData.append("img_contoh", imgCont)

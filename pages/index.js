@@ -131,7 +131,7 @@ export default function Home() {
               <img src='./rumus_saya.png'/>
               <p>Dengan fitur <span>Rumus Saya</span> kamu bisa menyimpan rumus yang kamu cari</p>
           </div>
-          <div>
+          <div className={styles.buatrumus}>
               <img src='./buat_rumus.png'/>
               <p>Dengan fitur <span>Buat Rumus</span> kamu bisa membuat rumus cepat versimu</p>
           </div>

@@ -147,3 +147,92 @@
     border: 2px dashed rgb(211, 85, 39) ;
     text-align: center;
 }
+
+
+
+@media (max-width: 480px) {
+
+
+    .container .addRumus{
+        margin: 35px 10px 0px 70px;
+        /* background-color: antiquewhite; */
+       
+    }
+
+    .titles h2{
+        margin-bottom: 50px;
+        font-weight: 800;
+        font-size: 25px;
+     }
+     
+     
+     .titles a{
+         margin-left: 300px;
+         cursor: pointer;
+         padding: 10px 20px;
+         border-radius: 5px;
+         font-size: 10px;
+         background-color: rgb(211, 85, 39);
+         box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         transition: 0.5s;
+         color: white;
+     }
+    
+    .rumus{
+        display: flex;
+        padding: 10px;
+    }
+    
+    .rumus p{
+        width: 70%;
+    }
+
+
+    .addRumus input, .addRumus select{
+        font-size: 13px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid rgb(211, 85, 39);
+        padding: 10px;
+        background-color: white;
+        color: black;
+    }  
+
+    .addRumus select{
+        height: 38px;
+    }
+    
+    .addRumus a{
+        font-size: 13px;
+        cursor: pointer;
+        background-color: rgb(211, 85, 39);
+        box-shadow: 0 1px 4px 0 rgb(211, 85, 39);
+        color:white;
+        font-family: Karla;
+        height: 30px;
+        width: 48%;
+    }
+
+
+    .addRumus .btn {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        
+    }
+
+    .addRumus .btn button {
+        border: none;
+        width: 50%;
+        color: white;
+        border-radius: 4px;
+        padding: 10px 20px;
+        text-align: center;
+        margin: 0px 10px;
+    }
+
+
+}

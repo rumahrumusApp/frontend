@@ -18,6 +18,7 @@ export default function ReviewRumus(){
     const [catatan, setCatatan] = useState("");
     const [komentar, setKomentar] = useState("");
     const [status, setStatus] = useState(0);
+    const [infoUser, SetU] = useState("")
 
     // useEffect(() => {
     //     const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
@@ -28,9 +29,23 @@ export default function ReviewRumus(){
 
     useEffect(()=> {
         getRumusById();
-        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-        SetInfoSignin(id)
-        // handleReview();
+        const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+        if (!t) {
+            router.push('/')
+        } else {
+                fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/info?token=${window.localStorage.getItem('t')}`)
+                    .then((res) => res.json())
+                    .then((val) => {
+                        SetU({
+                            uid: val.info.userid,
+                            uname: val.info.username,
+                            role: val.info.roleuser,
+                            img: val.info.pictprofile
+                        }) 
+
+                    })
+
+            }
     },[]);
 
     const getRumusById = async () => {
@@ -55,21 +70,15 @@ export default function ReviewRumus(){
         // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
         // SetInfoSignin(id)
         const statusid = document.getElementsByName('radio').value
-        console.log(status)
+        const id = infoUser.uid
         const rumusid = rumus.id
 
-        // console.log(rumusid)
-
-        // const formData = new FormData();
-        // formData.append("reviewer_id", infoSignin)
-        // formData.append("komentar", komentar)
-        // formData.append("status_id", status)
     
         try {
             console.log(router.query.id);
             const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/rumus/review/${rumusid}`,{
 
-                reviewer_id: infoSignin,
+                reviewer_id: id,
                 komentar: document.getElementById('komentar').value,
                 status_id: status,
 

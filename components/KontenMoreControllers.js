@@ -20,31 +20,8 @@ export default function KontenMoreControllers(page){
 
     const [collect, setCollect] = useState([])
 
-    const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-    // SetInfoSignin(id)
-
-
-
-    // useEffect(() => {
-    //     fetch(`http://localhost:8000/sct/allSubCateg`)
-    //         .then((res) => res.json())
-    //         .then((val) => {
-    //             setDatasubcat(val.data)
-                
-    //             fetch(`http://localhost:8000/sct/subByCategId/${val.data.category_id}`)
-    //                 .then((res) => res.json())
-    //                 .then((data) => {
-    //                     setDatasubcat(data.data)
-    //                 })
-    //         })
-    //     fetch(`http://localhost:8000/ct/allcateg`)
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //     setDataCat(data.data)
-    //      })
-    
-
-    // }, [])
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+   
 
     useEffect(() => {
         handleDataSubCat()
@@ -307,7 +284,7 @@ export default function KontenMoreControllers(page){
                         <td></td>
                     </tr>
 
-                    {subcat.length == 0 ? <p>Loading...</p> : subcat.map((item) => <tr key={item.id}><td>{item.id}</td><td>{item.name}</td><td>{item.category.name}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/more/editSubCateg/${item.id}`}><img src='/editicon.png'/></Link><Link href={'/dasboard/more'}><img src ='/icon-delete.png' onClick={(e)=> DelDataSubCat(e, item.id)}/></Link></td></tr>)}
+                    {subcat.length == 0 ? <p>Loading...</p> : subcat.map((item) => <tr key={item.id} className={style.datafont}><td>{item.id}</td><td>{item.name}</td><td>{item.category.name}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/more/editSubCateg/${item.id}`}><img src='/editicon.png'/></Link><Link href={'/dasboard/more'}><img src ='/icon-delete.png' onClick={(e)=> DelDataSubCat(e, item.id)}/></Link></td></tr>)}
     
 
                     </tbody>
@@ -336,7 +313,7 @@ export default function KontenMoreControllers(page){
                         <td></td>
                     </tr>
 
-                    {role.length == 0 ? <p>Loading...</p> : role.map((item) => <tr key={item.id}><td>{item.id}</td><td>{item.name}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/more/editRole/${item.id}`}><img src='/editicon.png'/></Link><Link href={'/dasboard/more'}><img src ='/icon-delete.png' onClick={(e)=> DelDataRole(e, item.id)}/></Link></td></tr>)}
+                    {role.length == 0 ? <p>Loading...</p> : role.map((item) => <tr key={item.id} className={style.datafont}><td>{item.id}</td><td>{item.name}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/more/editRole/${item.id}`}><img src='/editicon.png'/></Link><Link href={'/dasboard/more'}><img src ='/icon-delete.png' onClick={(e)=> DelDataRole(e, item.id)}/></Link></td></tr>)}
     
 
                     </tbody>
@@ -365,7 +342,7 @@ export default function KontenMoreControllers(page){
                             <td></td>
                         </tr>
     
-                        {occup.length == 0 ? <p>Loading...</p> : occup.map((item) => <tr key={item.id}><td>{item.id}</td><td>{item.name}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/more/editOccup/${item.id}`}><img src='/editicon.png'/></Link><Link href={'/dasboard/more'}><img src ='/icon-delete.png' onClick={(e)=> DelDataOccup(e, item.id)}/></Link></td></tr>)}
+                        {occup.length == 0 ? <p>Loading...</p> : occup.map((item) => <tr key={item.id} className={style.datafont}><td>{item.id}</td><td>{item.name}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/more/editOccup/${item.id}`}><img src='/editicon.png'/></Link><Link href={'/dasboard/more'}><img src ='/icon-delete.png' onClick={(e)=> DelDataOccup(e, item.id)}/></Link></td></tr>)}
         
     
                         </tbody>
@@ -393,7 +370,7 @@ export default function KontenMoreControllers(page){
                             <td></td>
                         </tr>
     
-                        {status.length == 0 ? <p>Loading...</p> : status.map((item) => <tr key={item.id}><td>{item.id}</td><td>{item.name}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/more/editStatus/${item.id}`}><img src='/editicon.png'/></Link><Link href={'/dasboard/more'}><img src ='/icon-delete.png' onClick={(e)=> DelDataStatus(e, item.id)}/></Link></td></tr>)}
+                        {status.length == 0 ? <p>Loading...</p> : status.map((item) => <tr key={item.id} className={style.datafont}><td>{item.id}</td><td>{item.name}</td><td>{item.updatedAt.slice(0,10)}</td><td><Link href={`/dasboard/more/editStatus/${item.id}`}><img src='/editicon.png'/></Link><Link href={'/dasboard/more'}><img src ='/icon-delete.png' onClick={(e)=> DelDataStatus(e, item.id)}/></Link></td></tr>)}
         
     
                         </tbody>

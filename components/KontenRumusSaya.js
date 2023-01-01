@@ -14,7 +14,7 @@ export default function KontenRumusSaya(page){
 
     const [collect, setCollect] = useState([])
 
-    const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     // SetInfoSignin(id)
 
     useEffect(() => {
@@ -28,7 +28,7 @@ export default function KontenRumusSaya(page){
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/myrumus/${id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/myrumus?token=${t}`)
             console.log(result.data.data)
             
 
@@ -56,9 +56,19 @@ export default function KontenRumusSaya(page){
             try {
 
             // e.preventDefault()
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/collect/collectById/${id}`)
-            setCollect(result.data.data)
-            console.log(result.data.data)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/collect/collectById?token=${t}`)
+            // setCollect(result.data.data)
+            // console.log(result.data.data.id)
+
+            if (result.data.status == 404) {
+                setCollect([])
+
+            } else {
+
+                setCollect(result.data.data)
+
+            }
+            
             
             
         

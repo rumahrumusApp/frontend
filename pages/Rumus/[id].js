@@ -12,6 +12,7 @@ const router = useRouter();
 const [rumus, setRumus] = useState([])
 const [infoRole, SetRole] = useState()
 const [comentShow, setComentShow] = useState(style.viewcoment)
+const [infoUser, SetU] = useState("")
 
 
 useEffect(()=> {
@@ -20,24 +21,37 @@ useEffect(()=> {
 },[]);
 
 useEffect(()=> {
-    const ro = typeof window !== 'undefined' ? window.localStorage.getItem('rol') : {}
-    SetRole(ro)
+    // const ro = typeof window !== 'undefined' ? window.localStorage.getItem('rol') : {}
+    // SetRole(ro)
 
-    if(ro == 1) {
-        setComentShow(style.hide);
-    }
+    // if(ro == 1) {
+    //     setComentShow(style.hide);
+    // }
+
+    if (!t) {
+        router.push('/')
+    } else {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/info?token=${window.localStorage.getItem('t')}`)
+                .then((res) => res.json())
+                .then((val) => {
+                    SetU({
+                        uid: val.info.userid,
+                        uname: val.info.username,
+                        role: val.info.roleuser,
+                        img: val.info.pictprofile
+                    }) 
+
+                    const ro = val.info.roleuser
+                    // console.log(ro)
+                    if(ro == 1) {
+                        setComentShow(style.hide);
+                    }
+
+                })
+
+        }
     
 },[]);
-
-// const handleComent = async () => {
-//     const ro = typeof window !== 'undefined' ? window.localStorage.getItem('rol') : {}
-//     SetRole(ro)
-//     // console.log(ro)
-
-//     if(ro == 1) {
-//         setComentShow(style.hide);
-//     }
-// }
 
 
 const getRumusById = async () => {

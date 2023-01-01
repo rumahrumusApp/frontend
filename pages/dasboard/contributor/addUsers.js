@@ -1,4 +1,4 @@
-import style from "../../../styles/Sign.module.css"
+import style from "../../../styles/AddUserByAdmin.module.css"
 import Navbar from "../../../components/Navbar";
 import axios from "axios";
 import {useState, useEffect} from 'react'

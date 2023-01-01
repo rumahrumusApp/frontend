@@ -11,20 +11,41 @@ export default function Navbar() {
     const [infoRole, SetRole] = useState()
     const [menu, setMenu] = useState(style.hide)
     const router = useRouter()
+    const [i, setI] = useState()
 
     useEffect(() => {
-        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-        const ro = typeof window !== 'undefined' ? window.localStorage.getItem('rol') : {}
-        SetInfoSignin(id)
-        SetRole(ro)
+        // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+        // const ro = typeof window !== 'undefined' ? window.localStorage.getItem('rol') : {}
+        // SetInfoSignin(id)
+        // SetRole(ro)
+
+        const token = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+
+        if (token != undefined) {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/info?token=${token}`)
+                .then((res) => res.json())
+                .then((val) => {
+                    setI({
+                        uid: val.info.userid,
+                        uname: val.info.username,
+                        role: val.info.roleuser,
+                        img: val.info.pictprofile
+                    })
+                })
+        }
+
+        else {
+            setI(null)
+        }
+
     }, []);
 
-    if (infoSignin == null) {
+    if (i == null) {
 
                 return (
                 <div className={style.container}>
-                        <div className={style.left}>
-                            <img src='/rumahrumus_logo.png'/>
+                        <div className={style.NavLog}>
+                            <img src='/rumahrumus_logo.png' className={style.imglogo}/>
                             <Link href={'/'}>RumahRumus</Link>
                         </div>
                 
@@ -56,7 +77,7 @@ export default function Navbar() {
                     router.push('/')
                 }
 
-             if( infoRole == 1) {
+             if( i.role == 1) {
 
                 return (
                     <div className={style.container}>
@@ -100,7 +121,7 @@ export default function Navbar() {
 
                          <hr/> */}
                         <hr/>
-                        <Link href={`/Profile/${infoSignin}`} >
+                        <Link href={`/Profile/profiles`} >
                              <img  className={style.user} src='/user_white.png' title="Profile"/>
                              <p className={menu}>Profile</p>
                         </Link>
@@ -115,7 +136,7 @@ export default function Navbar() {
              
                         
                  );
-            } else if (infoRole == 2) {
+            } else if (i.role == 2) {
 
                 return (
                     <div className={style.container}>
@@ -162,7 +183,7 @@ export default function Navbar() {
 
                          <hr/> */}
 
-                        <Link href={`/Profile/${infoSignin}`} >
+                        <Link href={`/Profile/profiles`} >
                              <img  className={style.user} src='/user_white.png' title="Profile"/>
                              <p className={menu}>Profile</p>
                         </Link>
@@ -178,7 +199,7 @@ export default function Navbar() {
                         
                  );
 
-            } else if (infoRole == 3) {
+            } else if (i.role == 3) {
                 return (
                     <div className={style.container}>
                          <div className={style.left}>
@@ -221,7 +242,7 @@ export default function Navbar() {
 
                          <hr/>  */}
 
-                        <Link href={`/Profile/${infoSignin}`} >
+                        <Link href={`/Profile/profiles`} >
                              <img  className={style.user} src='/user_white.png' title="Profile"/>
                              <p className={menu}>Profile</p>
                         </Link>
@@ -237,7 +258,7 @@ export default function Navbar() {
                         
                  );
             
-            } else if (infoRole == 4) {
+            } else if (i.role == 4) {
                 return (
                     <div className={style.container}>
                          <div className={style.left}>
@@ -280,7 +301,7 @@ export default function Navbar() {
 
                          <hr/>
 
-                        <Link href={`/Profile/${infoSignin}`} >
+                        <Link href={`/Profile/profiles`} >
                              <img  className={style.user} src='/user_white.png' title="Profile"/>
                              <p className={menu}>Profile</p>
                         </Link>

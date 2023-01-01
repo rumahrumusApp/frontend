@@ -51,7 +51,7 @@ export default function MoreControllers(){
                     <hr className={style.linehr}/>
                     <Link className={hover[0]} onClick={(event) => changeDisplay(event, 0)} href={'/more'}>Kategori</Link>
                     <hr/>
-                    <Link className={hover[1]} onClick={(event) => changeDisplay(event, 1)} href={'/more'}>Sub Kategori</Link>
+                    <Link className={hover[1]} onClick={(event) => changeDisplay(event, 1)} href={'/more'}>Subkategori</Link>
                     <hr/>
                     <Link className={hover[2]} onClick={(event) => changeDisplay(event, 2)} href={'/more'}>Role</Link>
                     <hr/>

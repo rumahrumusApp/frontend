@@ -1,40 +1,73 @@
-
 .cards{
     align-items: center;
     text-align: center;
-    padding: 10px 20px;
-    width: 200px;
-    height: 200px;
-    /* background-color: white; */
-    /* border-radius: 10px; */
-    border: 2px solid rgb(194, 150, 7);
+    padding-bottom: 30px;
+    width: 260px;
+    height: 210px;
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 70px 0px;
+    margin: 90px 20px;
     border-radius: 15px;
     box-sizing: border-box;
 
 }
 
+
 .cards img{
+    margin-top: 10px;
     width: 100%;
 }
 
 .desc {
     padding: 15px;
-    color: black;
+    margin-top: 20px;
     text-align: center;
     font-weight: bold;
-    margin-top: 20px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 
+.cards .delbtn{
+    width: 20px;
+    margin-top: 20px;
+}
+
+.delbtn{
+    margin-left: 180px;
+    cursor: pointer;
+  
+    
+}
 
 
+@media (max-width: 480px) {
 
-/* .cards p{
-    margin-top: 0px;
-    text-align: left;
-    font-weight: bold;
-} */
+.cards{
+    align-items: center;
+    padding-bottom: 30px;
+    width: 170px;
+    height: 170px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 90px 0px;
+    border-radius: 15px;
+    box-sizing: border-box;
 
+}
+
+
+.desc p {
+    font-size: 12px;
+}
+
+
+.delbtn{
+    margin-left: 100px;
+    cursor: pointer;
+  
+    
+}
+
+
+}

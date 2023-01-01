@@ -40,7 +40,7 @@ export default function RumusPage() {
 
     return(
         <>
-     
+        <div className={style.pagewhite}>
         <Navbar></Navbar>
         <div className={style.container}>
             <div className={style.left}>
@@ -88,6 +88,8 @@ export default function RumusPage() {
             </div>
         </div>
             <Footer></Footer>
+
+        </div>
         </>
     )
 

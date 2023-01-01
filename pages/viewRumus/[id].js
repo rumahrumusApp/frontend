@@ -27,11 +27,13 @@ useEffect(()=> {
 },[]);
 
 useEffect(() => {
-    const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
-    SetInfoSignin(id)
+    // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+    // SetInfoSignin(id)
     // changeDisplay()
+
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     
-    if(id == null ) {
+    if(t == null ) {
         setButtonimg(style.hide);
         setBtnSave(style.hide);
         setImgView(style.show);

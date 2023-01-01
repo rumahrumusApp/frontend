@@ -2,16 +2,18 @@
     background-color: white;
     color:black
 }
+ 
+
 
 .container {
-    display: flex;
-    justify-content: left;
-    margin-left: 120px;
-}
+    /* display: flex; */
+    /* justify-content: left; */
+    margin-left: 80px;
+} 
 
 
 .container .left {
-    margin-top: 40px;
+    /* margin-top: 30px; */
     color: rgb(81, 48, 48);
     /* width: 15%; */
 }
@@ -22,6 +24,7 @@
 .left a {
     /* margin-left: 250%; */
     position: absolute;
+    top: 90px;
     right: 60px;
     cursor: pointer;
     padding: 12px 20px;
@@ -143,8 +146,8 @@
 
 .btnSignin{
     position: absolute;
-    top: 1060px;
-    left: 420px;
+    top: 1030px;
+    left: 350px;
     /* margin: 50px; */
 }
 
@@ -158,3 +161,97 @@
 }
 
 
+
+
+@media (max-width: 480px) {
+
+.container {
+    margin-left: 30px;
+    /* width: 100%; */
+
+}
+
+.container2 {
+    margin-left: 40px;
+}
+
+
+.left a {
+    /* margin-left: 250%; */
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+    color: white;
+}
+
+
+.container textarea{
+    /* box-shadow: 0 1px 2px 0 rgb(11, 10, 10); */
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: calc(620px / 2);
+    height: calc(280px/2);
+    /* padding: 20px; */
+    font-family: karla;
+}
+
+
+
+.container2 .rumus, .container2 .rumusguest {
+    max-width: 80%;
+  
+}
+.container2 .rumus img, .container2 .rumusguest img {
+    width: calc(620px / 2);
+    height: calc(280px /2);
+    
+}
+
+.rumusguest .btnSignin{
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(211, 85, 39);
+    box-shadow: 0 1px 4px rgb(211, 85, 39);
+    color: white;
+    font-size: 10px;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30%;
+    font-family: karla;
+}
+
+.btnSignin{
+    position: absolute;
+    top: 1000px;
+    left: 250px;
+    /* margin: 50px; */
+}
+
+.container2 .iconStar img{
+    width: 20px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+
+.container2 .iconStar{
+    margin-left:130px;
+
+}
+
+.iconStar img{
+    position: absolute;
+    top: 140px;
+}
+
+}

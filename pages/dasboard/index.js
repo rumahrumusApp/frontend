@@ -11,6 +11,7 @@ export default function Admin(){
                
              <div className={style.pagecontainer}>
              <Navbar></Navbar>
+                <div className={style.header}>
                 <div className={style.container}>
                 <div className={style.cards}>
                      <Link href={`dasboard/contributor`}> 
@@ -18,21 +19,29 @@ export default function Admin(){
                          <div className={style.desc}> <p>Users</p></div>
                      </Link>
                 </div>
+                </div>
+                
 
+                
+                <div className={style.container}>
                 <div className={style.cards}>
                      <Link href={`dasboard/rumus`}>
                          <img src='./rumusicon.png' className={style.delbtn}/>
                          <div className={style.desc}> <p>Rumus</p></div>
                      </Link>
                 </div>
+             </div>
+
         </div>
 
+                <div className={style.header}>
                 <div className={style.container}>
                 <div className={style.cards}>
                      <Link href={`dasboard/collectRumusUsers`}>
                          <img src='./collecticon.png' className={style.delbtn}/>
                          <div className={style.desc}> <p>Koleksi Rumus User</p></div>
                      </Link>
+                </div>
                 </div>
 
                 <div className={style.container}>
@@ -43,7 +52,7 @@ export default function Admin(){
                      </Link>
                 </div>
             </div>
-        </div>
+            </div>
         <Footer></Footer>
       </div>
    
