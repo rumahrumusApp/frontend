@@ -13,15 +13,16 @@ export default function AccRumus() {
     const router = useRouter()
     const [statusid, setstatus] = useState("")
 
-    useEffect(() => {
-        const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
-        SetInfoSignin(t)
+    // useEffect(() => {
+        
+    //     SetInfoSignin(t)
        
-    }, []);
+    // }, []);
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
     const handleData = async ()=> {
         try {
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/getdatasubmits`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/getdatasubmits?token=${t}`)
             console.log(result)
             setDataRumus(result.data.data)
             setstatus(result.data.status.name)

@@ -13,6 +13,7 @@ export default function EditSubPage() {
     const [cat, setCat] = useState(-1)
     const [namesub, setNameSubCat] = useState("")
     const [orderid, setOrderid] = useState("")
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
     useEffect(() => {
         getSubCatbyID()
@@ -60,7 +61,7 @@ export default function EditSubPage() {
        
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/sct/editSubCateg/${router.query.id}`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/sct/editSubCateg/${router.query.id}?token=${t}`, {
                 name: document.getElementById('kategori').value,
                 category_id: parseInt(document.getElementById('subcat').value),
                 order: parseInt(document.getElementById('order').value),

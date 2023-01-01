@@ -9,6 +9,7 @@ import Footer from '../../../components/Footer'
 
 export default function DataRumus() {
 
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -23,7 +24,7 @@ export default function DataRumus() {
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/allrumus`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/allrumus?token=${t}`)
             console.log(result.data.data)
             setData(result.data.data)
             

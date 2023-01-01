@@ -10,13 +10,14 @@ export default function AddOccupPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
     const router = useRouter()
 
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     const AddOccup = async(e) =>{
        
 
         e.preventDefault()
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/role/createRole`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/role/createRole?token=${t}`, {
                 name: document.getElementById('occup').value,
                 order: parseInt(document.getElementById('order').value),
                     

@@ -135,7 +135,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/ct/delCateg/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/ct/delCateg/${id}?token=${t}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 
@@ -156,7 +156,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/sct/delSubCateg/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/sct/delSubCateg/${id}?token=${t}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 
@@ -176,7 +176,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}//role/delRole/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}//role/delRole/${id}?token=${t}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 
@@ -197,7 +197,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/occup/delOccupt/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/occup/delOccupt/${id}?token=${t}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 
@@ -218,7 +218,7 @@ export default function KontenMoreControllers(page){
         try {
             // e.preventDefault()
             if(confirm("Hapus kategori ini?") == true){
-            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/status/delStatus/${id}`)
+            const result = await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/status/delStatus/${id}?token=${t}`)
             console.log("berhasil dihapus")
             // setDatarumus(result.data.data)
 

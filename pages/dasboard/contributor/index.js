@@ -12,6 +12,7 @@ import Footer from '../../../components/Footer'
 export default function UsersPage() {
 
     const [data, setData] = useState([])
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     useEffect(() => {
         // handleRumus()
         handleData()
@@ -23,7 +24,7 @@ export default function UsersPage() {
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/getAll`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/getAll?token=${t}`)
             console.log(result.data.data)
             setData(result.data.data)
             document.getElementById('occup').innerHTML = result.data.data.occupation.name

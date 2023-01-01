@@ -12,7 +12,7 @@ import Footer from '../../../../components/Footer'
 export default function CollectUserPage() {
 
     const router = useRouter()
-
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     const [data, setData] = useState([])
     useEffect(() => {
         // handleRumus()
@@ -25,7 +25,7 @@ export default function CollectUserPage() {
     const handleData = async () => {
 
         try {
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/collect/collectById/${router.query.id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/collect/collectById?token=${t}`)
             console.log(result.data.data)
             setData(result.data.data)
             

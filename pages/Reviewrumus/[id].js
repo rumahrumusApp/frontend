@@ -26,7 +26,7 @@ export default function ReviewRumus(){
        
     // }, []);
 
-
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     useEffect(()=> {
         getRumusById();
         const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
@@ -53,7 +53,7 @@ export default function ReviewRumus(){
         console.log(router.query.id);
     
         try {
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/getdatasubmitbyid/${router.query.id}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rumus/getdatasubmitbyid/${router.query.id}?token=${t}`)
 
                console.log(result.data.data)
                SetDataRumus(result.data.data);
@@ -76,7 +76,7 @@ export default function ReviewRumus(){
     
         try {
             console.log(router.query.id);
-            const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/rumus/review/${rumusid}`,{
+            const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/rumus/${rumusid}/review?token=${t}`,{
 
                 reviewer_id: id,
                 komentar: document.getElementById('komentar').value,

@@ -9,14 +9,14 @@ import Link from "next/link"
 export default function AddRolePage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
     const router = useRouter()
-
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     const AddRole = async(e) =>{
        
 
         e.preventDefault()
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/role/createRole`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/role/createRole?token=${t}`, {
                 name: document.getElementById('kategori').value,
                 order: parseInt(document.getElementById('order').value),
                     

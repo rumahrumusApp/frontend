@@ -12,6 +12,7 @@ export default function EditStatusPage() {
     const [data, setData] = useState([])
     const [name, setName] = useState("")
     const [orderid, setOrderid] = useState("")
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
     useEffect(() => {
         getStatusbyID()
@@ -44,7 +45,7 @@ export default function EditStatusPage() {
        
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/status/editStatus/${router.query.id}`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/status/editStatus/${router.query.id}?token=${t}`, {
                 name: document.getElementById('status').value,
                 order: parseInt(document.getElementById('order').value),
                     

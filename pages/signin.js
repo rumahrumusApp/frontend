@@ -103,7 +103,7 @@ export default function Signin() {
 
                 <p>Password <span>*</span></p>
                 <div className={style.password}>
-                <input type ={type} id='password'placeholder="masukkan password..."/>
+                <input type ={type} id='password' placeholder="masukkan password..."/>
                 <span onClick={handleViewPass} className={style.eyeIcon}><Icon icon={icon} size={18} style={{color: 'black'}}/></span>
                 </div>
 

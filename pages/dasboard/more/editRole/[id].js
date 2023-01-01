@@ -13,6 +13,7 @@ export default function EditRolePage() {
     const [name, setName] = useState("")
     const [orderid, setOrderid] = useState("")
 
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     useEffect(() => {
         getRolebyID()
         
@@ -44,7 +45,7 @@ export default function EditRolePage() {
        
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/role/editRole/${router.query.id}`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/role/editRole/${router.query.id}?token=${t}`, {
                 name: document.getElementById('role').value,
                 order: parseInt(document.getElementById('order').value),
                     

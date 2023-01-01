@@ -9,6 +9,7 @@ import Link from "next/link"
 export default function AddCategPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
     const router = useRouter()
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
     const AddCategories = async(e) =>{
        
@@ -16,7 +17,7 @@ export default function AddCategPage() {
         e.preventDefault()
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/ct/createCateg`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/ct/createCateg?token=${t}`, {
                 name: document.getElementById('kategori').value,
                 order: parseInt(document.getElementById('order').value),
                     

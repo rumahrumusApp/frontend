@@ -9,6 +9,7 @@ import Footer from '../../../components/Footer'
 export default function AddStatusPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
     const router = useRouter()
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
     const AddStatus = async(e) =>{
        
@@ -16,7 +17,7 @@ export default function AddStatusPage() {
         e.preventDefault()
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/status/createStatus`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/status/createStatus?token=${t}`, {
                 name: document.getElementById('status').value,
                 order: parseInt(document.getElementById('order').value),
                     

@@ -27,6 +27,7 @@ useEffect(()=> {
     // if(ro == 1) {
     //     setComentShow(style.hide);
     // }
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
     if (!t) {
         router.push('/')

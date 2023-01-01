@@ -20,6 +20,7 @@ const [imgbtn, setButtonimg] = useState(style.rumushide) //before signin
 const [imgshow, setImgView] = useState(style.rumuslihat) // after signin
 const [btnSave, setBtnSave] = useState(style.btnSaving)
 const [datacollect, setDataCollect] = useState("")
+const [infoUser, SetU] = useState("")
 
 useEffect(()=> {
     getRumusById();
@@ -32,6 +33,29 @@ useEffect(() => {
     // changeDisplay()
 
     const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+
+    if (!t) {
+        router.push('/')
+    } else {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/info?token=${window.localStorage.getItem('t')}`)
+                .then((res) => res.json())
+                .then((val) => {
+                    SetU({
+                        uid: val.info.userid,
+                        uname: val.info.username,
+                        role: val.info.roleuser,
+                        img: val.info.pictprofile
+                    }) 
+
+                    const ro = val.info.roleuser
+                    // console.log(ro)
+                    if(ro == 1) {
+                        setButton(style.hide)
+                    }
+
+                })
+
+        }
     
     if(t == null ) {
         setButtonimg(style.hide);
@@ -53,9 +77,10 @@ const handleStarred = async(e, rumusid) => {
     if (btnStar == '/starwhite.png') {
 
         try {
+            const userid = infoUser.uid
 
             const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/collect/addCollect`,{
-                user_id: infoSignin,
+                user_id: userid,
                 rumus_id: rumusid,
 
             })

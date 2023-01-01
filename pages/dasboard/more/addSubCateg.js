@@ -10,7 +10,7 @@ export default function AddSubPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
     const router = useRouter()
     const [dataCateg, setDataCateg]= useState([])
-
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
 
     useEffect(() => {
@@ -39,7 +39,7 @@ export default function AddSubPage() {
         e.preventDefault()
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/sct/addSubCateg`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/sct/addSubCateg?token=${t}`, {
                 name: document.getElementById('kategori').value,
                 category_id: parseInt(document.getElementById('cat').value),
                 order: parseInt(document.getElementById('order').value),

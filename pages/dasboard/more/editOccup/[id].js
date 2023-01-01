@@ -8,6 +8,7 @@ import Footer from '../../../../components/Footer'
 
 export default function EditOccupPage() {
     const user = typeof window !== 'undefined' ? window.localStorage.getItem('u') : {}
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     const router = useRouter()
     const [data, setData] = useState([])
     const [occup, setNameoccup] = useState("")
@@ -44,7 +45,7 @@ export default function EditOccupPage() {
        
 
         try {
-            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/occup/editOccup/${router.query.id}`, {
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/occup/editOccup/${router.query.id}?token=${t}`, {
                 name: document.getElementById('occup').value,
                 order: parseInt(document.getElementById('order').value),
                     

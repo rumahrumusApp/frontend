@@ -30,9 +30,32 @@ export default function EditRumusByAdmin() {
     const [selectedFileRum, setSelectedFileRum] = useState(false);
     const [selectedFileCont, setSelectedFileCont] = useState(false);
 
-
-  const [CatList, setCatList] = useState([])
     const [subList, setSubList] = useState([])
+
+    const [infoUser, SetU] = useState("")
+  
+
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
+    useEffect(() => {
+
+        if (!t) {
+            router.push('/')
+        } else {
+                fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/info?token=${window.localStorage.getItem('t')}`)
+                    .then((res) => res.json())
+                    .then((val) => {
+                        SetU({
+                            uid: val.info.userid,
+                            uname: val.info.username,
+                            role: val.info.roleuser,
+                            img: val.info.pictprofile
+                        }) 
+                    })
+
+            }
+
+        
+    }, []);
 
     useEffect(() => {
 
@@ -154,11 +177,12 @@ export default function EditRumusByAdmin() {
 
     const editRumus = async(e, statusid) =>{
         e.preventDefault()
-        const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
+        // const id = typeof window !== 'undefined' ? window.localStorage.getItem('unm') : {}
         // SetInfoSignin(id)
 
         const categ = document.getElementById('ct').value
         const subcateg = document.getElementById('sub').value
+        const id = infoUser.uid
 
         const formData = new FormData();
         formData.append("title", title);

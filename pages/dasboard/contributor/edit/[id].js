@@ -23,7 +23,7 @@ export default function EditUsers() {
     const [previewSource, setPreviewSource] = useState("");
     const [selectedFile, setSelectedFile] = useState(false);
 
-
+    const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
     useEffect(() => {
         handleData()
         handleOccup()
@@ -42,7 +42,7 @@ export default function EditUsers() {
             // console.log(typeof router.query.id)
             const id_profile = parseInt(router.query.id)
 
-            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/${id_profile}`)
+            const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/user/${id_profile}?token=${t}`)
             SetIdUser(id_profile)
             SetImg(result.data.data.img_profile)
             SetEmail(result.data.data.email)
@@ -123,7 +123,7 @@ export default function EditUsers() {
      
         try {
            
-            const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/editbyAdmin/${idUser}`, formData, {
+            const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/editbyAdmin/${idUser}?token=${t}`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                    
