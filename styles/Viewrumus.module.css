@@ -90,11 +90,12 @@
 }
 
 .container2 .rumus, .container2 .rumusguest{
-    padding: 20px;
+    /* padding: 20px; */
     background-color: white;
     width: 500px;
     height: 200px;
-    margin: 30px 10px 50px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .container2 .rumus img, .container2 .rumusguest img{
@@ -146,8 +147,8 @@
 
 .btnSignin{
     position: absolute;
-    top: 1030px;
-    left: 350px;
+    top: 1000px;
+    left: 340px;
     /* margin: 50px; */
 }
 
@@ -166,7 +167,7 @@
 @media (max-width: 480px) {
 
 .container {
-    margin-left: 30px;
+    margin-left: 0px;
     /* width: 100%; */
 
 }
@@ -210,10 +211,15 @@
     max-width: 80%;
   
 }
-.container2 .rumus img, .container2 .rumusguest img {
-    width: calc(620px / 2);
+.container2 .rumus img, .container2 .rumusguest img, .container2 textarea{
+    width: calc(680px / 2);
     height: calc(280px /2);
     
+}
+
+.container2 textarea{
+    font-size: 13px;
+    color: black;
 }
 
 .rumusguest .btnSignin{
@@ -231,11 +237,24 @@
     font-family: karla;
 }
 
+.container2 h2{
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.container2 p {
+    font-size: 15px;
+}
+
 .btnSignin{
     position: absolute;
-    top: 1000px;
-    left: 250px;
+    top: 920px;
+    left: 210px;
     /* margin: 50px; */
+}
+
+.conso{
+    margin-top: 20px;
 }
 
 .container2 .iconStar img{

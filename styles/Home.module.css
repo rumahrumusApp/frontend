@@ -179,11 +179,17 @@
   /* background-color: aquamarine; */
   display: grid;
   grid-template-columns: auto auto auto auto;
-  column-gap: 10px;
-  row-gap: 10px;
-  margin-left: 120px;
+  row-gap: 30px;
+  column-gap: 30px;
   border-radius: 10px;
+  /* background-color: antiquewhite; */
+  padding-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 30px;
+  margin-top: 20px;
+  
 }
+
 
 .bgOrange{
   background-color: rgb(211, 85, 39);
@@ -205,7 +211,7 @@
 .header .fitur{
  
 
-  margin-left: 5pxpx;
+  margin-left: 5px;
 
   
 }
@@ -326,7 +332,7 @@
     width: 50%;
     margin-bottom: 20px;
     border-radius: 120px;
-    margin-left: -25px;
+    margin-left: 90px;
   }
   
   
@@ -377,15 +383,20 @@
     display: block;  
   }
   
-  .main .container2{
+  .container .container2{
     /* background-color: aquamarine; */
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 10px;
-    /* row-gap: -10px; */
-    margin-left: 50px;
+    row-gap: 30px;
+    column-gap: 30px;
     border-radius: 10px;
-  }
+    /* background-color: antiquewhite; */
+    padding-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+  }  
+
   
   .bgOrange{
     background-color: rgb(211, 85, 39);
