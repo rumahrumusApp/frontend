@@ -34,9 +34,6 @@ useEffect(() => {
 
     const t = typeof window !== 'undefined' ? window.localStorage.getItem('t') : {}
 
-    if (!t) {
-        router.push('/')
-    } else {
             fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/info?token=${window.localStorage.getItem('t')}`)
                 .then((res) => res.json())
                 .then((val) => {
@@ -55,7 +52,6 @@ useEffect(() => {
 
                 })
 
-        }
     
     if(t == null ) {
         setButtonimg(style.hide);

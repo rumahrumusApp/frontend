@@ -15,7 +15,7 @@
 
 
 .cards img{
-    margin-top: 10px;
+    margin-top: 15px;
     width: 100%;
 }
 
@@ -47,20 +47,20 @@
 .cards{
     align-items: center;
     padding-bottom: 30px;
-    width: 130px;
-    height: 155px;
+    width: 100px;
+    height: 135px;
     color: black;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 90px 0px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-sizing: border-box;
     margin: 15px;
 
 }
 
 .desc p {
-    font-size: 12px;
+    font-size: 9px;
     color: black;
 }
 

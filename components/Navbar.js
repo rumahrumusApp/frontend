@@ -91,7 +91,9 @@ export default function Navbar() {
                          </div>
              
                         <nav className = {style.nav}>
+                        <Link href={""}>
                          <img onClick={(event) => changeDisplay(event)} className={style.list} src='/listmenu_white.png'/>
+                         </Link>
                          
                          <Link href ={"/"}>
                              <img href src='/home_white.png' title="Home"/>

@@ -159,7 +159,7 @@ export default function Home() {
 {/* 
             <div className={styles.search}> */}
             {/* <div> */}
-            <input  type = 'text' id='key' placeholder='masukan keyword disini..'></input>
+            <input  type = 'text' id='key' placeholder='masukan keyword ...'></input>
             <button onSubmit={(event) => handleSearching(event, document.getElementById('key').value)} onClick={(event) => handleSearching(event, document.getElementById('key').value)}>Cari</button>
             {/* {rumus.length == 0?: <div className={styles.searchnotfound}><p>Hasil pencarianmu...</p><img src='./rumusnotfound.png'/></div>} */}
           {/* </div> */}
