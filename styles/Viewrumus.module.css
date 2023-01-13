@@ -94,8 +94,8 @@
     background-color: white;
     width: 500px;
     height: 200px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
 }
 
 .container2 .rumus img, .container2 .rumusguest img{
@@ -173,23 +173,24 @@
 }
 
 .container2 {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 
 .left a {
     /* margin-left: 250%; */
     position: absolute;
-    top: 90px;
-    right: 20px;
+    top: 80px;
+    right: 10px;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 8px 5px;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 8px;
     background-color: rgb(211, 85, 39);
     box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
     color: white;
+    
 }
 
 
@@ -199,8 +200,8 @@
     color: black;
     border-radius: 10px;
     border: 1px solid black;
-    width: calc(620px / 2);
-    height: calc(280px/2);
+    width: calc(450px / 2);
+    height: calc(200px/2);
     /* padding: 20px; */
     font-family: karla;
 }
@@ -212,9 +213,16 @@
   
 }
 .container2 .rumus img, .container2 .rumusguest img, .container2 textarea{
-    width: calc(680px / 2);
-    height: calc(280px /2);
+    width: calc(450px / 2);
+    height: calc(200px /2);
+    /* margin-top: 10px;
+    margin-bottom: 20px; */
     
+}
+
+
+.container2 .rumus{
+    margin-bottom: -80px;
 }
 
 .container2 textarea{
@@ -238,13 +246,13 @@
 }
 
 .container2 h2{
-    font-size: 25px;
-    margin-bottom: 50px;
-    margin-right: 100px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-right: 90px;
 }
 
 .container2 p {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .btnSignin{
@@ -259,13 +267,13 @@
 }
 
 .container2 .iconStar img{
-    width: 20px;
+    width: 15px;
     margin-left: 150px;
     cursor: pointer;
 }
 
 .container2 .iconStar{
-    margin-left:130px;
+    margin-left:40px;
 
 }
 

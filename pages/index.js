@@ -156,9 +156,7 @@ export default function Home() {
               {subList.map((item) => <option  value={item.id} key={item.id} >{item.name}</option>)}
             </select>
            
-{/* 
-            <div className={styles.search}> */}
-            {/* <div> */}
+      {/* <div className={styles.search}> */}
             <input  type = 'text' id='key' placeholder='masukan keyword ...'></input>
             <button onSubmit={(event) => handleSearching(event, document.getElementById('key').value)} onClick={(event) => handleSearching(event, document.getElementById('key').value)}>Cari</button>
             {/* {rumus.length == 0?: <div className={styles.searchnotfound}><p>Hasil pencarianmu...</p><img src='./rumusnotfound.png'/></div>} */}

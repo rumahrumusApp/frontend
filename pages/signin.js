@@ -70,7 +70,7 @@ export default function Signin() {
 
         } catch(err) {
             console.log(err);
-            toast.error("Invalid Email or Password", {
+            toast.error("Invalid Username or Password", {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: true,

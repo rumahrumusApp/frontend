@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
+    opacity: 0.9;
     /* position: fixed; */
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -53,6 +54,7 @@
     box-shadow: 0 4px 8px 0 rgba(238, 143, 108, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
     cursor: pointer;
+    margin: 5px;
 }
 
 .container .right a:hover{

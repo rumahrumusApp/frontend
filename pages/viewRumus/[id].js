@@ -44,11 +44,11 @@ useEffect(() => {
                         img: val.info.pictprofile
                     }) 
 
-                    const ro = val.info.roleuser
-                    // console.log(ro)
-                    if(ro == 1) {
-                        setButton(style.hide)
-                    }
+                    // const ro = val.info.roleuser
+                    // // console.log(ro)
+                    // if(ro == 1) {
+                    //     setButton(style.hide)
+                    // }
 
                 })
 

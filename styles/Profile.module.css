@@ -9,6 +9,7 @@
 .detail {
     margin: 55px auto;
     margin-left: 420px;
+    
 }
 
 
@@ -35,7 +36,7 @@
 
 .detail button{
     font-size: 9px;
-    width: 80%;
+    width: 80px;
     /* height: 25px; */
     border-radius: 5px;
     border: 1px solid rgb(211, 85, 39);
@@ -54,7 +55,7 @@
 
 .btnDiv .btn {
     position: relative;
-    left: 120px;
+    left: 115px;
     bottom: 30px;
    
 
@@ -67,6 +68,7 @@
 }
 
 .btnDiv button{
+    width: 90px;
     background-color:  rgb(211, 85, 39);
     color: white;
     box-shadow: 0 4px 8px 0 rgba(151, 141, 137, 0.495), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -104,7 +106,7 @@
     line-height: 0;
     position: relative;
     right: 60px;
-    margin: 5px 10px;
+    /* margin: 5px 10px; */
     color: black;
    
 } 
@@ -137,18 +139,21 @@
     .container .detail {
         /* margin: 30px auto; */
         /* margin-left: 200px; */
-        margin-left: 100px;
+        margin-left: 85px;
+        background-color: aqua;
 
         
     }
 
-    /* .detail{
-        background-color: aquamarine;
-    } */
+    .detail{
+        margin-right: 30px;
+    }
+
+
 
     .user img{
-        width: 90px;
-        height:90px;
+        width: 70px;
+        height:70px;
         border-radius: 70px;
         border: 3px groove rgb(211, 85, 39);
         cursor: pointer;
@@ -160,35 +165,42 @@
     
     }
     
-    .user p{
+    .detail .user p{
         /* right: 90px; */
-        font-size: 25px;
+        font-size: 13px;
         font-family: Fredoka One;
         font-weight: 400;
         line-height: 0;
         position: relative;
-        margin-right: 0px;
-        margin: 5px 3px;
+        /* margin: 0px 1px; */
         color: black;
        
     } 
 
+    .user p{
+        
+        margin: 0px 1px;
+    }
+
     .detail button{
-        font-size: 9px;
-        width: 80%;
+        width: 68px;
         /* height: 25px; */
         border-radius: 5px;
         border: 1px solid rgb(211, 85, 39);
-        padding: 10px;
-        margin: 0px 20px;
+        padding: 8px;
+        margin: 0px 2px;
+        font-size: 6.5px;
        
        
     }
     
+    .detail p{
+        font-size: 10px;
+    }
+
     .detail .btnDiv {
         display: flex;
-        height: 25px;
-        
+        height: 20px;
        
     }
     
@@ -196,17 +208,16 @@
         position: relative;
         left: 70px;
         bottom: 30px;
-       
     
     }
 
     .detail input, .detail select {
-        font-size: 13.5px;
-        width: calc(650px / 2);
-        height: 35px;
+        font-size: 10px;
+        width: calc(400px / 2);
+        height: 30px;
         border-radius: 7px;
         border: 1px solid rgb(211, 85, 39);
-        padding: 10px;
+        /* padding: 10px; */
         background-color: white;
         color: black;
     }
